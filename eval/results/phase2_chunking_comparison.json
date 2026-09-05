@@ -1,0 +1,1044 @@
+{
+  "timestamp": "2026-08-30T03:51:44.390535",
+  "k": 5,
+  "strategies": [
+    "fixed",
+    "recursive",
+    "section"
+  ],
+  "index_stats": {
+    "fixed": {
+      "total_chunks": 8146,
+      "avg_chars": 865.9,
+      "min_chars": 1,
+      "max_chars": 5633,
+      "median_chars": 903.0
+    },
+    "recursive": {
+      "total_chunks": 9472,
+      "avg_chars": 752.2,
+      "min_chars": 1,
+      "max_chars": 1000,
+      "median_chars": 838.0
+    },
+    "section": {
+      "total_chunks": 9424,
+      "avg_chars": 755.9,
+      "min_chars": 1,
+      "max_chars": 1000,
+      "median_chars": 840.0
+    }
+  },
+  "questions": [
+    {
+      "question": "What are Microsoft's main risk factors?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "META",
+            "META",
+            "NVDA",
+            "MSFT",
+            "MSFT"
+          ],
+          "sections": [
+            "Item 6.",
+            "Item 1A.",
+            "Item 1A. Risk Factors",
+            "Item 1A",
+            "PART II. OTHER"
+          ],
+          "item_numbers": [
+            "6",
+            "1A",
+            "1A",
+            "1A",
+            null
+          ],
+          "avg_chunk_len": 788.6,
+          "previews": [
+            "Summary Risk Factors Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may a",
+            "Summary Risk Factors Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may a",
+            "\u2022 Delaware law, provisions in our governing documents and our agreement with Microsoft could delay or prevent a change in control. 13 Table of Content",
+            "Our datacenters and our hardware products such as XBOX consoles, Surface devices, and other devices we design and market are highly complex. Failure t",
+            "Our hardware products such as Xbox consoles, Surface devices, and other devices we design and market are highly complex. Failure to prevent, detect, o"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "META",
+            "META",
+            "NVDA",
+            "MSFT",
+            "MSFT"
+          ],
+          "sections": [
+            "Item 6.",
+            "Item 1A.",
+            "Item 1A. Risk Factors",
+            "Item 1A",
+            "PART II. OTHER"
+          ],
+          "item_numbers": [
+            "6",
+            "1A",
+            "1A",
+            "1A",
+            null
+          ],
+          "avg_chunk_len": 788.6,
+          "previews": [
+            "Summary Risk Factors Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may a",
+            "Summary Risk Factors Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may a",
+            "\u2022 Delaware law, provisions in our governing documents and our agreement with Microsoft could delay or prevent a change in control. 13 Table of Content",
+            "Our datacenters and our hardware products such as XBOX consoles, Surface devices, and other devices we design and market are highly complex. Failure t",
+            "Our hardware products such as Xbox consoles, Surface devices, and other devices we design and market are highly complex. Failure to prevent, detect, o"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "META",
+            "META",
+            "NVDA",
+            "MSFT",
+            "MSFT"
+          ],
+          "sections": [
+            "Item 1A.",
+            "Item 6.",
+            "Item 1A. Risk Factors",
+            "Item 1A",
+            "PART II. OTHER"
+          ],
+          "item_numbers": [
+            "1A",
+            "6",
+            "1A",
+            "1A",
+            null
+          ],
+          "avg_chunk_len": 788.6,
+          "previews": [
+            "Summary Risk Factors Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may a",
+            "Summary Risk Factors Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may a",
+            "\u2022 Delaware law, provisions in our governing documents and our agreement with Microsoft could delay or prevent a change in control. 13 Table of Content",
+            "Our datacenters and our hardware products such as XBOX consoles, Surface devices, and other devices we design and market are highly complex. Failure t",
+            "Our hardware products such as Xbox consoles, Surface devices, and other devices we design and market are highly complex. Failure to prevent, detect, o"
+          ]
+        }
+      }
+    },
+    {
+      "question": "What business segments does Amazon operate in?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "AMZN",
+            "AMZN",
+            "AMZN",
+            "WMT",
+            "AMZN"
+          ],
+          "sections": [
+            "Item 1.",
+            "Item 6.",
+            "Item 7.",
+            "ITEM 1.",
+            "Item 1A."
+          ],
+          "item_numbers": [
+            "1",
+            "6",
+            "7",
+            "1",
+            "1A"
+          ],
+          "avg_chunk_len": 1188.2,
+          "previews": [
+            "We have organized our operations into three segments: North America, International, and Amazon Web Services (\u201cAWS\u201d). These segments reflect the way th",
+            "28 Table of Contents Results of Operations We have organized our operations into three segments: North America, International, and AWS. These segments",
+            "23 Table of Contents Results of Operations We have organized our operations into three segments: North America, International, and AWS. These segments",
+            "Information About Our Segments We are engaged in global operations of retail, wholesale and other units, as well as eCommerce, located throughout the ",
+            "We are subject to general business regulations and laws, as well as regulations and laws specifically governing the internet, physical, e-commerce, an"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "AMZN",
+            "AMZN",
+            "AMZN",
+            "WMT",
+            "WMT"
+          ],
+          "sections": [
+            "Item 1.",
+            "Item 6.",
+            "Item 7.",
+            "ITEM 1.",
+            "ITEM 1."
+          ],
+          "item_numbers": [
+            "1",
+            "6",
+            "7",
+            "1",
+            "1"
+          ],
+          "avg_chunk_len": 575.0,
+          "previews": [
+            "We have organized our operations into three segments: North America, International, and Amazon Web Services (\u201cAWS\u201d). These segments reflect the way th",
+            "28 Table of Contents Results of Operations We have organized our operations into three segments: North America, International, and AWS. These segments",
+            "23 Table of Contents Results of Operations We have organized our operations into three segments: North America, International, and AWS. These segments",
+            "Information About Our Segments We are engaged in global operations of retail, wholesale and other units, as well as eCommerce, located throughout the ",
+            "Other offerings in the Walmart U.S. business include advertising solutions for brands and online marketplace sellers, supply chain and fulfillment cap"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "AMZN",
+            "AMZN",
+            "AMZN",
+            "WMT",
+            "WMT"
+          ],
+          "sections": [
+            "Item 1.",
+            "Item 6.",
+            "Item 7.",
+            "ITEM 1.",
+            "ITEM 1."
+          ],
+          "item_numbers": [
+            "1",
+            "6",
+            "7",
+            "1",
+            "1"
+          ],
+          "avg_chunk_len": 575.0,
+          "previews": [
+            "We have organized our operations into three segments: North America, International, and Amazon Web Services (\u201cAWS\u201d). These segments reflect the way th",
+            "28 Table of Contents Results of Operations We have organized our operations into three segments: North America, International, and AWS. These segments",
+            "23 Table of Contents Results of Operations We have organized our operations into three segments: North America, International, and AWS. These segments",
+            "Information About Our Segments We are engaged in global operations of retail, wholesale and other units, as well as eCommerce, located throughout the ",
+            "Other offerings in the Walmart U.S. business include advertising solutions for brands and online marketplace sellers, supply chain and fulfillment cap"
+          ]
+        }
+      }
+    },
+    {
+      "question": "What is Google's primary source of revenue?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "AMZN",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL"
+          ],
+          "sections": [
+            "Item 7.",
+            "ITEM 1.",
+            "Item 6",
+            "Item 6",
+            "ITEM 7."
+          ],
+          "item_numbers": [
+            "7",
+            "1",
+            "6",
+            "6",
+            "7"
+          ],
+          "avg_chunk_len": 830.6,
+          "previews": [
+            "Overview Our primary source of revenue is the sale of a wide range of products and services to customers. The products offered through our stores incl",
+            "In addition, Google Services generates revenues from products and services beyond advertising, including: \u2022 consumer subscriptions, which primarily in",
+            "\u2022 devices, which primarily include sales of the Pixel family of devices; and \u2022 other products and services. Fluctuations in our Google subscriptions, ",
+            "The following table presents cash flows (in millions): Six Months Ended June 30, 2025 2026 Net cash provided by operating activities $ 63,897 $ 84,859",
+            "\u2022 devices, which primarily include sales of the Pixel family of devices; and \u2022 other products and services. Fluctuations in our Google subscriptions, "
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "AMZN",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL"
+          ],
+          "sections": [
+            "Item 7.",
+            "ITEM 1.",
+            "Item 6",
+            "Item 6",
+            "ITEM 7."
+          ],
+          "item_numbers": [
+            "7",
+            "1",
+            "6",
+            "6",
+            "7"
+          ],
+          "avg_chunk_len": 830.6,
+          "previews": [
+            "Overview Our primary source of revenue is the sale of a wide range of products and services to customers. The products offered through our stores incl",
+            "In addition, Google Services generates revenues from products and services beyond advertising, including: \u2022 consumer subscriptions, which primarily in",
+            "\u2022 devices, which primarily include sales of the Pixel family of devices; and \u2022 other products and services. Fluctuations in our Google subscriptions, ",
+            "The following table presents cash flows (in millions): Six Months Ended June 30, 2025 2026 Net cash provided by operating activities $ 63,897 $ 84,859",
+            "\u2022 devices, which primarily include sales of the Pixel family of devices; and \u2022 other products and services. Fluctuations in our Google subscriptions, "
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "AMZN",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL"
+          ],
+          "sections": [
+            "Item 7.",
+            "ITEM 1.",
+            "Item 6",
+            "Item 6",
+            "ITEM 7."
+          ],
+          "item_numbers": [
+            "7",
+            "1",
+            "6",
+            "6",
+            "7"
+          ],
+          "avg_chunk_len": 830.6,
+          "previews": [
+            "Overview Our primary source of revenue is the sale of a wide range of products and services to customers. The products offered through our stores incl",
+            "In addition, Google Services generates revenues from products and services beyond advertising, including: \u2022 consumer subscriptions, which primarily in",
+            "\u2022 devices, which primarily include sales of the Pixel family of devices; and \u2022 other products and services. Fluctuations in our Google subscriptions, ",
+            "The following table presents cash flows (in millions): Six Months Ended June 30, 2025 2026 Net cash provided by operating activities $ 63,897 $ 84,859",
+            "\u2022 devices, which primarily include sales of the Pixel family of devices; and \u2022 other products and services. Fluctuations in our Google subscriptions, "
+          ]
+        }
+      }
+    },
+    {
+      "question": "What was Apple's total net revenue in fiscal year 2025?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "AAPL",
+            "AAPL",
+            "AAPL",
+            "AAPL",
+            "AAPL"
+          ],
+          "sections": [
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+          ],
+          "item_numbers": [
+            "7",
+            "7",
+            "7",
+            "7",
+            "2"
+          ],
+          "avg_chunk_len": 860.0,
+          "previews": [
+            "First Quarter 2025: \u2022 MacBook Pro \u2022 Mac mini \u2022 iMac \u2022 iPad mini Second Quarter 2025: \u2022 iPhone 16e \u2022 iPad Air \u2022 iPad \u2022 MacBook Air \u2022 Mac Studio Third Q",
+            "28,023 5 % 26,694 (6) % 28,300 Wearables, Home and Accessories 35,686 (4) % 37,005 (7) % 39,845 Services (1) 109,158 14 % 96,169 13 % 85,200 Total net",
+            "Operating Expenses Operating expenses for 2025, 2024 and 2023 were as follows (dollars in millions): 2025 Change 2024 Change 2023 Research and develop",
+            "Apple Inc. | 2025 Form 10-K | 24 Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for 2",
+            "Three Months Ended Nine Months Ended June 27, 2026 June 28, 2025 Change June 27, 2026 June 28, 2025 Change iPhone $ 54,252 $ 44,582 22% $ 196,515 $ 16"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "AAPL",
+            "AAPL",
+            "AAPL",
+            "AAPL",
+            "MSFT"
+          ],
+          "sections": [
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "PART I. FINANCI"
+          ],
+          "item_numbers": [
+            "7",
+            "7",
+            "7",
+            "7",
+            null
+          ],
+          "avg_chunk_len": 874.0,
+          "previews": [
+            "First Quarter 2025: \u2022 MacBook Pro \u2022 Mac mini \u2022 iMac \u2022 iPad mini Second Quarter 2025: \u2022 iPhone 16e \u2022 iPad Air \u2022 iPad \u2022 MacBook Air \u2022 Mac Studio Third Q",
+            "28,023 5 % 26,694 (6) % 28,300 Wearables, Home and Accessories 35,686 (4) % 37,005 (7) % 39,845 Services (1) 109,158 14 % 96,169 13 % 85,200 Total net",
+            "Operating Expenses Operating expenses for 2025, 2024 and 2023 were as follows (dollars in millions): 2025 Change 2024 Change 2023 Research and develop",
+            "Apple Inc. | 2025 Form 10-K | 24 Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for 2",
+            "2025 Productivity and Business Processes Revenue $ 35,013 $ 29,944 17% $ 102,149 $ 87,698 16% Cost of revenue 6,197 5,517 12% 18,028 16,380 10% Operat"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "AAPL",
+            "AAPL",
+            "AAPL",
+            "AAPL",
+            "MSFT"
+          ],
+          "sections": [
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "PART I. FINANCI"
+          ],
+          "item_numbers": [
+            "7",
+            "7",
+            "7",
+            "7",
+            null
+          ],
+          "avg_chunk_len": 874.0,
+          "previews": [
+            "First Quarter 2025: \u2022 MacBook Pro \u2022 Mac mini \u2022 iMac \u2022 iPad mini Second Quarter 2025: \u2022 iPhone 16e \u2022 iPad Air \u2022 iPad \u2022 MacBook Air \u2022 Mac Studio Third Q",
+            "28,023 5 % 26,694 (6) % 28,300 Wearables, Home and Accessories 35,686 (4) % 37,005 (7) % 39,845 Services (1) 109,158 14 % 96,169 13 % 85,200 Total net",
+            "Operating Expenses Operating expenses for 2025, 2024 and 2023 were as follows (dollars in millions): 2025 Change 2024 Change 2023 Research and develop",
+            "Apple Inc. | 2025 Form 10-K | 24 Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for 2",
+            "2025 Productivity and Business Processes Revenue $ 35,013 $ 29,944 17% $ 102,149 $ 87,698 16% Cost of revenue 6,197 5,517 12% 18,028 16,380 10% Operat"
+          ]
+        }
+      }
+    },
+    {
+      "question": "How much did NVIDIA spend on research and development?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "NVDA",
+            "NVDA",
+            "NVDA",
+            "NVDA",
+            "NVDA"
+          ],
+          "sections": [
+            "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+            "Part I. Financial Information",
+            "Part I. Financial Information",
+            "Item 1. Business",
+            "Item 1. Business"
+          ],
+          "item_numbers": [
+            "7",
+            null,
+            null,
+            "1",
+            "1"
+          ],
+          "avg_chunk_len": 839.8,
+          "previews": [
+            "Overview Our Company and Our Businesses NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our or",
+            "Part I. Financial Information Item 1.\u00a0Financial Statements (Unaudited) NVIDIA Corporation and Subsidiaries Condensed Consolidated Statements of Income",
+            "Overview Our Company and Our Businesses NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our or",
+            "NVIDIA has a platform strategy, bringing together hardware, systems, software, algorithms, libraries, AI models and training data sets, and services t",
+            "Researchers and developers use our computing solutions to accelerate a wide range of important applications, from simulating molecular dynamics to cli"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "NVDA",
+            "NVDA",
+            "NVDA",
+            "NVDA",
+            "NVDA"
+          ],
+          "sections": [
+            "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+            "Part I. Financial Information",
+            "Part I. Financial Information",
+            "Item 1. Business",
+            "Item 1. Business"
+          ],
+          "item_numbers": [
+            "7",
+            null,
+            null,
+            "1",
+            "1"
+          ],
+          "avg_chunk_len": 839.8,
+          "previews": [
+            "Overview Our Company and Our Businesses NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our or",
+            "Part I. Financial Information Item 1.\u00a0Financial Statements (Unaudited) NVIDIA Corporation and Subsidiaries Condensed Consolidated Statements of Income",
+            "Overview Our Company and Our Businesses NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our or",
+            "NVIDIA has a platform strategy, bringing together hardware, systems, software, algorithms, libraries, AI models and training data sets, and services t",
+            "Researchers and developers use our computing solutions to accelerate a wide range of important applications, from simulating molecular dynamics to cli"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "NVDA",
+            "NVDA",
+            "NVDA",
+            "NVDA",
+            "NVDA"
+          ],
+          "sections": [
+            "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+            "Part I. Financial Information",
+            "Part I. Financial Information",
+            "Item 1. Business",
+            "Item 1. Business"
+          ],
+          "item_numbers": [
+            "7",
+            null,
+            null,
+            "1",
+            "1"
+          ],
+          "avg_chunk_len": 839.8,
+          "previews": [
+            "Overview Our Company and Our Businesses NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our or",
+            "Part I. Financial Information Item 1.\u00a0Financial Statements (Unaudited) NVIDIA Corporation and Subsidiaries Condensed Consolidated Statements of Income",
+            "Overview Our Company and Our Businesses NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. Since our or",
+            "NVIDIA has a platform strategy, bringing together hardware, systems, software, algorithms, libraries, AI models and training data sets, and services t",
+            "Researchers and developers use our computing solutions to accelerate a wide range of important applications, from simulating molecular dynamics to cli"
+          ]
+        }
+      }
+    },
+    {
+      "question": "What was JPMorgan Chase's net income for 2025?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "JPM",
+            "JPM",
+            "JPM",
+            "JPM",
+            "JPM"
+          ],
+          "sections": [
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity."
+          ],
+          "item_numbers": [
+            "1C",
+            "1C",
+            "1C",
+            "1C",
+            "1C"
+          ],
+          "avg_chunk_len": 961.0,
+          "previews": [
+            "80 JPMorgan Chase & Co./2025 Form 10-K 2025 compared with 2024 Net income was $4.5 billion, compared with $10.6 billion in the prior year. Net revenue",
+            "(c) Included MSR risk management results of $118 million, $159 million and $131 million for the years ended December\u00a031, 2025, 2024 and 2023, respecti",
+            "New York, New York February\u00a013, 2026 We have served as the Firm\u2019s auditor since 1965. 164 JPMorgan Chase & Co./2025 Form 10-K JPMorgan Chase & Co. Con",
+            "46 JPMorgan Chase & Co./2025 Form 10-K EXECUTIVE OVERVIEW This executive overview of the MD&A highlights selected information and does not contain all",
+            "Refer to CCB segment results on pages 65\u201368, Capital Risk Management on pages 89\u201399 and Notes 4, 13, 27 and 28 for additional information. Comparisons"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "JPM",
+            "JPM",
+            "JPM",
+            "JPM",
+            "JPM"
+          ],
+          "sections": [
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity."
+          ],
+          "item_numbers": [
+            "1C",
+            "1C",
+            "1C",
+            "1C",
+            "1C"
+          ],
+          "avg_chunk_len": 961.0,
+          "previews": [
+            "80 JPMorgan Chase & Co./2025 Form 10-K 2025 compared with 2024 Net income was $4.5 billion, compared with $10.6 billion in the prior year. Net revenue",
+            "(c) Included MSR risk management results of $118 million, $159 million and $131 million for the years ended December\u00a031, 2025, 2024 and 2023, respecti",
+            "New York, New York February\u00a013, 2026 We have served as the Firm\u2019s auditor since 1965. 164 JPMorgan Chase & Co./2025 Form 10-K JPMorgan Chase & Co. Con",
+            "46 JPMorgan Chase & Co./2025 Form 10-K EXECUTIVE OVERVIEW This executive overview of the MD&A highlights selected information and does not contain all",
+            "Refer to CCB segment results on pages 65\u201368, Capital Risk Management on pages 89\u201399 and Notes 4, 13, 27 and 28 for additional information. Comparisons"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "JPM",
+            "JPM",
+            "JPM",
+            "JPM",
+            "JPM"
+          ],
+          "sections": [
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity.",
+            "Item 1C. Cybersecurity."
+          ],
+          "item_numbers": [
+            "1C",
+            "1C",
+            "1C",
+            "1C",
+            "1C"
+          ],
+          "avg_chunk_len": 961.0,
+          "previews": [
+            "80 JPMorgan Chase & Co./2025 Form 10-K 2025 compared with 2024 Net income was $4.5 billion, compared with $10.6 billion in the prior year. Net revenue",
+            "(c) Included MSR risk management results of $118 million, $159 million and $131 million for the years ended December\u00a031, 2025, 2024 and 2023, respecti",
+            "New York, New York February\u00a013, 2026 We have served as the Firm\u2019s auditor since 1965. 164 JPMorgan Chase & Co./2025 Form 10-K JPMorgan Chase & Co. Con",
+            "46 JPMorgan Chase & Co./2025 Form 10-K EXECUTIVE OVERVIEW This executive overview of the MD&A highlights selected information and does not contain all",
+            "Refer to CCB segment results on pages 65\u201368, Capital Risk Management on pages 89\u201399 and Notes 4, 13, 27 and 28 for additional information. Comparisons"
+          ]
+        }
+      }
+    },
+    {
+      "question": "How did Meta's advertising revenue change year over year?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "GOOGL",
+            "GOOGL",
+            "META",
+            "META",
+            "META"
+          ],
+          "sections": [
+            "Item 6",
+            "ITEM 7.",
+            "Item 6.",
+            "Item 7.",
+            "Item 6."
+          ],
+          "item_numbers": [
+            "6",
+            "7",
+            "6",
+            "7",
+            "6"
+          ],
+          "avg_chunk_len": 1016.8,
+          "previews": [
+            "As our business evolves, we periodically review, refine, and update our methodologies for monitoring, gathering, and counting the number of paid click",
+            "As our business evolves, we periodically review, refine, and update our methodologies for monitoring, gathering, and counting the number of paid click",
+            "Although we regularly evaluate a variety of sources to understand trends in our advertising revenue, we do not have perfect visibility into the factor",
+            "Although we regularly evaluate a variety of sources to understand trends in our advertising revenue, we do not have perfect visibility into the factor",
+            "Advertising revenue in the three and six months ended June\u00a030, 2026 increased $12.80\u00a0billion, or 27%, and $26.43\u00a0billion, or 30%, respectively, compar"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "GOOGL",
+            "GOOGL",
+            "META",
+            "META",
+            "META"
+          ],
+          "sections": [
+            "Item 6",
+            "ITEM 7.",
+            "Item 6.",
+            "Item 1A.",
+            "Item 6."
+          ],
+          "item_numbers": [
+            "6",
+            "7",
+            "6",
+            "1A",
+            "6"
+          ],
+          "avg_chunk_len": 923.2,
+          "previews": [
+            "As our business evolves, we periodically review, refine, and update our methodologies for monitoring, gathering, and counting the number of paid click",
+            "As our business evolves, we periodically review, refine, and update our methodologies for monitoring, gathering, and counting the number of paid click",
+            ". Similarly, from time to time we update our Feed display and ranking algorithms or other product features to improve the user experience, and these c",
+            ". Similarly, from time to time we update our Feed display and ranking algorithms or other product features to improve the user experience, and these c",
+            "We recognize revenue from the display of impression-based ads in the contracted period in which the impressions are delivered. Impressions are conside"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "GOOGL",
+            "GOOGL",
+            "META",
+            "META",
+            "META"
+          ],
+          "sections": [
+            "Item 6",
+            "ITEM 7.",
+            "Item 6.",
+            "Item 1A.",
+            "Item 6."
+          ],
+          "item_numbers": [
+            "6",
+            "7",
+            "6",
+            "1A",
+            "6"
+          ],
+          "avg_chunk_len": 923.2,
+          "previews": [
+            "As our business evolves, we periodically review, refine, and update our methodologies for monitoring, gathering, and counting the number of paid click",
+            "As our business evolves, we periodically review, refine, and update our methodologies for monitoring, gathering, and counting the number of paid click",
+            ". Similarly, from time to time we update our Feed display and ranking algorithms or other product features to improve the user experience, and these c",
+            ". Similarly, from time to time we update our Feed display and ranking algorithms or other product features to improve the user experience, and these c",
+            "We recognize revenue from the display of impression-based ads in the contracted period in which the impressions are delivered. Impressions are conside"
+          ]
+        }
+      }
+    },
+    {
+      "question": "What is Walmart's revenue growth trend?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "WMT",
+            "WMT",
+            "WMT",
+            "WMT",
+            "WMT"
+          ],
+          "sections": [
+            "ITEM 7.",
+            "ITEM 7.",
+            "Part I, Item 1",
+            "ITEM 7.",
+            "Part I, Item 1"
+          ],
+          "item_numbers": [
+            "7",
+            "7",
+            null,
+            "7",
+            null
+          ],
+          "avg_chunk_len": 807.0,
+          "previews": [
+            "21.4 % 21.8 % 21.6 % Operating expenses 18.6 % 18.5 % 18.6 % Operating income 3.9 % 4.5 % 4.3 % Retail unit counts at period end 5,743 5,566 5,402 Ret",
+            "Our gross profit rate increased 8 and 40 basis points for fiscal 2026 and 2025, respectively, when compared to the previous fiscal year. The increase ",
+            "Membership and other income increased 15.6% and 30.4% for the three and six months ended July 31, 2026, respectively, primarily driven by double-digit",
+            "4,615 Retail square feet at period end 699 698 699 Net sales for the Walmart U.S. segment increased $20.6 billion or 4.4% and $20.6 billion or 4.7% fo",
+            "21.3 % 21.4 % Operating expenses 18.5 % 18.8 % 18.2 % 18.5 % Operating income 4.1 % 4.0 % 4.3 % 4.1 % Unit counts at period end 5,783 5,591 5,783 5,59"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "WMT",
+            "WMT",
+            "WMT",
+            "WMT",
+            "WMT"
+          ],
+          "sections": [
+            "ITEM 7.",
+            "ITEM 7.",
+            "Part I, Item 1",
+            "ITEM 7.",
+            "Part I, Item 1"
+          ],
+          "item_numbers": [
+            "7",
+            "7",
+            null,
+            "7",
+            null
+          ],
+          "avg_chunk_len": 804.8,
+          "previews": [
+            "21.4 % 21.8 % 21.6 % Operating expenses 18.6 % 18.5 % 18.6 % Operating income 3.9 % 4.5 % 4.3 % Retail unit counts at period end 5,743 5,566 5,402 Ret",
+            "Our gross profit rate increased 8 and 40 basis points for fiscal 2026 and 2025, respectively, when compared to the previous fiscal year. The increase ",
+            "Membership and other income increased 15.6% and 30.4% for the three and six months ended July 31, 2026, respectively, primarily driven by double-digit",
+            "Retail square feet at period end 699 698 699 Net sales for the Walmart U.S. segment increased $20.6 billion or 4.4% and $20.6 billion or 4.7% for fisc",
+            "% 21.4 % Operating expenses 18.5 % 18.8 % 18.2 % 18.5 % Operating income 4.1 % 4.0 % 4.3 % 4.1 % Unit counts at period end 5,783 5,591 5,783 5,591 Ret"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "WMT",
+            "WMT",
+            "WMT",
+            "WMT",
+            "WMT"
+          ],
+          "sections": [
+            "ITEM 7.",
+            "ITEM 7.",
+            "Part I, Item 1",
+            "ITEM 7.",
+            "Part I, Item 1"
+          ],
+          "item_numbers": [
+            "7",
+            "7",
+            null,
+            "7",
+            null
+          ],
+          "avg_chunk_len": 804.8,
+          "previews": [
+            "21.4 % 21.8 % 21.6 % Operating expenses 18.6 % 18.5 % 18.6 % Operating income 3.9 % 4.5 % 4.3 % Retail unit counts at period end 5,743 5,566 5,402 Ret",
+            "Our gross profit rate increased 8 and 40 basis points for fiscal 2026 and 2025, respectively, when compared to the previous fiscal year. The increase ",
+            "Membership and other income increased 15.6% and 30.4% for the three and six months ended July 31, 2026, respectively, primarily driven by double-digit",
+            "Retail square feet at period end 699 698 699 Net sales for the Walmart U.S. segment increased $20.6 billion or 4.4% and $20.6 billion or 4.7% for fisc",
+            "% 21.4 % Operating expenses 18.5 % 18.8 % 18.2 % 18.5 % Operating income 4.1 % 4.0 % 4.3 % 4.1 % Unit counts at period end 5,783 5,591 5,783 5,591 Ret"
+          ]
+        }
+      }
+    },
+    {
+      "question": "Which companies mention AI infrastructure as a risk factor?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "META",
+            "MSFT",
+            "GOOGL",
+            "GOOGL",
+            "GOOGL"
+          ],
+          "sections": [
+            "Item 6.",
+            "PART II. OTHER",
+            "ITEM 1A.",
+            "Item 6",
+            "ITEM 1A."
+          ],
+          "item_numbers": [
+            "6",
+            null,
+            "1A",
+            "6",
+            "1A"
+          ],
+          "avg_chunk_len": 1228.4,
+          "previews": [
+            "In addition, as the amount and types of information shared on our products continue to grow and evolve, as the usage patterns of our global community ",
+            "We are building AI into many of our offerings, including our productivity services, and we are also making AI available for our customers to use in so",
+            "Risks Related to our Industry Issues in the development and use of AI may result in reputational harm and increased liability exposure. Our evolving A",
+            "Within Other Bets, we are investing significantly in areas such as transportation and life sciences, among others. These investment areas face intense",
+            "Within Other Bets, we are investing significantly in areas such as life sciences and transportation, among others. These investment areas face intense"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "META",
+            "AAPL",
+            "GS",
+            "GOOGL",
+            "GOOGL"
+          ],
+          "sections": [
+            "Item 6.",
+            "Item 1A. Risk Factors",
+            "Item 15",
+            "ITEM 1A.",
+            "Item 6"
+          ],
+          "item_numbers": [
+            "6",
+            "1A",
+            "15",
+            "1A",
+            "6"
+          ],
+          "avg_chunk_len": 764.4,
+          "previews": [
+            "In addition, as the amount and types of information shared on our products continue to grow and evolve, as the usage patterns of our global community ",
+            "The Company\u2019s business, including its artificial intelligence and machine learning offerings, also depends on access to sufficient computing resources",
+            ". Additionally, we are exposed to risks related to the use of AI technologies by third-party vendors, clients, counterparties, clearinghouses and othe",
+            "Risks Related to our Industry Issues in the development and use of AI may result in reputational harm and increased liability exposure. Our evolving A",
+            "Within Other Bets, we are investing significantly in areas such as transportation and life sciences, among others. These investment areas face intense"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "META",
+            "AAPL",
+            "GS",
+            "GOOGL",
+            "GOOGL"
+          ],
+          "sections": [
+            "Item 6.",
+            "Item 1A. Risk Factors",
+            "Item 15",
+            "ITEM 1A.",
+            "Item 6"
+          ],
+          "item_numbers": [
+            "6",
+            "1A",
+            "15",
+            "1A",
+            "6"
+          ],
+          "avg_chunk_len": 764.4,
+          "previews": [
+            "In addition, as the amount and types of information shared on our products continue to grow and evolve, as the usage patterns of our global community ",
+            "The Company\u2019s business, including its artificial intelligence and machine learning offerings, also depends on access to sufficient computing resources",
+            ". Additionally, we are exposed to risks related to the use of AI technologies by third-party vendors, clients, counterparties, clearinghouses and othe",
+            "Risks Related to our Industry Issues in the development and use of AI may result in reputational harm and increased liability exposure. Our evolving A",
+            "Within Other Bets, we are investing significantly in areas such as transportation and life sciences, among others. These investment areas face intense"
+          ]
+        }
+      }
+    },
+    {
+      "question": "What is Tesla's revenue forecast for 2027?",
+      "results": {
+        "fixed": {
+          "count": 5,
+          "tickers": [
+            "TSLA",
+            "TSLA",
+            "TSLA",
+            "TSLA",
+            "TSLA"
+          ],
+          "sections": [
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+          ],
+          "item_numbers": [
+            "7",
+            "8",
+            "8",
+            "7",
+            "7"
+          ],
+          "avg_chunk_len": 839.8,
+          "previews": [
+            "In 2025, we deployed 46.7 GWh of energy storage products. We are focused on ramping the production, increasing the market penetration of our energy st",
+            "2025 2024 2023 Revenues Automotive sales $ $ $ Automotive regulatory credits Automotive leasing Total automotive revenues Energy generation and storag",
+            "Deferred revenue, net of current portion Other long-term liabilities Total liabilities Commitments and contingencies (Note 13) Redeemable noncontrolli",
+            "Services and other revenue consists of sales of used vehicles, non-warranty maintenance services and collision, paid Supercharging sessions, automotiv",
+            "Results of Operations Revenues Year Ended December 31, 2025 vs. 2024 Change 2024 vs. 2023 Change (Dollars in millions) 2025 2024 2023 $ % $ % Automoti"
+          ]
+        },
+        "recursive": {
+          "count": 5,
+          "tickers": [
+            "TSLA",
+            "TSLA",
+            "TSLA",
+            "TSLA",
+            "TSLA"
+          ],
+          "sections": [
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+          ],
+          "item_numbers": [
+            "7",
+            "8",
+            "8",
+            "7",
+            "7"
+          ],
+          "avg_chunk_len": 839.8,
+          "previews": [
+            "In 2025, we deployed 46.7 GWh of energy storage products. We are focused on ramping the production, increasing the market penetration of our energy st",
+            "2025 2024 2023 Revenues Automotive sales $ $ $ Automotive regulatory credits Automotive leasing Total automotive revenues Energy generation and storag",
+            "Deferred revenue, net of current portion Other long-term liabilities Total liabilities Commitments and contingencies (Note 13) Redeemable noncontrolli",
+            "Services and other revenue consists of sales of used vehicles, non-warranty maintenance services and collision, paid Supercharging sessions, automotiv",
+            "Results of Operations Revenues Year Ended December 31, 2025 vs. 2024 Change 2024 vs. 2023 Change (Dollars in millions) 2025 2024 2023 $ % $ % Automoti"
+          ]
+        },
+        "section": {
+          "count": 5,
+          "tickers": [
+            "TSLA",
+            "TSLA",
+            "TSLA",
+            "TSLA",
+            "TSLA"
+          ],
+          "sections": [
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+          ],
+          "item_numbers": [
+            "7",
+            "8",
+            "8",
+            "7",
+            "7"
+          ],
+          "avg_chunk_len": 839.8,
+          "previews": [
+            "In 2025, we deployed 46.7 GWh of energy storage products. We are focused on ramping the production, increasing the market penetration of our energy st",
+            "2025 2024 2023 Revenues Automotive sales $ $ $ Automotive regulatory credits Automotive leasing Total automotive revenues Energy generation and storag",
+            "Deferred revenue, net of current portion Other long-term liabilities Total liabilities Commitments and contingencies (Note 13) Redeemable noncontrolli",
+            "Services and other revenue consists of sales of used vehicles, non-warranty maintenance services and collision, paid Supercharging sessions, automotiv",
+            "Results of Operations Revenues Year Ended December 31, 2025 vs. 2024 Change 2024 vs. 2023 Change (Dollars in millions) 2025 2024 2023 $ % $ % Automoti"
+          ]
+        }
+      }
+    }
+  ]
+}
