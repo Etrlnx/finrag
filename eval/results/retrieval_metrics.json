@@ -1,0 +1,3076 @@
+{
+  "with_reranker": [
+    {
+      "id": "eval_01",
+      "category": "factual",
+      "ticker": "MSFT",
+      "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.16666666666666666,
+          "ndcg": 1.0,
+          "contamination": 0.6666666666666666
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 0.3333333333333333,
+          "ndcg": 0.9887162988776932,
+          "contamination": 0.6
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 0.3333333333333333,
+          "ndcg": 0.9887162988776932,
+          "contamination": 0.3
+        }
+      },
+      "latency_ms": 257.3,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_02",
+      "category": "numerical",
+      "ticker": "GOOGL",
+      "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.6,
+          "ndcg": 0.9986422827883327,
+          "contamination": 0.2
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.6,
+          "ndcg": 0.9986422827883327,
+          "contamination": 0.1
+        }
+      },
+      "latency_ms": 233.5,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_03",
+      "category": "factual",
+      "ticker": "GOOGL",
+      "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.4
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.2
+        }
+      },
+      "latency_ms": 191.77,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_04",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What was Apple's total net sales in fiscal year 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.9916168334164263,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.9916168334164263,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 194.25,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_05",
+      "category": "factual",
+      "ticker": "AAPL",
+      "question": "What are Apple's reportable product and service categories in its annual filing?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 0.8,
+          "ndcg": 0.557088914004306,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 0.8,
+          "ndcg": 0.557088914004306,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 200.14,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_06",
+      "category": "numerical",
+      "ticker": "NVDA",
+      "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.7380487420225963,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.7380487420225963,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 212.51,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_07",
+      "category": "factual",
+      "ticker": "NVDA",
+      "question": "What business segments does NVIDIA report in its financial disclosures?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.9939948506250893,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.9939948506250893,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 178.15,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_08",
+      "category": "factual",
+      "ticker": "AMZN",
+      "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.75,
+          "ndcg": 0.9943189242208944,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.75,
+          "ndcg": 0.9943189242208944,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 155.78,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_09",
+      "category": "numerical",
+      "ticker": "AMZN",
+      "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.8075588805057204,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.808089222910768,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.808089222910768,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 186.51,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_10",
+      "category": "factual",
+      "ticker": "META",
+      "question": "What are Meta Platforms' two reportable business segments?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 140.85,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_11",
+      "category": "numerical",
+      "ticker": "META",
+      "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 159.36,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_12",
+      "category": "factual",
+      "ticker": "TSLA",
+      "question": "What are Tesla's operating segments reported in its 10-K filing?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 205.71,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_13",
+      "category": "numerical",
+      "ticker": "TSLA",
+      "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 146.8,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_14",
+      "category": "factual",
+      "ticker": "JPM",
+      "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 155.26,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_15",
+      "category": "numerical",
+      "ticker": "JPM",
+      "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 200.28,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_16",
+      "category": "factual",
+      "ticker": "GS",
+      "question": "What are the reportable business segments of The Goldman Sachs Group?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "ndcg": 0.991474106402634,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 1.0,
+          "ndcg": 0.991474106402634,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 149.16,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_17",
+      "category": "numerical",
+      "ticker": "GS",
+      "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 145.79,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_18",
+      "category": "factual",
+      "ticker": "BAC",
+      "question": "What operating business segments does Bank of America report?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 162.32,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_19",
+      "category": "numerical",
+      "ticker": "WMT",
+      "question": "What was Walmart's total net sales and e-commerce sales growth?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.7579237460681981,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.75,
+          "ndcg": 0.7579237460681981,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.75,
+          "ndcg": 0.7579237460681981,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 162.51,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_20",
+      "category": "factual",
+      "ticker": "WMT",
+      "question": "What are Walmart's three reportable operating segments?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 138.69,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_21",
+      "category": "factual",
+      "ticker": "COST",
+      "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.9514426589871553,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.7709142760467946,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.7709142760467946,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 162.0,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_22",
+      "category": "numerical",
+      "ticker": "COST",
+      "question": "What was Costco's membership fee revenue and member renewal rate?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.8075588805057204,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.8270622705565233,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.8270622705565233,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 154.61,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_23",
+      "category": "factual",
+      "ticker": "JNJ",
+      "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 174.73,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_24",
+      "category": "factual",
+      "ticker": "UNH",
+      "question": "What are the reportable segments of UnitedHealth Group?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.6,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 148.34,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_25",
+      "category": "numerical",
+      "ticker": "XOM",
+      "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 208.82,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_26",
+      "category": "temporal",
+      "ticker": "MSFT",
+      "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 166.47,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_27",
+      "category": "temporal",
+      "ticker": "NVDA",
+      "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.6,
+          "ndcg": 0.7591919243197319,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 0.7745304403710691,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "ndcg": 0.7745304403710691,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 178.44,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_28",
+      "category": "temporal",
+      "ticker": "AMZN",
+      "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.8428282648809379,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.821867591569102,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.821867591569102,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 195.46,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_29",
+      "category": "cross-document",
+      "ticker": "TECH",
+      "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 181.62,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_30",
+      "category": "cross-document",
+      "ticker": "BANKS",
+      "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 243.36,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_31",
+      "category": "unanswerable",
+      "ticker": "AAPL",
+      "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 220.77,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_32",
+      "category": "unanswerable",
+      "ticker": "NVDA",
+      "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 218.85,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_33",
+      "category": "unanswerable",
+      "ticker": "TSLA",
+      "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 182.37,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_34",
+      "category": "unanswerable",
+      "ticker": "XYZ",
+      "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 1.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 1.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.5
+        }
+      },
+      "latency_ms": 152.98,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_35",
+      "category": "unanswerable",
+      "ticker": "AMZN",
+      "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 157.32,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_36",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "In Apple's consolidated statements of operations, what were total net sales for fiscal 2025 versus fiscal 2024?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 0.7276545800191442,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 0.7525360009859927,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 0.7525360009859927,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 235.98,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_37",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What were Apple's total assets at the end of fiscal 2025 according to the consolidated balance sheet?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 2.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 2.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 218.54,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_38",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What were Apple's total liabilities at the end of fiscal 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 2.0,
+          "ndcg": 0.9558295932317544,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 2.0,
+          "ndcg": 0.9558295932317544,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 192.67,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_39",
+      "category": "numerical",
+      "ticker": "NVDA",
+      "question": "What was NVIDIA's net income for the three months ended in the most recent quarter reported in this 10-Q?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.5950427489208391,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 0.5950427489208391,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 271.85,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_40",
+      "category": "numerical",
+      "ticker": "NVDA",
+      "question": "How much did NVIDIA spend on research and development in the most recent quarter versus the prior-year quarter?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 1.3333333333333333,
+          "ndcg": 0.5878007331959307,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.3333333333333333,
+          "ndcg": 0.5878007331959307,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 257.59,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_41",
+      "category": "numerical",
+      "ticker": "MSFT",
+      "question": "What was Microsoft's net income for the three months ended March 31, 2026?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.8503449055347546,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 0.8503449055347546,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 222.53,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_42",
+      "category": "numerical",
+      "ticker": "WMT",
+      "question": "What were Walmart's total revenues in the most recent fiscal year, and what were they the year before?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "ndcg": 0.9197207891481876,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "ndcg": 0.8854598815714874,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 1.0,
+          "ndcg": 0.8854598815714874,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 254.53,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_43",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "In the most recent quarter, how did Apple's Products net sales compare to Services net sales?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.9514426589871553,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.9395225786842207,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.9395225786842207,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 206.66,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_44",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "How much cash and cash equivalents did Apple hold at the end of the most recent quarter?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 251.44,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_45",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What was the value of Apple's inventories at the end of the most recent quarter?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 244.96,
+      "retrieved_count": 5
+    }
+  ],
+  "without_reranker": [
+    {
+      "id": "eval_01",
+      "category": "factual",
+      "ticker": "MSFT",
+      "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.3333333333333333,
+          "recall": 0.16666666666666666,
+          "ndcg": 0.6309297535714575,
+          "contamination": 0.6666666666666666
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.4,
+          "recall": 0.3333333333333333,
+          "ndcg": 0.6324370491201508,
+          "contamination": 0.6
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.2,
+          "recall": 0.3333333333333333,
+          "ndcg": 0.6324370491201508,
+          "contamination": 0.3
+        }
+      },
+      "latency_ms": 129.58,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_02",
+      "category": "numerical",
+      "ticker": "GOOGL",
+      "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "ndcg": 0.5216413215971617,
+          "contamination": 0.3333333333333333
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.6,
+          "ndcg": 0.5846388913827087,
+          "contamination": 0.2
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.6,
+          "ndcg": 0.5846388913827087,
+          "contamination": 0.1
+        }
+      },
+      "latency_ms": 152.65,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_03",
+      "category": "factual",
+      "ticker": "GOOGL",
+      "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "ndcg": 1.0,
+          "contamination": 0.3333333333333333
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.75,
+          "ndcg": 0.9716767318618029,
+          "contamination": 0.4
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.75,
+          "ndcg": 0.9716767318618029,
+          "contamination": 0.2
+        }
+      },
+      "latency_ms": 140.67,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_04",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What was Apple's total net sales in fiscal year 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.9605564132737651,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.8910563060113624,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.8910563060113624,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 104.37,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_05",
+      "category": "factual",
+      "ticker": "AAPL",
+      "question": "What are Apple's reportable product and service categories in its annual filing?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.6,
+          "ndcg": 0.7276545800191442,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 0.8,
+          "ndcg": 0.7413544377111377,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 0.8,
+          "ndcg": 0.7413544377111377,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 119.38,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_06",
+      "category": "numerical",
+      "ticker": "NVDA",
+      "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.7380487420225963,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.7380487420225963,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 119.58,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_07",
+      "category": "factual",
+      "ticker": "NVDA",
+      "question": "What business segments does NVIDIA report in its financial disclosures?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 92.13,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_08",
+      "category": "factual",
+      "ticker": "AMZN",
+      "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "ndcg": 0.7098097413968655,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.75,
+          "ndcg": 0.5633166330466233,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.75,
+          "ndcg": 0.5633166330466233,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 104.7,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_09",
+      "category": "numerical",
+      "ticker": "AMZN",
+      "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.6806060567602009,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.7120596330029775,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.7120596330029775,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 125.52,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_10",
+      "category": "factual",
+      "ticker": "META",
+      "question": "What are Meta Platforms' two reportable business segments?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 84.32,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_11",
+      "category": "numerical",
+      "ticker": "META",
+      "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.9686152031181796,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.9686152031181796,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 97.58,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_12",
+      "category": "factual",
+      "ticker": "TSLA",
+      "question": "What are Tesla's operating segments reported in its 10-K filing?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 93.79,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_13",
+      "category": "numerical",
+      "ticker": "TSLA",
+      "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 90.88,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_14",
+      "category": "factual",
+      "ticker": "JPM",
+      "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.3333333333333333,
+          "recall": 0.25,
+          "ndcg": 0.5,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.4,
+          "recall": 0.5,
+          "ndcg": 0.5706417189553201,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.2,
+          "recall": 0.5,
+          "ndcg": 0.5706417189553201,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 90.76,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_15",
+      "category": "numerical",
+      "ticker": "JPM",
+      "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 108.56,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_16",
+      "category": "factual",
+      "ticker": "GS",
+      "question": "What are the reportable business segments of The Goldman Sachs Group?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "ndcg": 0.5897053367440438,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "ndcg": 0.6010201730113366,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 1.0,
+          "ndcg": 0.6010201730113366,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 111.74,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_17",
+      "category": "numerical",
+      "ticker": "GS",
+      "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "ndcg": 0.9197207891481876,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "ndcg": 0.9047172294870752,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.9047172294870752,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 94.9,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_18",
+      "category": "factual",
+      "ticker": "BAC",
+      "question": "What operating business segments does Bank of America report?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.7195956154176459,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.778823727436232,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.778823727436232,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 93.81,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_19",
+      "category": "numerical",
+      "ticker": "WMT",
+      "question": "What was Walmart's total net sales and e-commerce sales growth?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "ndcg": 0.9197207891481876,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 0.75,
+          "ndcg": 0.6440580160927207,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 0.75,
+          "ndcg": 0.6440580160927207,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 102.89,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_20",
+      "category": "factual",
+      "ticker": "WMT",
+      "question": "What are Walmart's three reportable operating segments?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 73.52,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_21",
+      "category": "factual",
+      "ticker": "COST",
+      "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.7926063426251277,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.7926063426251277,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 115.38,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_22",
+      "category": "numerical",
+      "ticker": "COST",
+      "question": "What was Costco's membership fee revenue and member renewal rate?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.811352245459813,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.811352245459813,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 109.43,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_23",
+      "category": "factual",
+      "ticker": "JNJ",
+      "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 105.99,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_24",
+      "category": "factual",
+      "ticker": "UNH",
+      "question": "What are the reportable segments of UnitedHealth Group?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.6,
+          "ndcg": 0.8145672023038535,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 0.8480742992651266,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "ndcg": 0.8480742992651266,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 89.76,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_25",
+      "category": "numerical",
+      "ticker": "XOM",
+      "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.951678175969967,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.951678175969967,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 118.13,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_26",
+      "category": "temporal",
+      "ticker": "MSFT",
+      "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.985645752110898,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.985645752110898,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 115.04,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_27",
+      "category": "temporal",
+      "ticker": "NVDA",
+      "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.6,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 0.9108248814201987,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "ndcg": 0.9108248814201987,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 136.21,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_28",
+      "category": "temporal",
+      "ticker": "AMZN",
+      "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 0.9721212198129313,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.8950458310208543,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.8950458310208543,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 118.59,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_29",
+      "category": "cross-document",
+      "ticker": "TECH",
+      "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 136.22,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_30",
+      "category": "cross-document",
+      "ticker": "BANKS",
+      "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 147.8,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_31",
+      "category": "unanswerable",
+      "ticker": "AAPL",
+      "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 131.05,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_32",
+      "category": "unanswerable",
+      "ticker": "NVDA",
+      "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 122.91,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_33",
+      "category": "unanswerable",
+      "ticker": "TSLA",
+      "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 126.01,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_34",
+      "category": "unanswerable",
+      "ticker": "XYZ",
+      "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 1.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 1.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.5
+        }
+      },
+      "latency_ms": 89.51,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_35",
+      "category": "unanswerable",
+      "ticker": "AMZN",
+      "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+      "k_metrics": {
+        "k_3": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": false,
+          "reciprocal_rank": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "ndcg": 0.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 97.8,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_36",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "In Apple's consolidated statements of operations, what were total net sales for fiscal 2025 versus fiscal 2024?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 0.6310385047070085,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.6666666666666667,
+          "ndcg": 0.6647467502342809,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.6666666666666667,
+          "ndcg": 0.6647467502342809,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 146.28,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_37",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What were Apple's total assets at the end of fiscal 2025 according to the consolidated balance sheet?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 2.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 2.5,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 155.73,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_38",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What were Apple's total liabilities at the end of fiscal 2025?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "ndcg": 0.9197207891481876,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 2.0,
+          "ndcg": 0.9047172294870751,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 2.0,
+          "ndcg": 0.9047172294870751,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 112.11,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_39",
+      "category": "numerical",
+      "ticker": "NVDA",
+      "question": "What was NVIDIA's net income for the three months ended in the most recent quarter reported in this 10-Q?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "ndcg": 0.5,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.4573369727327457,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 0.4573369727327457,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 166.97,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_40",
+      "category": "numerical",
+      "ticker": "NVDA",
+      "question": "How much did NVIDIA spend on research and development in the most recent quarter versus the prior-year quarter?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "recall": 1.3333333333333333,
+          "ndcg": 0.9948813634680627,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.3333333333333333,
+          "ndcg": 0.9948813634680627,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 142.4,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_41",
+      "category": "numerical",
+      "ticker": "MSFT",
+      "question": "What was Microsoft's net income for the three months ended March 31, 2026?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "ndcg": 0.6309297535714575,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.6240505200038379,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 0.6240505200038379,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 119.93,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_42",
+      "category": "numerical",
+      "ticker": "WMT",
+      "question": "What were Walmart's total revenues in the most recent fiscal year, and what were they the year before?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.3,
+          "recall": 1.0,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 161.4,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_43",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "In the most recent quarter, how did Apple's Products net sales compare to Services net sales?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 0.75,
+          "ndcg": 1.0,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "recall": 1.25,
+          "ndcg": 0.9719643720954757,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.5,
+          "recall": 1.25,
+          "ndcg": 0.9719643720954757,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 136.63,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_44",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "How much cash and cash equivalents did Apple hold at the end of the most recent quarter?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "ndcg": 0.6309297535714575,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.6509209298071326,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 0.5,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 0.6509209298071326,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 135.83,
+      "retrieved_count": 5
+    },
+    {
+      "id": "eval_45",
+      "category": "numerical",
+      "ticker": "AAPL",
+      "question": "What was the value of Apple's inventories at the end of the most recent quarter?",
+      "k_metrics": {
+        "k_3": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "ndcg": 0.9639404333166532,
+          "contamination": 0.0
+        },
+        "k_5": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "recall": 1.0,
+          "ndcg": 0.9639404333166532,
+          "contamination": 0.0
+        },
+        "k_10": {
+          "hit": true,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "ndcg": 0.9639404333166532,
+          "contamination": 0.0
+        }
+      },
+      "latency_ms": 127.98,
+      "retrieved_count": 5
+    }
+  ],
+  "config": {
+    "corpus": "phase6_table_aware",
+    "embedding": "BAAI/bge-base-en-v1.5",
+    "hybrid_weights": {
+      "dense": 0.7,
+      "bm25": 0.3
+    },
+    "filtering": true,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  }
+}
