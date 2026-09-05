@@ -1,0 +1,776 @@
+[
+  {
+    "id": "eval_01",
+    "category": "factual",
+    "ticker": "MSFT",
+    "form": "10-K",
+    "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+    "target_sections": [
+      "Item 1A",
+      "Item 16",
+      "PART I"
+    ],
+    "ground_truth_keywords": [
+      "datacenters",
+      "hardware",
+      "Xbox",
+      "Surface",
+      "defects",
+      "design"
+    ],
+    "expected_answer": "Microsoft faces risks from complex datacenters and hardware products like Xbox consoles and Surface devices where failure to prevent or address defects could adversely affect business."
+  },
+  {
+    "id": "eval_02",
+    "category": "numerical",
+    "ticker": "GOOGL",
+    "form": "10-K",
+    "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+    "target_sections": [
+      "Item 7",
+      "Item 8",
+      "PART I"
+    ],
+    "ground_truth_keywords": [
+      "402,836",
+      "350,018",
+      "Revenues",
+      "Google Search",
+      "YouTube ads"
+    ],
+    "expected_answer": "Total revenues increased from $350,018 million in 2024 to $402,836 million in 2025."
+  },
+  {
+    "id": "eval_03",
+    "category": "factual",
+    "ticker": "GOOGL",
+    "form": "10-K",
+    "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+    "target_sections": [
+      "Item 7",
+      "MD&A"
+    ],
+    "ground_truth_keywords": [
+      "search queries",
+      "mobile devices",
+      "advertiser spending",
+      "ad formats"
+    ],
+    "expected_answer": "Growth in search queries from mobile adoption, advertiser spending growth, and improvements in ad formats and delivery."
+  },
+  {
+    "id": "eval_04",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What was Apple's total net sales in fiscal year 2025?",
+    "target_sections": [
+      "Item 7",
+      "Item 8",
+      "Consolidated Statements of Operations"
+    ],
+    "ground_truth_keywords": [
+      "net sales",
+      "Products",
+      "Services",
+      "iPhone"
+    ],
+    "expected_answer": "Apple's consolidated net sales for fiscal year 2025."
+  },
+  {
+    "id": "eval_05",
+    "category": "factual",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What are Apple's reportable product and service categories in its annual filing?",
+    "target_sections": [
+      "Item 1",
+      "Item 7"
+    ],
+    "ground_truth_keywords": [
+      "iPhone",
+      "Mac",
+      "iPad",
+      "Wearables",
+      "Services"
+    ],
+    "expected_answer": "iPhone, Mac, iPad, Wearables, Home and Accessories, and Services."
+  },
+  {
+    "id": "eval_06",
+    "category": "numerical",
+    "ticker": "NVDA",
+    "form": "10-K",
+    "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+    "target_sections": [
+      "Item 7",
+      "Item 8",
+      "MD&A"
+    ],
+    "ground_truth_keywords": [
+      "Compute & Networking",
+      "Graphics",
+      "Data Center",
+      "gross margin"
+    ],
+    "expected_answer": "NVIDIA's Data Center revenue expansion, total revenue growth and gross margin percentage."
+  },
+  {
+    "id": "eval_07",
+    "category": "factual",
+    "ticker": "NVDA",
+    "form": "10-K",
+    "question": "What business segments does NVIDIA report in its financial disclosures?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Compute & Networking",
+      "Graphics",
+      "Data Center",
+      "Gaming"
+    ],
+    "expected_answer": "Compute & Networking and Graphics segments."
+  },
+  {
+    "id": "eval_08",
+    "category": "factual",
+    "ticker": "AMZN",
+    "form": "10-K",
+    "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "North America",
+      "International",
+      "AWS",
+      "Amazon Web Services"
+    ],
+    "expected_answer": "North America, International, and AWS (Amazon Web Services)."
+  },
+  {
+    "id": "eval_09",
+    "category": "numerical",
+    "ticker": "AMZN",
+    "form": "10-K",
+    "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+    "target_sections": [
+      "Item 7",
+      "Item 8",
+      "Segment Results"
+    ],
+    "ground_truth_keywords": [
+      "AWS",
+      "segment",
+      "net sales",
+      "operating income"
+    ],
+    "expected_answer": "AWS segment net sales and operating income breakdown."
+  },
+  {
+    "id": "eval_10",
+    "category": "factual",
+    "ticker": "META",
+    "form": "10-K",
+    "question": "What are Meta Platforms' two reportable business segments?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Family of Apps",
+      "Reality Labs",
+      "FoA",
+      "RL"
+    ],
+    "expected_answer": "Family of Apps (FoA) and Reality Labs (RL)."
+  },
+  {
+    "id": "eval_11",
+    "category": "numerical",
+    "ticker": "META",
+    "form": "10-K",
+    "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+    "target_sections": [
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Reality Labs",
+      "loss",
+      "operating income",
+      "Family of Apps"
+    ],
+    "expected_answer": "Reality Labs recorded multi-billion dollar operating losses investing in metaverse and hardware technologies."
+  },
+  {
+    "id": "eval_12",
+    "category": "factual",
+    "ticker": "TSLA",
+    "form": "10-K",
+    "question": "What are Tesla's operating segments reported in its 10-K filing?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Automotive",
+      "Energy generation and storage",
+      "Services and other"
+    ],
+    "expected_answer": "Automotive and Energy generation and storage."
+  },
+  {
+    "id": "eval_13",
+    "category": "numerical",
+    "ticker": "TSLA",
+    "form": "10-K",
+    "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+    "target_sections": [
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "automotive revenues",
+      "regulatory credits",
+      "automotive gross margin"
+    ],
+    "expected_answer": "Tesla automotive revenues including regulatory credits and leasing revenues."
+  },
+  {
+    "id": "eval_14",
+    "category": "factual",
+    "ticker": "JPM",
+    "form": "10-K",
+    "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Executive Overview"
+    ],
+    "ground_truth_keywords": [
+      "Consumer & Community Banking",
+      "Corporate & Investment Bank",
+      "Commercial Banking",
+      "Asset & Wealth Management"
+    ],
+    "expected_answer": "Consumer & Community Banking (CCB), Commercial & Investment Bank (CIB), and Asset & Wealth Management (AWM)."
+  },
+  {
+    "id": "eval_15",
+    "category": "numerical",
+    "ticker": "JPM",
+    "form": "10-K",
+    "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+    "target_sections": [
+      "Item 7",
+      "Item 8",
+      "MD&A"
+    ],
+    "ground_truth_keywords": [
+      "Net interest income",
+      "credit losses",
+      "noninterest revenue"
+    ],
+    "expected_answer": "JPMorgan Chase net interest income and provision for credit losses."
+  },
+  {
+    "id": "eval_16",
+    "category": "factual",
+    "ticker": "GS",
+    "form": "10-K",
+    "question": "What are the reportable business segments of The Goldman Sachs Group?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Global Banking & Markets",
+      "Asset & Wealth Management",
+      "Platform Solutions"
+    ],
+    "expected_answer": "Global Banking & Markets, Asset & Wealth Management, and Platform Solutions."
+  },
+  {
+    "id": "eval_17",
+    "category": "numerical",
+    "ticker": "GS",
+    "form": "10-K",
+    "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+    "target_sections": [
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Investment banking",
+      "Advisory",
+      "Underwriting",
+      "fees"
+    ],
+    "expected_answer": "Goldman Sachs investment banking advisory and underwriting revenues."
+  },
+  {
+    "id": "eval_18",
+    "category": "factual",
+    "ticker": "BAC",
+    "form": "10-K",
+    "question": "What operating business segments does Bank of America report?",
+    "target_sections": [
+      "Item 1",
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Consumer Banking",
+      "Global Wealth & Investment Management",
+      "Global Banking",
+      "Global Markets"
+    ],
+    "expected_answer": "Consumer Banking, Global Wealth & Investment Management, Global Banking, and Global Markets."
+  },
+  {
+    "id": "eval_19",
+    "category": "numerical",
+    "ticker": "WMT",
+    "form": "10-K",
+    "question": "What was Walmart's total net sales and e-commerce sales growth?",
+    "target_sections": [
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Walmart U.S.",
+      "Walmart International",
+      "Sam's Club",
+      "e-commerce"
+    ],
+    "expected_answer": "Walmart net sales breakdown across Walmart U.S., Walmart International, and Sam's Club."
+  },
+  {
+    "id": "eval_20",
+    "category": "factual",
+    "ticker": "WMT",
+    "form": "10-K",
+    "question": "What are Walmart's three reportable operating segments?",
+    "target_sections": [
+      "Item 1",
+      "Item 7"
+    ],
+    "ground_truth_keywords": [
+      "Walmart U.S.",
+      "Walmart International",
+      "Sam's Club"
+    ],
+    "expected_answer": "Walmart U.S., Walmart International, and Sam's Club."
+  },
+  {
+    "id": "eval_21",
+    "category": "factual",
+    "ticker": "COST",
+    "form": "10-K",
+    "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+    "target_sections": [
+      "Item 1",
+      "Item 7"
+    ],
+    "ground_truth_keywords": [
+      "membership fees",
+      "net sales",
+      "warehouse",
+      "renewal rate"
+    ],
+    "expected_answer": "Costco operates membership warehouses where membership fees generate a substantial portion of operating income alongside merchandise sales."
+  },
+  {
+    "id": "eval_22",
+    "category": "numerical",
+    "ticker": "COST",
+    "form": "10-K",
+    "question": "What was Costco's membership fee revenue and member renewal rate?",
+    "target_sections": [
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "membership fees",
+      "renewal rate",
+      "Gold Star",
+      "Executive"
+    ],
+    "expected_answer": "Costco's membership fee revenue and membership renewal rates (US/Canada vs Worldwide)."
+  },
+  {
+    "id": "eval_23",
+    "category": "factual",
+    "ticker": "JNJ",
+    "form": "10-K",
+    "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+    "target_sections": [
+      "Item 1",
+      "Item 7"
+    ],
+    "ground_truth_keywords": [
+      "Innovative Medicine",
+      "MedTech",
+      "Pharmaceuticals",
+      "Medical Devices"
+    ],
+    "expected_answer": "Innovative Medicine (formerly Pharmaceuticals) and MedTech (Medical Devices)."
+  },
+  {
+    "id": "eval_24",
+    "category": "factual",
+    "ticker": "UNH",
+    "form": "10-K",
+    "question": "What are the reportable segments of UnitedHealth Group?",
+    "target_sections": [
+      "Item 1",
+      "Item 7"
+    ],
+    "ground_truth_keywords": [
+      "UnitedHealthcare",
+      "Optum",
+      "OptumHealth",
+      "OptumInsight",
+      "OptumRx"
+    ],
+    "expected_answer": "UnitedHealthcare, OptumHealth, OptumInsight, and OptumRx."
+  },
+  {
+    "id": "eval_25",
+    "category": "numerical",
+    "ticker": "XOM",
+    "form": "10-K",
+    "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+    "target_sections": [
+      "Item 7",
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "Upstream",
+      "Energy Products",
+      "Chemical Products",
+      "Specialty Products"
+    ],
+    "expected_answer": "ExxonMobil earnings categorized by Upstream, Energy Products, Chemical Products, and Specialty Products."
+  },
+  {
+    "id": "eval_26",
+    "category": "temporal",
+    "ticker": "MSFT",
+    "form": "10-K",
+    "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+    "target_sections": [
+      "Item 7",
+      "MD&A"
+    ],
+    "ground_truth_keywords": [
+      "Microsoft Cloud",
+      "Intelligent Cloud",
+      "Azure",
+      "server products"
+    ],
+    "expected_answer": "Growth rates and dollar increases in Microsoft Cloud and Intelligent Cloud revenue."
+  },
+  {
+    "id": "eval_27",
+    "category": "temporal",
+    "ticker": "NVDA",
+    "form": "10-K",
+    "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+    "target_sections": [
+      "Item 7",
+      "MD&A"
+    ],
+    "ground_truth_keywords": [
+      "Data Center",
+      "Compute & Networking",
+      "Hopper",
+      "Blackwell",
+      "revenue"
+    ],
+    "expected_answer": "Year-over-year Data Center revenue growth driven by AI accelerators and computing architectures."
+  },
+  {
+    "id": "eval_28",
+    "category": "temporal",
+    "ticker": "AMZN",
+    "form": "10-K",
+    "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+    "target_sections": [
+      "Item 7",
+      "Results of Operations"
+    ],
+    "ground_truth_keywords": [
+      "Advertising services",
+      "Online stores",
+      "Third-party seller",
+      "growth"
+    ],
+    "expected_answer": "Advertising services growth percentage compared to Online stores revenue."
+  },
+  {
+    "id": "eval_29",
+    "category": "cross-document",
+    "ticker": "TECH",
+    "form": "10-K",
+    "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+    "target_sections": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "ground_truth_keywords": [
+      "artificial intelligence",
+      "datacenters",
+      "capital expenditures",
+      "infrastructure",
+      "competition"
+    ],
+    "expected_answer": "All three companies cite substantial capital expenditure requirements for datacenters, competitive pressures, and evolving AI safety/regulatory risks."
+  },
+  {
+    "id": "eval_30",
+    "category": "cross-document",
+    "ticker": "BANKS",
+    "form": "10-K",
+    "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+    "target_sections": [
+      "Item 1A",
+      "Item 7A"
+    ],
+    "ground_truth_keywords": [
+      "interest rate",
+      "credit risk",
+      "liquidity",
+      "regulatory capital",
+      "market risk"
+    ],
+    "expected_answer": "Risks of monetary policy shifts, changes in interest rate curves, commercial real estate credit exposure, and Basel III regulatory capital rules."
+  },
+  {
+    "id": "eval_31",
+    "category": "unanswerable",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+    "target_sections": [],
+    "ground_truth_keywords": [],
+    "expected_answer": "Insufficient evidence to answer this question. SEC filings do not provide speculative multi-year forward hardware unit forecasts."
+  },
+  {
+    "id": "eval_32",
+    "category": "unanswerable",
+    "ticker": "NVDA",
+    "form": "10-K",
+    "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+    "target_sections": [],
+    "ground_truth_keywords": [],
+    "expected_answer": "Insufficient evidence to answer this question."
+  },
+  {
+    "id": "eval_33",
+    "category": "unanswerable",
+    "ticker": "TSLA",
+    "form": "10-K",
+    "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+    "target_sections": [],
+    "ground_truth_keywords": [],
+    "expected_answer": "Insufficient evidence to answer this question."
+  },
+  {
+    "id": "eval_34",
+    "category": "unanswerable",
+    "ticker": "XYZ",
+    "form": "10-K",
+    "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+    "target_sections": [],
+    "ground_truth_keywords": [],
+    "expected_answer": "Insufficient evidence to answer this question. No filings exist for QuantumCorp."
+  },
+  {
+    "id": "eval_35",
+    "category": "unanswerable",
+    "ticker": "AMZN",
+    "form": "10-K",
+    "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+    "target_sections": [],
+    "ground_truth_keywords": [],
+    "expected_answer": "Insufficient evidence to answer this question."
+  },
+  {
+    "id": "eval_36",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "In Apple's consolidated statements of operations, what were total net sales for fiscal 2025 versus fiscal 2024?",
+    "target_sections": [
+      "Item 8",
+      "Item 7"
+    ],
+    "ground_truth_keywords": [
+      "416,161",
+      "391,035",
+      "Total net sales"
+    ],
+    "expected_answer": "Total net sales were $416,161 million in fiscal 2025 versus $391,035 million in fiscal 2024.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_37",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What were Apple's total assets at the end of fiscal 2025 according to the consolidated balance sheet?",
+    "target_sections": [
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "359,241",
+      "Total assets"
+    ],
+    "expected_answer": "Total assets were $359,241 million at September 27, 2025.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_38",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What were Apple's total liabilities at the end of fiscal 2025?",
+    "target_sections": [
+      "Item 8"
+    ],
+    "ground_truth_keywords": [
+      "285,508",
+      "Total liabilities"
+    ],
+    "expected_answer": "Total liabilities were $285,508 million at the end of fiscal 2025.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_39",
+    "category": "numerical",
+    "ticker": "NVDA",
+    "form": "10-Q",
+    "question": "What was NVIDIA's net income for the three months ended in the most recent quarter reported in this 10-Q?",
+    "target_sections": [
+      "Item 1"
+    ],
+    "ground_truth_keywords": [
+      "59,688",
+      "Net income"
+    ],
+    "expected_answer": "Net income was $59,688 million for the three months ended in the most recent quarter.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_40",
+    "category": "numerical",
+    "ticker": "NVDA",
+    "form": "10-Q",
+    "question": "How much did NVIDIA spend on research and development in the most recent quarter versus the prior-year quarter?",
+    "target_sections": [
+      "Item 1"
+    ],
+    "ground_truth_keywords": [
+      "7,054",
+      "4,291",
+      "Research and development"
+    ],
+    "expected_answer": "Research and development expense was $7,054 million versus $4,291 million in the prior-year quarter.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_41",
+    "category": "numerical",
+    "ticker": "MSFT",
+    "form": "10-Q",
+    "question": "What was Microsoft's net income for the three months ended March 31, 2026?",
+    "target_sections": [
+      "Item 1"
+    ],
+    "ground_truth_keywords": [
+      "31,778",
+      "Net income"
+    ],
+    "expected_answer": "Net income was $31,778 million for the three months ended March 31, 2026.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_42",
+    "category": "numerical",
+    "ticker": "WMT",
+    "form": "10-K",
+    "question": "What were Walmart's total revenues in the most recent fiscal year, and what were they the year before?",
+    "target_sections": [
+      "Item 8",
+      "Item 7",
+      "Item 1A"
+    ],
+    "ground_truth_keywords": [
+      "713,163",
+      "680,985",
+      "Total revenues"
+    ],
+    "expected_answer": "Total revenues were $713,163 million in the most recent fiscal year versus $680,985 million in the prior year.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_43",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-Q",
+    "question": "In the most recent quarter, how did Apple's Products net sales compare to Services net sales?",
+    "target_sections": [
+      "Item 1"
+    ],
+    "ground_truth_keywords": [
+      "78,678",
+      "30,739",
+      "Products",
+      "Services"
+    ],
+    "expected_answer": "Products net sales were $78,678 million and Services net sales were $30,739 million.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_44",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-Q",
+    "question": "How much cash and cash equivalents did Apple hold at the end of the most recent quarter?",
+    "target_sections": [
+      "Item 1"
+    ],
+    "ground_truth_keywords": [
+      "39,544",
+      "Cash and cash equivalents"
+    ],
+    "expected_answer": "Cash and cash equivalents were $39,544 million.",
+    "requires_table": true
+  },
+  {
+    "id": "eval_45",
+    "category": "numerical",
+    "ticker": "AAPL",
+    "form": "10-Q",
+    "question": "What was the value of Apple's inventories at the end of the most recent quarter?",
+    "target_sections": [
+      "Item 1"
+    ],
+    "ground_truth_keywords": [
+      "11,092",
+      "Inventories"
+    ],
+    "expected_answer": "Inventories were $11,092 million at the end of the most recent quarter.",
+    "requires_table": true
+  }
+]

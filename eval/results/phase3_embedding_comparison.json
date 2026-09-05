@@ -1,0 +1,7429 @@
+[
+  {
+    "model_name": "bge-small",
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "dimensions": 384,
+    "avg_latency_ms": 19.15593142849892,
+    "median_latency_ms": 17.18789999722503,
+    "summary_metrics": {
+      "k_3": {
+        "hit_rate": 0.9714285714285714,
+        "mrr": 0.9428571428571428,
+        "precision": 0.8476190476190476,
+        "recall": 0.6742857142857144,
+        "by_category": {
+          "factual": {
+            "hit_rate": 1.0,
+            "mrr": 0.9285714285714286,
+            "precision": 0.7857142857142857,
+            "recall": 0.675,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.9393939393939393,
+            "recall": 0.6318181818181818,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 0.6666666666666666,
+            "mrr": 0.6666666666666666,
+            "precision": 0.6666666666666666,
+            "recall": 0.6,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.2,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      },
+      "k_5": {
+        "hit_rate": 0.9714285714285714,
+        "mrr": 0.9428571428571428,
+        "precision": 0.8228571428571428,
+        "recall": 0.7990476190476191,
+        "by_category": {
+          "factual": {
+            "hit_rate": 1.0,
+            "mrr": 0.9285714285714286,
+            "precision": 0.7428571428571429,
+            "recall": 0.7642857142857143,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.9272727272727272,
+            "recall": 0.856060606060606,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 0.6666666666666666,
+            "mrr": 0.6666666666666666,
+            "precision": 0.6,
+            "recall": 0.6833333333333332,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.7,
+            "recall": 0.4,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      },
+      "k_10": {
+        "hit_rate": 1.0,
+        "mrr": 0.946938775510204,
+        "precision": 0.7628571428571429,
+        "recall": 0.8519047619047619,
+        "by_category": {
+          "factual": {
+            "hit_rate": 1.0,
+            "mrr": 0.9285714285714286,
+            "precision": 0.6428571428571429,
+            "recall": 0.7642857142857143,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.8272727272727274,
+            "recall": 0.9242424242424242,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 0.7142857142857143,
+            "precision": 0.6666666666666666,
+            "recall": 0.9166666666666666,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.8,
+            "recall": 0.6,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      }
+    },
+    "per_question_results": [
+      {
+        "id": "eval_01",
+        "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+        "category": "factual",
+        "ticker": "MSFT",
+        "latency_ms": 72.46,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "AMZN",
+              "AMZN",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "AMZN",
+              "AMZN",
+              "NVDA",
+              "NVDA",
+              "AAPL",
+              "MSFT",
+              "MSFT",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_02",
+        "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+        "category": "numerical",
+        "ticker": "GOOGL",
+        "latency_ms": 22.59,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.2,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "revenues"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "UNH"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "revenues",
+              "402,836",
+              "youtube ads",
+              "350,018",
+              "google search"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "UNH",
+              "GOOGL",
+              "GOOGL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "revenues",
+              "402,836",
+              "youtube ads",
+              "350,018",
+              "google search"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "UNH",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_03",
+        "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+        "category": "factual",
+        "ticker": "GOOGL",
+        "latency_ms": 23.48,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "META",
+              "GOOGL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "META",
+              "GOOGL",
+              "META",
+              "GOOGL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "META",
+              "GOOGL",
+              "META",
+              "GOOGL",
+              "GOOGL",
+              "META",
+              "META",
+              "GOOGL",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_04",
+        "question": "What was Apple's total net sales in fiscal year 2025?",
+        "category": "numerical",
+        "ticker": "AAPL",
+        "latency_ms": 23.24,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_05",
+        "question": "What are Apple's reportable product and service categories in its annual filing?",
+        "category": "factual",
+        "ticker": "AAPL",
+        "latency_ms": 21.14,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.8,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.8,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 0.8,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_06",
+        "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+        "category": "numerical",
+        "ticker": "NVDA",
+        "latency_ms": 19.66,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "gross margin",
+              "data center"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "gross margin",
+              "data center"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 6,
+            "matched_keywords": [
+              "gross margin",
+              "data center",
+              "graphics",
+              "compute & networking"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_07",
+        "question": "What business segments does NVIDIA report in its financial disclosures?",
+        "category": "factual",
+        "ticker": "NVDA",
+        "latency_ms": 19.03,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.3333333333333333,
+            "recall": 0.0,
+            "relevant_count": 1,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "graphics",
+              "gaming",
+              "data center",
+              "compute & networking"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 6,
+            "matched_keywords": [
+              "graphics",
+              "gaming",
+              "data center",
+              "compute & networking"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_08",
+        "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+        "category": "factual",
+        "ticker": "AMZN",
+        "latency_ms": 17.97,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "WMT",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "WMT",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_09",
+        "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+        "category": "numerical",
+        "ticker": "AMZN",
+        "latency_ms": 16.54,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "net sales",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "MSFT",
+              "GOOGL",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_10",
+        "question": "What are Meta Platforms' two reportable business segments?",
+        "category": "factual",
+        "ticker": "META",
+        "latency_ms": 15.82,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.0,
+            "relevant_count": 2,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 3,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "GS",
+              "META",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.0,
+            "relevant_count": 4,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "GS",
+              "META",
+              "META",
+              "GS",
+              "META",
+              "JPM",
+              "JPM",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_11",
+        "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+        "category": "numerical",
+        "ticker": "META",
+        "latency_ms": 17.19,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META",
+              "META",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "NVDA",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_12",
+        "question": "What are Tesla's operating segments reported in its 10-K filing?",
+        "category": "factual",
+        "ticker": "TSLA",
+        "latency_ms": 14.88,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_13",
+        "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+        "category": "numerical",
+        "ticker": "TSLA",
+        "latency_ms": 16.35,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.6666666666666666,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_14",
+        "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+        "category": "factual",
+        "ticker": "JPM",
+        "latency_ms": 16.82,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "commercial banking",
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "commercial banking",
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 0.75,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "commercial banking",
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "GS",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_15",
+        "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+        "category": "numerical",
+        "ticker": "JPM",
+        "latency_ms": 18.09,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "credit losses"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_16",
+        "question": "What are the reportable business segments of The Goldman Sachs Group?",
+        "category": "factual",
+        "ticker": "GS",
+        "latency_ms": 16.88,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_17",
+        "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+        "category": "numerical",
+        "ticker": "GS",
+        "latency_ms": 14.56,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 6,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "JPM",
+              "GS",
+              "JPM",
+              "GS",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_18",
+        "question": "What operating business segments does Bank of America report?",
+        "category": "factual",
+        "ticker": "BAC",
+        "latency_ms": 15.87,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "global wealth & investment management",
+              "global banking",
+              "global markets",
+              "consumer banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "BAC",
+              "BAC"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "global wealth & investment management",
+              "global banking",
+              "global markets",
+              "consumer banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "BAC",
+              "BAC",
+              "BAC",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "global wealth & investment management",
+              "global banking",
+              "global markets",
+              "consumer banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "BAC",
+              "BAC",
+              "BAC",
+              "GS",
+              "GS",
+              "BAC",
+              "BAC",
+              "BAC",
+              "BAC"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_19",
+        "question": "What was Walmart's total net sales and e-commerce sales growth?",
+        "category": "numerical",
+        "ticker": "WMT",
+        "latency_ms": 15.85,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s."
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s."
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_20",
+        "question": "What are Walmart's three reportable operating segments?",
+        "category": "factual",
+        "ticker": "WMT",
+        "latency_ms": 14.71,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "AMZN",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "AMZN",
+              "MSFT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "AMZN",
+              "MSFT",
+              "WMT",
+              "WMT",
+              "AMZN",
+              "AMZN",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_21",
+        "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+        "category": "factual",
+        "ticker": "COST",
+        "latency_ms": 17.01,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "net sales",
+              "warehouse"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "net sales",
+              "warehouse",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "net sales",
+              "warehouse",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_22",
+        "question": "What was Costco's membership fee revenue and member renewal rate?",
+        "category": "numerical",
+        "ticker": "COST",
+        "latency_ms": 14.99,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "gold star",
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "gold star",
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "WMT",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_23",
+        "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+        "category": "factual",
+        "ticker": "JNJ",
+        "latency_ms": 18.02,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.0,
+            "relevant_count": 2,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 3,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 6,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_24",
+        "question": "What are the reportable segments of UnitedHealth Group?",
+        "category": "factual",
+        "ticker": "UNH",
+        "latency_ms": 15.34,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.4,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.4,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 0.4,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_25",
+        "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+        "category": "numerical",
+        "ticker": "XOM",
+        "latency_ms": 18.39,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "specialty products",
+              "energy products",
+              "chemical products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "specialty products",
+              "energy products",
+              "upstream",
+              "chemical products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "specialty products",
+              "energy products",
+              "upstream",
+              "chemical products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_26",
+        "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+        "category": "temporal",
+        "ticker": "MSFT",
+        "latency_ms": 17.53,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "server products",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "server products",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_27",
+        "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+        "category": "temporal",
+        "ticker": "NVDA",
+        "latency_ms": 17.46,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.8,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "compute & networking",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.8,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "compute & networking",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "hopper",
+              "blackwell",
+              "data center",
+              "compute & networking",
+              "revenue"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_28",
+        "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+        "category": "temporal",
+        "ticker": "AMZN",
+        "latency_ms": 15.91,
+        "k_metrics": {
+          "k_3": {
+            "hit": false,
+            "reciprocal_rank": 0.0,
+            "precision": 0.0,
+            "recall": 0.25,
+            "relevant_count": 0,
+            "matched_keywords": [
+              "growth"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": false,
+            "reciprocal_rank": 0.0,
+            "precision": 0.0,
+            "recall": 0.25,
+            "relevant_count": 0,
+            "matched_keywords": [
+              "growth"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "MSFT",
+              "MSFT",
+              "GOOGL",
+              "GOOGL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 0.14285714285714285,
+            "precision": 0.2,
+            "recall": 0.75,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "third-party seller",
+              "growth",
+              "advertising services"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "MSFT",
+              "MSFT",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "AMZN",
+              "GOOGL",
+              "AMZN",
+              "GOOGL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_29",
+        "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+        "category": "cross-document",
+        "ticker": "TECH",
+        "latency_ms": 16.8,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.0,
+            "relevant_count": 2,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JPM",
+              "WMT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.4,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "infrastructure",
+              "artificial intelligence"
+            ],
+            "retrieved_tickers": [
+              "JNJ",
+              "JPM",
+              "WMT",
+              "JPM",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.6,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "infrastructure",
+              "competition",
+              "artificial intelligence"
+            ],
+            "retrieved_tickers": [
+              "JNJ",
+              "JPM",
+              "WMT",
+              "JPM",
+              "AAPL",
+              "MSFT",
+              "MSFT",
+              "GOOGL",
+              "NVDA",
+              "GOOGL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_30",
+        "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+        "category": "cross-document",
+        "ticker": "BANKS",
+        "latency_ms": 18.37,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "credit risk",
+              "liquidity"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.4,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "credit risk",
+              "liquidity"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.6,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "credit risk",
+              "liquidity",
+              "interest rate"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "GS",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_31",
+        "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+        "category": "unanswerable",
+        "ticker": "AAPL",
+        "latency_ms": 18.29,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_32",
+        "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+        "category": "unanswerable",
+        "ticker": "NVDA",
+        "latency_ms": 18.04,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_33",
+        "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+        "category": "unanswerable",
+        "ticker": "TSLA",
+        "latency_ms": 19.54,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "XOM",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_34",
+        "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+        "category": "unanswerable",
+        "ticker": "XYZ",
+        "latency_ms": 15.07,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "MSFT",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "MSFT",
+              "NVDA",
+              "MSFT",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "MSFT",
+              "NVDA",
+              "MSFT",
+              "TSLA",
+              "META",
+              "UNH",
+              "GS",
+              "NVDA",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_35",
+        "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+        "category": "unanswerable",
+        "ticker": "AMZN",
+        "latency_ms": 16.56,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AMZN",
+              "TSLA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AMZN",
+              "TSLA",
+              "NVDA",
+              "AMZN",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AMZN",
+              "TSLA",
+              "NVDA",
+              "AMZN",
+              "TSLA",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "NVDA"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "model_name": "minilm-l6",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "dimensions": 384,
+    "avg_latency_ms": 9.689099999897214,
+    "median_latency_ms": 9.56419999783975,
+    "summary_metrics": {
+      "k_3": {
+        "hit_rate": 0.9714285714285714,
+        "mrr": 0.9571428571428572,
+        "precision": 0.8380952380952381,
+        "recall": 0.6647619047619048,
+        "by_category": {
+          "factual": {
+            "hit_rate": 0.9285714285714286,
+            "mrr": 0.9285714285714286,
+            "precision": 0.7619047619047619,
+            "recall": 0.675,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 0.9545454545454546,
+            "precision": 0.818181818181818,
+            "recall": 0.6015151515151514,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.8888888888888888,
+            "recall": 0.5333333333333333,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 0.30000000000000004,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      },
+      "k_5": {
+        "hit_rate": 0.9714285714285714,
+        "mrr": 0.9571428571428572,
+        "precision": 0.8,
+        "recall": 0.6933333333333334,
+        "by_category": {
+          "factual": {
+            "hit_rate": 0.9285714285714286,
+            "mrr": 0.9285714285714286,
+            "precision": 0.6857142857142857,
+            "recall": 0.692857142857143,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 0.9545454545454546,
+            "precision": 0.8363636363636363,
+            "recall": 0.6696969696969698,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.7999999999999999,
+            "recall": 0.5333333333333333,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.9,
+            "recall": 0.30000000000000004,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      },
+      "k_10": {
+        "hit_rate": 0.9714285714285714,
+        "mrr": 0.9571428571428572,
+        "precision": 0.7314285714285714,
+        "recall": 0.7761904761904762,
+        "by_category": {
+          "factual": {
+            "hit_rate": 0.9285714285714286,
+            "mrr": 0.9285714285714286,
+            "precision": 0.5857142857142857,
+            "recall": 0.7107142857142857,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 0.9545454545454546,
+            "precision": 0.7727272727272727,
+            "recall": 0.8015151515151515,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.7000000000000001,
+            "recall": 0.6666666666666666,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.9,
+            "recall": 0.7,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      }
+    },
+    "per_question_results": [
+      {
+        "id": "eval_01",
+        "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+        "category": "factual",
+        "ticker": "MSFT",
+        "latency_ms": 11.78,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "TSLA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "TSLA",
+              "NVDA",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 6,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "TSLA",
+              "NVDA",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "META",
+              "META",
+              "MSFT",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_02",
+        "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+        "category": "numerical",
+        "ticker": "GOOGL",
+        "latency_ms": 12.43,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.3333333333333333,
+            "recall": 0.2,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "revenues"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "GOOGL",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.4,
+            "recall": 0.2,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "revenues"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "GOOGL",
+              "MSFT",
+              "GOOGL",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.5,
+            "recall": 0.4,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "revenues",
+              "google search"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "GOOGL",
+              "MSFT",
+              "GOOGL",
+              "META",
+              "GOOGL",
+              "META",
+              "META",
+              "GOOGL",
+              "GOOGL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_03",
+        "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+        "category": "factual",
+        "ticker": "GOOGL",
+        "latency_ms": 10.41,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "GOOGL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "META",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "META",
+              "MSFT",
+              "META",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_04",
+        "question": "What was Apple's total net sales in fiscal year 2025?",
+        "category": "numerical",
+        "ticker": "AAPL",
+        "latency_ms": 10.99,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_05",
+        "question": "What are Apple's reportable product and service categories in its annual filing?",
+        "category": "factual",
+        "ticker": "AAPL",
+        "latency_ms": 11.5,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "WMT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.8,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "WMT",
+              "AAPL",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.8,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "WMT",
+              "AAPL",
+              "MSFT",
+              "AAPL",
+              "AAPL",
+              "GS",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_06",
+        "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+        "category": "numerical",
+        "ticker": "NVDA",
+        "latency_ms": 11.04,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 0.0,
+            "relevant_count": 1,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.2,
+            "recall": 0.0,
+            "relevant_count": 1,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.75,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "gross margin",
+              "data center",
+              "compute & networking"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_07",
+        "question": "What business segments does NVIDIA report in its financial disclosures?",
+        "category": "factual",
+        "ticker": "NVDA",
+        "latency_ms": 11.21,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.0,
+            "relevant_count": 2,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 3,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 0.0,
+            "relevant_count": 7,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_08",
+        "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+        "category": "factual",
+        "ticker": "AMZN",
+        "latency_ms": 11.56,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_09",
+        "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+        "category": "numerical",
+        "ticker": "AMZN",
+        "latency_ms": 11.21,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_10",
+        "question": "What are Meta Platforms' two reportable business segments?",
+        "category": "factual",
+        "ticker": "META",
+        "latency_ms": 9.9,
+        "k_metrics": {
+          "k_3": {
+            "hit": false,
+            "reciprocal_rank": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": false,
+            "reciprocal_rank": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": false,
+            "reciprocal_rank": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "MSFT",
+              "UNH",
+              "GS",
+              "MSFT",
+              "JPM",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_11",
+        "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+        "category": "numerical",
+        "ticker": "META",
+        "latency_ms": 8.5,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META",
+              "META",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "UNH",
+              "META",
+              "META",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_12",
+        "question": "What are Tesla's operating segments reported in its 10-K filing?",
+        "category": "factual",
+        "ticker": "TSLA",
+        "latency_ms": 8.89,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "WMT",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_13",
+        "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+        "category": "numerical",
+        "ticker": "TSLA",
+        "latency_ms": 9.7,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.6666666666666666,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_14",
+        "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+        "category": "factual",
+        "ticker": "JPM",
+        "latency_ms": 10.62,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "commercial banking",
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_15",
+        "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+        "category": "numerical",
+        "ticker": "JPM",
+        "latency_ms": 11.23,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_16",
+        "question": "What are the reportable business segments of The Goldman Sachs Group?",
+        "category": "factual",
+        "ticker": "GS",
+        "latency_ms": 9.78,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_17",
+        "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+        "category": "numerical",
+        "ticker": "GS",
+        "latency_ms": 7.97,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "JPM",
+              "GS",
+              "GS",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_18",
+        "question": "What operating business segments does Bank of America report?",
+        "category": "factual",
+        "ticker": "BAC",
+        "latency_ms": 8.28,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "global wealth & investment management",
+              "global markets",
+              "consumer banking",
+              "global banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "BAC",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "global wealth & investment management",
+              "global markets",
+              "consumer banking",
+              "global banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "BAC",
+              "JPM",
+              "BAC",
+              "BAC"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "global wealth & investment management",
+              "global markets",
+              "consumer banking",
+              "global banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "BAC",
+              "JPM",
+              "BAC",
+              "BAC",
+              "JPM",
+              "MSFT",
+              "BAC",
+              "GS",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_19",
+        "question": "What was Walmart's total net sales and e-commerce sales growth?",
+        "category": "numerical",
+        "ticker": "WMT",
+        "latency_ms": 9.37,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s."
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s."
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s."
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_20",
+        "question": "What are Walmart's three reportable operating segments?",
+        "category": "factual",
+        "ticker": "WMT",
+        "latency_ms": 9.54,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "UNH",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "UNH",
+              "MSFT",
+              "UNH",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_21",
+        "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+        "category": "factual",
+        "ticker": "COST",
+        "latency_ms": 7.31,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "net sales",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "net sales",
+              "renewal rate",
+              "warehouse",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "net sales",
+              "renewal rate",
+              "warehouse",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "WMT",
+              "WMT",
+              "COST",
+              "COST"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_22",
+        "question": "What was Costco's membership fee revenue and member renewal rate?",
+        "category": "numerical",
+        "ticker": "COST",
+        "latency_ms": 8.78,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.75,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "WMT",
+              "WMT",
+              "COST",
+              "COST"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_23",
+        "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+        "category": "factual",
+        "ticker": "JNJ",
+        "latency_ms": 8.6,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.0,
+            "relevant_count": 2,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 3,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.5,
+            "recall": 0.0,
+            "relevant_count": 5,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_24",
+        "question": "What are the reportable segments of UnitedHealth Group?",
+        "category": "factual",
+        "ticker": "UNH",
+        "latency_ms": 9.22,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.4,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.4,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.5,
+            "recall": 0.4,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_25",
+        "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+        "category": "numerical",
+        "ticker": "XOM",
+        "latency_ms": 8.8,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "specialty products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.5,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "specialty products",
+              "upstream"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "specialty products",
+              "energy products",
+              "upstream",
+              "chemical products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_26",
+        "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+        "category": "temporal",
+        "ticker": "MSFT",
+        "latency_ms": 8.47,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "GOOGL",
+              "MSFT",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_27",
+        "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+        "category": "temporal",
+        "ticker": "NVDA",
+        "latency_ms": 8.81,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "hopper",
+              "blackwell",
+              "data center",
+              "compute & networking",
+              "revenue"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_28",
+        "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+        "category": "temporal",
+        "ticker": "AMZN",
+        "latency_ms": 9.56,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "growth"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.25,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "growth"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "META",
+              "MSFT",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.2,
+            "recall": 0.25,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "growth"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "META",
+              "MSFT",
+              "META",
+              "GOOGL",
+              "MSFT",
+              "MSFT",
+              "GOOGL",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_29",
+        "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+        "category": "cross-document",
+        "ticker": "TECH",
+        "latency_ms": 9.86,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.2,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "infrastructure"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.2,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "infrastructure"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "JNJ"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "capital expenditures",
+              "infrastructure",
+              "artificial intelligence"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "JNJ",
+              "NVDA",
+              "TSLA",
+              "MSFT",
+              "MSFT",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_30",
+        "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+        "category": "cross-document",
+        "ticker": "BANKS",
+        "latency_ms": 9.97,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.4,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "credit risk",
+              "liquidity"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.4,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "credit risk",
+              "liquidity"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.8,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "market risk",
+              "credit risk",
+              "liquidity",
+              "interest rate"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "JPM",
+              "JPM",
+              "GS",
+              "GS",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_31",
+        "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+        "category": "unanswerable",
+        "ticker": "AAPL",
+        "latency_ms": 8.11,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "META",
+              "AMZN",
+              "AAPL",
+              "AMZN",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_32",
+        "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+        "category": "unanswerable",
+        "ticker": "NVDA",
+        "latency_ms": 9.26,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_33",
+        "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+        "category": "unanswerable",
+        "ticker": "TSLA",
+        "latency_ms": 10.35,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "XOM",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_34",
+        "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+        "category": "unanswerable",
+        "ticker": "XYZ",
+        "latency_ms": 8.47,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "NVDA",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "NVDA",
+              "AMZN",
+              "JPM",
+              "XOM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "NVDA",
+              "AMZN",
+              "JPM",
+              "XOM",
+              "UNH",
+              "GS",
+              "META",
+              "GS",
+              "BAC"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_35",
+        "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+        "category": "unanswerable",
+        "ticker": "AMZN",
+        "latency_ms": 7.64,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "model_name": "bge-base",
+    "model_id": "BAAI/bge-base-en-v1.5",
+    "dimensions": 768,
+    "avg_latency_ms": 35.54642857166722,
+    "median_latency_ms": 35.20429999844055,
+    "summary_metrics": {
+      "k_3": {
+        "hit_rate": 1.0,
+        "mrr": 0.9714285714285714,
+        "precision": 0.8095238095238094,
+        "recall": 0.6695238095238095,
+        "by_category": {
+          "factual": {
+            "hit_rate": 1.0,
+            "mrr": 0.9642857142857143,
+            "precision": 0.6666666666666666,
+            "recall": 0.5297619047619048,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 0.9545454545454546,
+            "precision": 0.9393939393939393,
+            "recall": 0.6969696969696969,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.7833333333333333,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.8333333333333333,
+            "recall": 0.5,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      },
+      "k_5": {
+        "hit_rate": 1.0,
+        "mrr": 0.9714285714285714,
+        "precision": 0.8114285714285714,
+        "recall": 0.7857142857142857,
+        "by_category": {
+          "factual": {
+            "hit_rate": 1.0,
+            "mrr": 0.9642857142857143,
+            "precision": 0.6714285714285715,
+            "recall": 0.6630952380952381,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 0.9545454545454546,
+            "precision": 0.9272727272727272,
+            "recall": 0.8787878787878788,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.7833333333333333,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.9,
+            "recall": 0.6,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      },
+      "k_10": {
+        "hit_rate": 1.0,
+        "mrr": 0.9714285714285714,
+        "precision": 0.7342857142857142,
+        "recall": 0.8304761904761906,
+        "by_category": {
+          "factual": {
+            "hit_rate": 1.0,
+            "mrr": 0.9642857142857143,
+            "precision": 0.5857142857142856,
+            "recall": 0.7464285714285716,
+            "count": 14
+          },
+          "numerical": {
+            "hit_rate": 1.0,
+            "mrr": 0.9545454545454546,
+            "precision": 0.8454545454545456,
+            "recall": 0.8787878787878788,
+            "count": 11
+          },
+          "temporal": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.5666666666666667,
+            "recall": 0.85,
+            "count": 3
+          },
+          "cross-document": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 0.75,
+            "recall": 0.7,
+            "count": 2
+          },
+          "unanswerable": {
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "count": 5
+          }
+        }
+      }
+    },
+    "per_question_results": [
+      {
+        "id": "eval_01",
+        "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+        "category": "factual",
+        "ticker": "MSFT",
+        "latency_ms": 49.52,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "AAPL",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "AAPL",
+              "NVDA",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "design",
+              "xbox",
+              "hardware",
+              "defects",
+              "surface",
+              "datacenters"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "AAPL",
+              "NVDA",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "META",
+              "META",
+              "META",
+              "GOOGL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_02",
+        "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+        "category": "numerical",
+        "ticker": "GOOGL",
+        "latency_ms": 48.2,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "revenues",
+              "402,836",
+              "youtube ads",
+              "350,018",
+              "google search"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "GOOGL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "revenues",
+              "402,836",
+              "youtube ads",
+              "350,018",
+              "google search"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "revenues",
+              "402,836",
+              "youtube ads",
+              "350,018",
+              "google search"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "META",
+              "GOOGL",
+              "GOOGL",
+              "GOOGL",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_03",
+        "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+        "category": "factual",
+        "ticker": "GOOGL",
+        "latency_ms": 43.09,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "GOOGL",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "GOOGL",
+              "META",
+              "META",
+              "GOOGL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.3,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "ad formats",
+              "mobile devices",
+              "advertiser spending",
+              "search queries"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "GOOGL",
+              "META",
+              "META",
+              "GOOGL",
+              "GOOGL",
+              "MSFT",
+              "GOOGL",
+              "MSFT",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_04",
+        "question": "What was Apple's total net sales in fiscal year 2025?",
+        "category": "numerical",
+        "ticker": "AAPL",
+        "latency_ms": 37.27,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "iphone",
+              "net sales",
+              "products",
+              "services"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_05",
+        "question": "What are Apple's reportable product and service categories in its annual filing?",
+        "category": "factual",
+        "ticker": "AAPL",
+        "latency_ms": 35.01,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 0.6,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "ipad"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.8,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "services",
+              "ipad"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "MSFT",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.5,
+            "recall": 0.8,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "iphone",
+              "mac",
+              "services",
+              "ipad"
+            ],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "MSFT",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_06",
+        "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+        "category": "numerical",
+        "ticker": "NVDA",
+        "latency_ms": 34.02,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "gross margin",
+              "data center"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "gross margin",
+              "data center"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.5,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "gross margin",
+              "data center"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "NVDA",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_07",
+        "question": "What business segments does NVIDIA report in its financial disclosures?",
+        "category": "factual",
+        "ticker": "NVDA",
+        "latency_ms": 33.93,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.0,
+            "relevant_count": 2,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 3,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.0,
+            "relevant_count": 6,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_08",
+        "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+        "category": "factual",
+        "ticker": "AMZN",
+        "latency_ms": 35.85,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "north america",
+              "amazon web services",
+              "international",
+              "aws"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_09",
+        "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+        "category": "numerical",
+        "ticker": "AMZN",
+        "latency_ms": 34.95,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "segment",
+              "net sales",
+              "aws",
+              "operating income"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_10",
+        "question": "What are Meta Platforms' two reportable business segments?",
+        "category": "factual",
+        "ticker": "META",
+        "latency_ms": 32.57,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "rl"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "UNH",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.25,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "rl"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "UNH",
+              "META",
+              "MSFT",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3,
+            "recall": 0.25,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "rl"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "UNH",
+              "META",
+              "MSFT",
+              "META",
+              "UNH",
+              "META",
+              "MSFT",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_11",
+        "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+        "category": "numerical",
+        "ticker": "META",
+        "latency_ms": 35.2,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META",
+              "META",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "family of apps",
+              "reality labs",
+              "loss"
+            ],
+            "retrieved_tickers": [
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_12",
+        "question": "What are Tesla's operating segments reported in its 10-K filing?",
+        "category": "factual",
+        "ticker": "TSLA",
+        "latency_ms": 35.6,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.3333333333333333,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "energy generation and storage"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.3333333333333333,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "energy generation and storage"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "WMT",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "energy generation and storage",
+              "automotive",
+              "services and other"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "WMT",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_13",
+        "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+        "category": "numerical",
+        "ticker": "TSLA",
+        "latency_ms": 32.18,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "relevant_count": 10,
+            "matched_keywords": [
+              "automotive revenues",
+              "regulatory credits"
+            ],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_14",
+        "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+        "category": "factual",
+        "ticker": "JPM",
+        "latency_ms": 36.03,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "commercial banking"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.75,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "commercial banking",
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "commercial banking",
+              "consumer & community banking",
+              "asset & wealth management"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_15",
+        "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+        "category": "numerical",
+        "ticker": "JPM",
+        "latency_ms": 35.99,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.6666666666666666,
+            "recall": 0.3333333333333333,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "credit losses"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "noninterest revenue",
+              "credit losses",
+              "net interest income"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_16",
+        "question": "What are the reportable business segments of The Goldman Sachs Group?",
+        "category": "factual",
+        "ticker": "GS",
+        "latency_ms": 30.95,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "global banking & markets"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "global banking & markets",
+              "asset & wealth management",
+              "platform solutions"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_17",
+        "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+        "category": "numerical",
+        "ticker": "GS",
+        "latency_ms": 31.62,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 1.0,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "fees",
+              "underwriting",
+              "advisory",
+              "investment banking"
+            ],
+            "retrieved_tickers": [
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "GS",
+              "JPM",
+              "JPM",
+              "GS",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_18",
+        "question": "What operating business segments does Bank of America report?",
+        "category": "factual",
+        "ticker": "BAC",
+        "latency_ms": 33.6,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "global banking",
+              "global markets",
+              "consumer banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "JPM",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.75,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "global banking",
+              "global markets",
+              "consumer banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "JPM",
+              "JPM",
+              "BAC",
+              "JPM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.75,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "global banking",
+              "global markets",
+              "consumer banking"
+            ],
+            "retrieved_tickers": [
+              "BAC",
+              "JPM",
+              "JPM",
+              "BAC",
+              "JPM",
+              "BAC",
+              "BAC",
+              "BAC",
+              "MSFT",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_19",
+        "question": "What was Walmart's total net sales and e-commerce sales growth?",
+        "category": "numerical",
+        "ticker": "WMT",
+        "latency_ms": 36.5,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s."
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT",
+              "WMT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_20",
+        "question": "What are Walmart's three reportable operating segments?",
+        "category": "factual",
+        "ticker": "WMT",
+        "latency_ms": 29.5,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "MSFT",
+              "UNH"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 1.0,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "MSFT",
+              "UNH",
+              "WMT",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "walmart international",
+              "walmart u.s.",
+              "sam's club"
+            ],
+            "retrieved_tickers": [
+              "WMT",
+              "MSFT",
+              "UNH",
+              "WMT",
+              "AMZN",
+              "AMZN",
+              "WMT",
+              "WMT",
+              "MSFT",
+              "UNH"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_21",
+        "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+        "category": "factual",
+        "ticker": "COST",
+        "latency_ms": 37.47,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "net sales",
+              "warehouse"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "net sales",
+              "renewal rate",
+              "warehouse",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "WMT",
+              "COST"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "net sales",
+              "renewal rate",
+              "warehouse",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "WMT",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_22",
+        "question": "What was Costco's membership fee revenue and member renewal rate?",
+        "category": "numerical",
+        "ticker": "COST",
+        "latency_ms": 31.22,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "gold star",
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "gold star",
+              "executive",
+              "renewal rate",
+              "membership fees"
+            ],
+            "retrieved_tickers": [
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST",
+              "COST"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_23",
+        "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+        "category": "factual",
+        "ticker": "JNJ",
+        "latency_ms": 34.05,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.0,
+            "relevant_count": 3,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.0,
+            "relevant_count": 5,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.5,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "innovative medicine",
+              "medtech"
+            ],
+            "retrieved_tickers": [
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "JNJ",
+              "GS",
+              "JNJ",
+              "JNJ"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_24",
+        "question": "What are the reportable segments of UnitedHealth Group?",
+        "category": "factual",
+        "ticker": "UNH",
+        "latency_ms": 30.2,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.4,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.4,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.5,
+            "recall": 0.4,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "optum",
+              "unitedhealthcare"
+            ],
+            "retrieved_tickers": [
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "UNH",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_25",
+        "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+        "category": "numerical",
+        "ticker": "XOM",
+        "latency_ms": 35.2,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.5,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "energy products",
+              "upstream"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "energy products",
+              "upstream",
+              "chemical products",
+              "specialty products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "energy products",
+              "upstream",
+              "chemical products",
+              "specialty products"
+            ],
+            "retrieved_tickers": [
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM",
+              "XOM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_26",
+        "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+        "category": "temporal",
+        "ticker": "MSFT",
+        "latency_ms": 36.91,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "server products",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "server products",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "relevant_count": 9,
+            "matched_keywords": [
+              "azure",
+              "intelligent cloud",
+              "server products",
+              "microsoft cloud"
+            ],
+            "retrieved_tickers": [
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "MSFT"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_27",
+        "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+        "category": "temporal",
+        "ticker": "NVDA",
+        "latency_ms": 36.25,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.6,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "MSFT",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.6,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "META",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6,
+            "recall": 0.8,
+            "relevant_count": 6,
+            "matched_keywords": [
+              "data center",
+              "revenue",
+              "compute & networking",
+              "blackwell"
+            ],
+            "retrieved_tickers": [
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "META",
+              "NVDA",
+              "MSFT",
+              "NVDA",
+              "META",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_28",
+        "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+        "category": "temporal",
+        "ticker": "AMZN",
+        "latency_ms": 32.43,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "relevant_count": 1,
+            "matched_keywords": [
+              "third-party seller",
+              "growth",
+              "advertising services"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "META",
+              "GOOGL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.4,
+            "recall": 0.75,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "third-party seller",
+              "growth",
+              "advertising services"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "META",
+              "GOOGL",
+              "GOOGL",
+              "AMZN"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.2,
+            "recall": 0.75,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "third-party seller",
+              "growth",
+              "advertising services"
+            ],
+            "retrieved_tickers": [
+              "AMZN",
+              "META",
+              "GOOGL",
+              "GOOGL",
+              "AMZN",
+              "MSFT",
+              "GOOGL",
+              "GOOGL",
+              "META",
+              "META"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_29",
+        "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+        "category": "cross-document",
+        "ticker": "TECH",
+        "latency_ms": 36.01,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6,
+            "relevant_count": 3,
+            "matched_keywords": [
+              "datacenters",
+              "capital expenditures",
+              "infrastructure"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "MSFT"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 0.6,
+            "relevant_count": 5,
+            "matched_keywords": [
+              "datacenters",
+              "capital expenditures",
+              "infrastructure"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "MSFT",
+              "META",
+              "JNJ"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.7,
+            "recall": 0.6,
+            "relevant_count": 7,
+            "matched_keywords": [
+              "datacenters",
+              "capital expenditures",
+              "infrastructure"
+            ],
+            "retrieved_tickers": [
+              "GOOGL",
+              "GOOGL",
+              "MSFT",
+              "META",
+              "JNJ",
+              "META",
+              "MSFT",
+              "MSFT",
+              "MSFT",
+              "GS"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_30",
+        "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+        "category": "cross-document",
+        "ticker": "BANKS",
+        "latency_ms": 36.45,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "relevant_count": 2,
+            "matched_keywords": [
+              "liquidity",
+              "interest rate"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "GS",
+              "JPM"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.6,
+            "relevant_count": 4,
+            "matched_keywords": [
+              "credit risk",
+              "liquidity",
+              "interest rate"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "GS",
+              "JPM",
+              "GS",
+              "GS"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 0.8,
+            "recall": 0.8,
+            "relevant_count": 8,
+            "matched_keywords": [
+              "market risk",
+              "credit risk",
+              "liquidity",
+              "interest rate"
+            ],
+            "retrieved_tickers": [
+              "JPM",
+              "GS",
+              "JPM",
+              "GS",
+              "GS",
+              "GS",
+              "JPM",
+              "GS",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_31",
+        "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+        "category": "unanswerable",
+        "ticker": "AAPL",
+        "latency_ms": 34.35,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL",
+              "AAPL"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_32",
+        "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+        "category": "unanswerable",
+        "ticker": "NVDA",
+        "latency_ms": 36.5,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA",
+              "NVDA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_33",
+        "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+        "category": "unanswerable",
+        "ticker": "TSLA",
+        "latency_ms": 38.92,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA",
+              "TSLA"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_34",
+        "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+        "category": "unanswerable",
+        "ticker": "XYZ",
+        "latency_ms": 31.13,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "META",
+              "NVDA",
+              "TSLA"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "META",
+              "NVDA",
+              "TSLA",
+              "GS",
+              "MSFT"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "META",
+              "NVDA",
+              "TSLA",
+              "GS",
+              "MSFT",
+              "GS",
+              "META",
+              "UNH",
+              "JPM",
+              "JPM"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval_35",
+        "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+        "category": "unanswerable",
+        "ticker": "AMZN",
+        "latency_ms": 35.42,
+        "k_metrics": {
+          "k_3": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "GOOGL",
+              "META",
+              "META"
+            ]
+          },
+          "k_5": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "GOOGL",
+              "META",
+              "META",
+              "AMZN",
+              "META"
+            ]
+          },
+          "k_10": {
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "relevant_count": 0,
+            "matched_keywords": [],
+            "retrieved_tickers": [
+              "GOOGL",
+              "META",
+              "META",
+              "AMZN",
+              "META",
+              "META",
+              "AMZN",
+              "AMZN",
+              "AMZN",
+              "AMZN"
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

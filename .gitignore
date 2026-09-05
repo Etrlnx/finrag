@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Environment vars
+.env
+.env.local
+
+# Data files
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+data/vector_stores/*
+!data/vector_stores/.gitkeep
+
+knowledge-graph/
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+work/
+
+# Evaluation runs & temporary test outputs
+eval/results/*
+!eval/results/.gitkeep
+*.log
