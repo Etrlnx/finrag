@@ -1,0 +1,1098 @@
+{
+  "config": {
+    "prompt": "original",
+    "reranker": false,
+    "fetch_k": 20,
+    "final_k": 5
+  },
+  "overall": {
+    "total": 20,
+    "correct": 0,
+    "accuracy": 0.0,
+    "format_ok": 0.0,
+    "citation_ok": 0.2,
+    "grounded_ok": 1.0,
+    "refusal_ok": 0.55,
+    "avg_latency_ms": 5836.654
+  },
+  "by_category": {
+    "supported_numerical": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.2,
+      "grounded": 1.0,
+      "refusal": 0.2
+    },
+    "supported_factual": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.5,
+      "grounded": 1.0,
+      "refusal": 0.5
+    },
+    "temporal": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 0.5
+    },
+    "cross_document": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 1.0,
+      "grounded": 1.0,
+      "refusal": 0.0
+    },
+    "unanswerable_future": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 1.0
+    },
+    "unanswerable_absent_company": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 1.0
+    },
+    "unanswerable_unsupported_causal": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 1.0
+    },
+    "unanswerable_outside_corpus": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 1.0
+    },
+    "unanswerable_specific_metric": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 1.0
+    },
+    "ambiguous_contradictory": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 1.0
+    },
+    "supported_table_dependent": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.25,
+      "grounded": 1.0,
+      "refusal": 0.5
+    }
+  },
+  "per_question": [
+    {
+      "id": "gen_01",
+      "category": "supported_numerical",
+      "question": "What were Apple's total net sales for fiscal 2025 versus fiscal 2024?",
+      "answer": "Insufficient evidence to answer this question.\nThe evidence contains Apple's total net sales for fiscal 2025 ($94,036 million) and fiscal 2024 ($80,408 million).",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 2478.4,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "gen_02",
+      "category": "supported_numerical",
+      "question": "What were Apple's total assets at the end of fiscal 2025 according to the consolidated balance sheet?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains the total shareholders' equity, beginning balances for fiscal years 2025, 2024, and 2023, as well as the total assets, beginning balances for fiscal years 2025 and 2024.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 4148.5,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "gen_03",
+      "category": "supported_numerical",
+      "question": "What was NVIDIA's net income for the most recent quarter reported in this 10-Q?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain NVIDIA's net income for the fiscal year ended January 25, 2026, but not for the most recent quarter reported in this 10-Q.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 5863.49,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "gen_04",
+      "category": "supported_numerical",
+      "question": "How much did NVIDIA spend on research and development in the most recent quarter versus the prior-year quarter?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about research and development expenses for NVIDIA in previous quarters, but it does not provide information about the company's research and development expenses in the most recent quarter compared to the prior quarter.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 5964.9,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Financial Statements (Unaudited)"
+      ]
+    },
+    {
+      "id": "gen_05",
+      "category": "supported_numerical",
+      "question": "What was Microsoft's net income for the three months ended March 31, 2026?",
+      "answer": "[MSFT, 10-Q, 2026-04-29, Item 2]\nNet income was $133,749 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 2",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 2]",
+            "start": 0,
+            "end": 32
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 5769.04,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 1",
+        "Item 2",
+        "Item 7",
+        "Item 1"
+      ]
+    },
+    {
+      "id": "gen_06",
+      "category": "supported_factual",
+      "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+      "answer": "Based on the provided evidence passages, Microsoft's main risk factors regarding complex datacenters and hardware products are:\n\n1. Inadequate datacenter capacity to support the delivery and continued development of their products and services. [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]\n2. Component shortages, excess or obsolete inventory, or price reductions resulting in inventory adjustments, which may increase their cost of revenue. [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]\n3. Failure to maintain and operate adequate infrastructure or secure the resources necessary to support it, which may result in outages, disruptions, or capacity constraints. [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]\n4. The complexity of their products and services, which demand more computing power, and the cost or availability of dependencies such as permitted and buildable land, predictable energy, networking supplies, and servers. [MSFT, 10-K, 2026-07-29, Item 1A]\n5. The rapid evolution of AI technologies and use cases, which may outpace the development, deployment, and effectiveness of security products, controls, and industry standards. [MSFT, 10-K, 2026-07-29, Item 1A]\n6. The need to maintain and support third-party hardware and software from multiple vendors, which may include systems acquired over many years. [MSFT, 10-K, 2026-07-29, Item 1A]\n\nThese risk factors are related to the complexity and scale of Microsoft's datacenter and hardware product offerings, and the challenges they face in maintaining and supporting these offerings.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 6,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 245,
+            "end": 282
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 435,
+            "end": 472
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 648,
+            "end": 685
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 908,
+            "end": 941
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 1120,
+            "end": 1153
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 1299,
+            "end": 1332
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 6,
+        "ungrounded": [],
+        "total": 6
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 0.5,
+      "correct": false,
+      "latency_ms": 8950.41,
+      "retrieved_tickers": [
+        "META",
+        "MSFT",
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 1A.",
+        "Item 1A",
+        "Item 1A. Risk Factors",
+        "Item 1A",
+        "Item 1A. Risk Factors"
+      ]
+    },
+    {
+      "id": "gen_07",
+      "category": "supported_factual",
+      "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about revenue growth drivers for Meta's advertising in 2025, but not for Google Search & other advertising.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 2916.9,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "MSFT",
+        "MSFT",
+        "META"
+      ],
+      "retrieved_sections": [
+        "ITEM 7.",
+        "ITEM 2.",
+        "Item 2",
+        "Item 2",
+        "Item 7."
+      ]
+    },
+    {
+      "id": "gen_08",
+      "category": "temporal",
+      "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+      "answer": "I'm sorry, but I cannot provide the answer in the requested format. The question seems to ask for a comparison of Microsoft Cloud revenue and Intelligent Cloud operating income, but the evidence passages do not provide a direct comparison between these two metrics.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 0.6666666666666666,
+      "correct": false,
+      "latency_ms": 6036.79,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 7",
+        "Item 7",
+        "Item 2",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "gen_09",
+      "category": "temporal",
+      "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about revenue growth, but not the specific comparison between fiscal year 2025 and fiscal year 2026 for Data Center revenue.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.5,
+      "correct": false,
+      "latency_ms": 5846.07,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "gen_10",
+      "category": "cross_document",
+      "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+      "answer": "Here are the descriptions of risks related to artificial intelligence and datacenter capital expenditures from Microsoft, Google, and Meta:\n\n**Microsoft:**\n\n* Risks related to artificial intelligence:\n + Issues in the development, deployment, and use of AI may result in reputational or competitive harm or liability [MSFT, 10-K, 2026-07-29, Item 1A].\n + Our ability to fund these investments depends on our ability to generate sufficient cash flows and obtain financing on acceptable terms [MSFT, 10-K, 2026-07-29, Item 1A].\n + Issues in the development, deployment, and use of AI may result in unintended consequences or other new or expanded risks and liabilities [MSFT, 10-K, 2026-07-29, Item 1A].\n + Our increasing user traffic, growth in services, and the complexity of our products and services demand more computing power [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Datasets may be overbroad, insufficient, or contain biased or inaccurate information [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Content generated by AI systems may be offensive, illegal, inaccurate, or otherwise harmful [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Our AI systems offer users powerful tools and capabilities, but may be used in unintended or inappropriate ways [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Our focus on cloud-based and AI services presents execution and competitive risks [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n* Risks related to datacenter capital expenditures:\n + We are incurring significant costs to build and maintain infrastructure to support cloud-based and AI services, reducing operating margins [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Our datacenters depend on the availability of permitted and buildable land, predictable energy, networking supplies, and servers, including graphics processing units and other components [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + The cost or availability of these dependencies could be adversely affected by a variety of factors, including the transition to a clean energy economy, local and regional environmental regulations, and geopolitical disruptions [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n\n**Google:**\n\n* Risks related to artificial intelligence:\n + Errors, bugs, or vulnerabilities introduced through the use of AI to develop or maintain software or systems and the use of AI within those software and systems have led to, and may in the future lead to, outcomes including a negative experience or other adverse effects for users and marketers who use our products [15, META, 10-K, 2026-01-29, Item 1A].\n + AI algorithms or training methodologies may be flawed [14, MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Datasets may be overbroad, insufficient, or contain biased or inaccurate information [14, MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n + Content generated by AI systems may be offensive, illegal, inaccurate, or otherwise harmful [14, MSFT, 10-Q, 2026-04-29, ITEM 1A. RI].\n* Risks related to datacenter capital expenditures:\n + Insufficient evidence to answer this question. The evidence does contain information about the increasing scale and adoption of AI, which may impact the development, deployment, and use of AI.\n\n**Meta:**\n\n* Risks related to artificial intelligence:\n + We also face risks from errors, bugs, or vulnerabilities introduced through the use of AI to develop or maintain software or systems and the use of AI within those software and systems [15, META, 10-K, 2026-01-29, Item 1A].\n + Errors, bugs, vulnerabilities, design defects, or technical limitations within the software and hardware on which we rely, or human error or malfeasance in using such systems, have led to, and may in the future lead to, outcomes including a negative experience or other adverse effects for users and marketers who use our products [15, META, 10-K, 2026-01-29, Item 1A].\n + Generative AI, if used to perpetrate fraud or launch cyber attacks, could result in losses, liquidity outflows or other adverse effects for us and our clients [20, GS, 10-K, 2026-02-25, Item 1A. Risk Factors].\n* Risks related to datacenter capital expenditures:\n + Insufficient evidence to answer this question. The evidence does contain information about the increasing scale and adoption of AI, which may impact the development, deployment, and use of AI.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 11,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 317,
+            "end": 350
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 491,
+            "end": 524
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 667,
+            "end": 700
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 830,
+            "end": 867
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 957,
+            "end": 994
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 1091,
+            "end": 1128
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 1245,
+            "end": 1282
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 1369,
+            "end": 1406
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 1602,
+            "end": 1639
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 1831,
+            "end": 1868
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 2100,
+            "end": 2137
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 11,
+        "ungrounded": [],
+        "total": 11
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 14638.19,
+      "retrieved_tickers": [
+        "MSFT",
+        "GOOGL",
+        "GOOGL",
+        "MSFT",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 7",
+        "ITEM 1A.",
+        "ITEM 1A.",
+        "Item 1A",
+        "Item 1A."
+      ]
+    },
+    {
+      "id": "gen_11",
+      "category": "unanswerable_future",
+      "question": "What is Tesla's projected revenue for fiscal year 2027?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains Tesla's revenue for the year ended December 31, 2025 ($28,236 million), the year ended December 31, 2024 ($22,496 million), and the year ended December 31, 2023 ($26 million). However, the evidence does not provide Tesla's projected revenue for fiscal year 2027.",
+      "is_refusal": true,
+      "expected_refusal": true,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 948.11,
+      "retrieved_tickers": [
+        "NVDA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+      ]
+    },
+    {
+      "id": "gen_12",
+      "category": "unanswerable_absent_company",
+      "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about the net revenues of various companies (JPM, JNJ, GS) for specific periods, but it does not mention QuantumCorp.",
+      "is_refusal": true,
+      "expected_refusal": true,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5633.88,
+      "retrieved_tickers": [
+        "COST",
+        "MSFT",
+        "NVDA",
+        "NVDA",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 8\u2014Financial Statements and Supplementary Data",
+        "Item 7",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 7."
+      ]
+    },
+    {
+      "id": "gen_13",
+      "category": "unanswerable_unsupported_causal",
+      "question": "Why did Apple's net sales increase in fiscal 2025?",
+      "answer": "Insufficient evidence to answer this question.\nThe evidence contains information about Apple's net sales in fiscal 2025, but not the reason for the increase.",
+      "is_refusal": true,
+      "expected_refusal": true,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6040.13,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "gen_14",
+      "category": "unanswerable_outside_corpus",
+      "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence passages do not mention Amazon's drone delivery parcel counts across Europe in 2019. However, they do contain information about other companies' financial data and regulatory issues, such as Google's Android-related distribution agreements, Meta's compliance with European Union competition rules, and Novartis' immunology products sales.",
+      "is_refusal": true,
+      "expected_refusal": true,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6228.43,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "PART II",
+        "PART II",
+        "PART II",
+        "PART II"
+      ]
+    },
+    {
+      "id": "gen_15",
+      "category": "unanswerable_specific_metric",
+      "question": "What was NVIDIA's exact market share percentage for data center GPUs in the most recent quarter?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about NVIDIA's revenue, gross margin, operating expenses, and share repurchase transactions, but it does not provide information about the company's market share percentage for data center GPUs.",
+      "is_refusal": true,
+      "expected_refusal": true,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5756.91,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 5. Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities"
+      ]
+    },
+    {
+      "id": "gen_16",
+      "category": "ambiguous_contradictory",
+      "question": "Did Microsoft's cloud revenue grow faster or slower than Amazon's AWS in the most recent period?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain Microsoft's cloud revenue for the most recent period, as well as Amazon's AWS revenue for the same period, but it does not provide a direct comparison between the two.",
+      "is_refusal": true,
+      "expected_refusal": true,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6047.17,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 2",
+        "Item 2",
+        "Item 2",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "gen_17",
+      "category": "supported_table_dependent",
+      "question": "In the most recent quarter, how did Apple's Products net sales compare to Services net sales?",
+      "answer": "Insufficient evidence to answer this question.\nThe evidence contains information about net sales by reportable segment for 2025, 2024, and 2023, but not the comparison between Products net sales and Services net sales in the most recent quarter.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 5830.91,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "gen_18",
+      "category": "supported_table_dependent",
+      "question": "How much cash and cash equivalents did Apple hold at the end of the most recent quarter?",
+      "answer": "[17] [UNH, 10-Q, 2026-08-10, ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS]\nAs of June 30, 2026, our cash, cash equivalent, available-for-sale debt securities and marketable equity securities balances of $81.0 billion included approximately $28.6 billion of cash and cash equivalents.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "UNH",
+            "form": "10-Q",
+            "filing_date": "2026-08-10",
+            "section": "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "raw": "[UNH, 10-Q, 2026-08-10, ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS]",
+            "start": 5,
+            "end": 123
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 6007.37,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Financial Statements",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "gen_19",
+      "category": "supported_table_dependent",
+      "question": "What were Walmart's total revenues in the most recent fiscal year, and what were they the year before?",
+      "answer": "I'm sorry, but I cannot provide an answer to your question based on the provided evidence. Insufficient evidence to answer this question. The evidence contains Walmart's total revenues for fiscal years 2026, 2025, and 2024, but not the revenues for the year before 2024.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 5894.68,
+      "retrieved_tickers": [
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "Item 3. Legal Proce",
+        "PART I",
+        "PART II",
+        "PART II"
+      ]
+    },
+    {
+      "id": "gen_20",
+      "category": "supported_table_dependent",
+      "question": "What were Apple's total liabilities at the end of fiscal 2025?",
+      "answer": "[19, Item 1. Financial Statements, Table: Cash, cash equivalents, and restricted cash and cash equivalents, beginning balances] $29,943 million",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 0.0,
+      "correct": false,
+      "latency_ms": 5732.8,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    }
+  ]
+}

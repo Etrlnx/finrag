@@ -1,0 +1,222 @@
+[
+  {
+    "id": "gen_01",
+    "category": "supported_numerical",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What were Apple's total net sales for fiscal 2025 versus fiscal 2024?",
+    "expected_answer_contains": ["416,161", "391,035"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Direct table lookup from consolidated statements of operations"
+  },
+  {
+    "id": "gen_02",
+    "category": "supported_numerical",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What were Apple's total assets at the end of fiscal 2025 according to the consolidated balance sheet?",
+    "expected_answer_contains": ["359,241"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Balance sheet figure"
+  },
+  {
+    "id": "gen_03",
+    "category": "supported_numerical",
+    "ticker": "NVDA",
+    "form": "10-Q",
+    "question": "What was NVIDIA's net income for the most recent quarter reported in this 10-Q?",
+    "expected_answer_contains": ["59,688"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Quarterly income statement"
+  },
+  {
+    "id": "gen_04",
+    "category": "supported_numerical",
+    "ticker": "NVDA",
+    "form": "10-Q",
+    "question": "How much did NVIDIA spend on research and development in the most recent quarter versus the prior-year quarter?",
+    "expected_answer_contains": ["7,054", "4,291"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "R&D expense comparison"
+  },
+  {
+    "id": "gen_05",
+    "category": "supported_numerical",
+    "ticker": "MSFT",
+    "form": "10-Q",
+    "question": "What was Microsoft's net income for the three months ended March 31, 2026?",
+    "expected_answer_contains": ["31,778"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Quarterly net income"
+  },
+  {
+    "id": "gen_06",
+    "category": "supported_factual",
+    "ticker": "MSFT",
+    "form": "10-K",
+    "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+    "expected_answer_contains": ["datacenters", "hardware", "Xbox", "Surface"],
+    "expected_refusal": false,
+    "requires_table": false,
+    "notes": "Risk factors narrative"
+  },
+  {
+    "id": "gen_07",
+    "category": "supported_factual",
+    "ticker": "GOOGL",
+    "form": "10-K",
+    "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+    "expected_answer_contains": ["search queries", "mobile devices", "advertiser spending"],
+    "expected_refusal": false,
+    "requires_table": false,
+    "notes": "MD&A narrative"
+  },
+  {
+    "id": "gen_08",
+    "category": "temporal",
+    "ticker": "MSFT",
+    "form": "10-K",
+    "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+    "expected_answer_contains": ["Microsoft Cloud", "Intelligent Cloud", "Azure"],
+    "expected_refusal": false,
+    "requires_table": false,
+    "notes": "Year-over-year comparison - ensure correct fiscal years"
+  },
+  {
+    "id": "gen_09",
+    "category": "temporal",
+    "ticker": "NVDA",
+    "form": "10-K",
+    "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+    "expected_answer_contains": ["Data Center", "Compute & Networking"],
+    "expected_refusal": false,
+    "requires_table": false,
+    "notes": "Fiscal year comparison - must distinguish FY2025 vs FY2026"
+  },
+  {
+    "id": "gen_10",
+    "category": "cross_document",
+    "ticker": "TECH",
+    "form": "10-K",
+    "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+    "expected_answer_contains": ["artificial intelligence", "datacenters", "capital expenditures"],
+    "expected_refusal": false,
+    "requires_table": false,
+    "notes": "Multi-company comparison - each claim must cite its own source"
+  },
+  {
+    "id": "gen_11",
+    "category": "unanswerable_future",
+    "ticker": "TSLA",
+    "form": "10-K",
+    "question": "What is Tesla's projected revenue for fiscal year 2027?",
+    "expected_answer_contains": [],
+    "expected_refusal": true,
+    "requires_table": false,
+    "notes": "Future forecast - must refuse"
+  },
+  {
+    "id": "gen_12",
+    "category": "unanswerable_absent_company",
+    "ticker": "XYZ",
+    "form": "10-K",
+    "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+    "expected_answer_contains": [],
+    "expected_refusal": true,
+    "requires_table": false,
+    "notes": "Company not in corpus"
+  },
+  {
+    "id": "gen_13",
+    "category": "unanswerable_unsupported_causal",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "Why did Apple's net sales increase in fiscal 2025?",
+    "expected_answer_contains": [],
+    "expected_refusal": true,
+    "requires_table": false,
+    "notes": "Causal claim not directly stated - must refuse or state ambiguity"
+  },
+  {
+    "id": "gen_14",
+    "category": "unanswerable_outside_corpus",
+    "ticker": "AMZN",
+    "form": "10-K",
+    "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+    "expected_answer_contains": [],
+    "expected_refusal": true,
+    "requires_table": false,
+    "notes": "Data outside scope of 30 filings"
+  },
+  {
+    "id": "gen_15",
+    "category": "unanswerable_specific_metric",
+    "ticker": "NVDA",
+    "form": "10-Q",
+    "question": "What was NVIDIA's exact market share percentage for data center GPUs in the most recent quarter?",
+    "expected_answer_contains": [],
+    "expected_refusal": true,
+    "requires_table": false,
+    "notes": "Specific metric not in filings"
+  },
+  {
+    "id": "gen_16",
+    "category": "ambiguous_contradictory",
+    "ticker": "MSFT",
+    "form": "10-K",
+    "question": "Did Microsoft's cloud revenue grow faster or slower than Amazon's AWS in the most recent period?",
+    "expected_answer_contains": [],
+    "expected_refusal": true,
+    "requires_table": false,
+    "notes": "Cross-company comparison with ambiguous period - must clarify or refuse"
+  },
+  {
+    "id": "gen_17",
+    "category": "supported_table_dependent",
+    "ticker": "AAPL",
+    "form": "10-Q",
+    "question": "In the most recent quarter, how did Apple's Products net sales compare to Services net sales?",
+    "expected_answer_contains": ["78,678", "30,739"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Table comparison - Products vs Services"
+  },
+  {
+    "id": "gen_18",
+    "category": "supported_table_dependent",
+    "ticker": "AAPL",
+    "form": "10-Q",
+    "question": "How much cash and cash equivalents did Apple hold at the end of the most recent quarter?",
+    "expected_answer_contains": ["39,544"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Balance sheet cash figure"
+  },
+  {
+    "id": "gen_19",
+    "category": "supported_table_dependent",
+    "ticker": "WMT",
+    "form": "10-K",
+    "question": "What were Walmart's total revenues in the most recent fiscal year, and what were they the year before?",
+    "expected_answer_contains": ["713,163", "680,985"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Year-over-year revenue from table"
+  },
+  {
+    "id": "gen_20",
+    "category": "supported_table_dependent",
+    "ticker": "AAPL",
+    "form": "10-K",
+    "question": "What were Apple's total liabilities at the end of fiscal 2025?",
+    "expected_answer_contains": ["285,508"],
+    "expected_refusal": false,
+    "requires_table": true,
+    "notes": "Balance sheet liabilities"
+  }
+]
