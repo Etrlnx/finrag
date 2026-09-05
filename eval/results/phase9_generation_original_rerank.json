@@ -1,0 +1,4317 @@
+{
+  "config": {
+    "prompt": "original",
+    "reranker": true,
+    "fetch_k": 20,
+    "final_k": 5
+  },
+  "overall": {
+    "total": 87,
+    "correct": 0,
+    "accuracy": 0.0,
+    "format_ok": 0.0,
+    "citation_ok": 0.45977011494252873,
+    "grounded_ok": 0.9080459770114943,
+    "refusal_ok": 0.5977011494252874,
+    "avg_latency_ms": 5630.481724137931
+  },
+  "by_category": {
+    "factual": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.5652173913043478,
+      "grounded": 0.8260869565217391,
+      "refusal": 0.782608695652174
+    },
+    "numerical": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.6111111111111112,
+      "grounded": 0.8888888888888888,
+      "refusal": 0.8055555555555556
+    },
+    "temporal": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.8333333333333334,
+      "grounded": 1.0,
+      "refusal": 0.8333333333333334
+    },
+    "cross-document": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 0.0
+    },
+    "unanswerable": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 0.0
+    },
+    "ambiguous_contradictory": {
+      "correct": 0.0,
+      "fmt": 0.0,
+      "cit": 0.0,
+      "grounded": 1.0,
+      "refusal": 0.0
+    }
+  },
+  "per_question": [
+    {
+      "id": "eval_01",
+      "category": "factual",
+      "question": "What are Microsoft's main risk factors regarding complex datacenters and hardware products?",
+      "answer": "According to [MSFT, 10-K, 2026-07-29, Item 1A], Microsoft's main risk factors regarding complex datacenters and hardware products are:\n\n1. Failure to prevent, detect, or address defects in design, manufacture, or associated software could adversely affect their business and results of operations.\n2. Failure to prevent, detect, or address defects in design, manufacture, or associated software could result in recalls, safety alerts, or product liability claims, which could adversely affect their business and results of operations.\n\nNote that the second point is supported by [MSFT, 10-Q, 2026-04-29, ITEM 1A. RI], which mentions the same risk factor.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 2,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 1A",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 1A]",
+            "start": 13,
+            "end": 46
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "ITEM 1A. RI",
+            "raw": "[MSFT, 10-Q, 2026-04-29, ITEM 1A. RI]",
+            "start": 579,
+            "end": 616
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 2,
+        "ungrounded": [],
+        "total": 2
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 1478.54,
+      "retrieved_tickers": [
+        "MSFT",
+        "NVDA",
+        "NVDA",
+        "AAPL",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 1A",
+        "Item 1A. Risk Factors",
+        "Item 1A. Risk Factors",
+        "Item 1A. Risk Factors",
+        "ITEM 1A. RI"
+      ]
+    },
+    {
+      "id": "eval_02",
+      "category": "numerical",
+      "question": "What was Alphabet's total revenues for the year ended December 31, 2025 compared to 2024?",
+      "answer": "According to [GOOGL, 10-K, 2026-02-05, ITEM 7.], Alphabet's total revenues for the year ended December 31, 2025 were $402,836 million.\n\nThis answer is supported by the table in ITEM 7, which presents revenues by type for the year ended December 31, 2025.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 7.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 7.]",
+            "start": 13,
+            "end": 47
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4957.36,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 7.",
+        "ITEM 8.",
+        "ITEM 8.",
+        "ITEM 8.",
+        "ITEM 7."
+      ]
+    },
+    {
+      "id": "eval_03",
+      "category": "factual",
+      "question": "What were the main revenue growth drivers for Google Search & other advertising in 2025?",
+      "answer": "According to [GOOGL, 10-K, 2026-02-05, ITEM 7.], the main revenue growth drivers for Google Search & other advertising in 2025 were:\n\n1. Increases in search queries resulting from growth in user adoption and usage on mobile devices.\n2. Growth in advertiser spending.\n3. Improvements made in ad formats and delivery.\n\nThese factors contributed to an increase of $26.4 billion in Google Search & other revenues from 2024 to 2025.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 7.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 7.]",
+            "start": 13,
+            "end": 47
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5921.88,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 7.",
+        "ITEM 2.",
+        "ITEM 7.",
+        "ITEM 2.",
+        "ITEM 7."
+      ]
+    },
+    {
+      "id": "eval_04",
+      "category": "numerical",
+      "question": "What was Apple's total net sales in fiscal year 2025?",
+      "answer": "According to [AAPL, 10-K, 2025-10-31, Item 8. Financial Statements and Supplementary Data], Apple's total net sales for fiscal year 2025 were $416,161 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AAPL",
+            "form": "10-K",
+            "filing_date": "2025-10-31",
+            "section": "Item 8. Financial Statements and Supplementary Data",
+            "raw": "[AAPL, 10-K, 2025-10-31, Item 8. Financial Statements and Supplementary Data]",
+            "start": 13,
+            "end": 90
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5219.27,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 1. Financial Statements",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_05",
+      "category": "factual",
+      "question": "What are Apple's reportable product and service categories in its annual filing?",
+      "answer": "Based on the provided evidence passages, Apple's reportable product and service categories are:\n\n1. iPhone\n2. Mac\n3. iPad\n4. Wearables, Home and Accessories\n5. Services\n\nThese categories are listed in Table 1 from Item 8. Financial Statements and Supplementary Data, [AAPL, 10-K, 2025-10-31, Item 8].",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AAPL",
+            "form": "10-K",
+            "filing_date": "2025-10-31",
+            "section": "Item 8",
+            "raw": "[AAPL, 10-K, 2025-10-31, Item 8]",
+            "start": 267,
+            "end": 299
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [
+          "[AAPL, 10-K, 2025-10-31, Item 8]"
+        ],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6063.18,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 1. Business",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 15. Exhibit and Financial Statement Schedules",
+        "Item 1. Business",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "eval_06",
+      "category": "numerical",
+      "question": "What was NVIDIA's revenue and gross margin performance for fiscal year 2026?",
+      "answer": "According to Table 1 in NVIDIA's 10-K filing for fiscal year 2026, Item 7, the revenue and gross margin performance for fiscal year 2026 were:\n\n- Revenue: $215,938 million, up 65% from $130,497 million in fiscal year 2025.\n- Gross margin: 71.1%, down 3.9 percentage points from 75.0% in fiscal year 2025.\n\n[1, 7, 2026-02-25]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5545.99,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 1. Financial Statements (Unaudited)"
+      ]
+    },
+    {
+      "id": "eval_07",
+      "category": "factual",
+      "question": "What business segments does NVIDIA report in its financial disclosures?",
+      "answer": "NVIDIA reports two business segments: Compute & Networking and Graphics.\n\n[1, 2, 5]\n\nThe Compute & Networking segment includes Data Center accelerated computing and networking platforms and AI solutions and software, and Automotive platforms and autonomous and electric vehicle solutions including software.\n\n[1, 2]\n\nThe Graphics segment includes GeForce GPUs for gaming and PCs, and Quadro/NVIDIA RTX GPUs for enterprise workstation graphics.\n\n[1, 2, 5]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5556.99,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_08",
+      "category": "factual",
+      "question": "What are the three primary operating segments of Amazon.com, Inc.?",
+      "answer": "According to the evidence, the three primary operating segments of Amazon.com, Inc. are:\n\n1. North America\n2. International\n3. Amazon Web Services (AWS)\n\nThese segments are mentioned in evidence passages [1] and [4].",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5444.52,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "MSFT",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART I",
+        "PART II",
+        "Item 1",
+        "PART I. FINANCIAL INFORMATION",
+        "PART I. FINANCIAL INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_09",
+      "category": "numerical",
+      "question": "What were the net sales and operating income for AWS (Amazon Web Services)?",
+      "answer": "According to [AMZN, 10-Q, 2026-07-31, PART I. FINANCIAL INFORMATION], the net sales for AWS (Amazon Web Services) for the three months ended June 30, 2026, were $0, and for the six months ended June 30, 2026, were $0.\n\nInsufficient evidence to answer this question. The evidence does contain net sales information for the North America and International segments, as well as AWS operating income information for the same periods.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AMZN",
+            "form": "10-Q",
+            "filing_date": "2026-07-31",
+            "section": "PART I. FINANCIAL INFORMATION",
+            "raw": "[AMZN, 10-Q, 2026-07-31, PART I. FINANCIAL INFORMATION]",
+            "start": 13,
+            "end": 68
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6219.43,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART I. FINANCIAL INFORMATION",
+        "PART I. FINANCIAL INFORMATION",
+        "PART I",
+        "PART II",
+        "PART I. FINANCIAL INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_10",
+      "category": "factual",
+      "question": "What are Meta Platforms' two reportable business segments?",
+      "answer": "According to [META, 10-K, 2026-01-29, Item 8.], Meta Platforms' two reportable business segments are:\n\n1. Family of Apps (FoA)\n2. Reality Labs (RL)",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "META",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "Item 8.",
+            "raw": "[META, 10-K, 2026-01-29, Item 8.]",
+            "start": 13,
+            "end": 46
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5325.58,
+      "retrieved_tickers": [
+        "META",
+        "JPM",
+        "JPM",
+        "UNH",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 8.",
+        "Part IV",
+        "Part IV",
+        "ITEM 7.",
+        "Item 8."
+      ]
+    },
+    {
+      "id": "eval_11",
+      "category": "numerical",
+      "question": "What was the operating loss reported by Meta's Reality Labs segment?",
+      "answer": "According to [3, Item 2], the operating loss reported by Meta's Reality Labs segment for the six months ended June 30, 2026, was $8,647 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5527.91,
+      "retrieved_tickers": [
+        "META",
+        "META",
+        "META",
+        "META",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 1A.",
+        "Item 1A.",
+        "Item 2.",
+        "Item 1.",
+        "Item 7."
+      ]
+    },
+    {
+      "id": "eval_12",
+      "category": "factual",
+      "question": "What are Tesla's operating segments reported in its 10-K filing?",
+      "answer": "Based on the provided evidence passages, Tesla's operating segments reported in its 10-K filing are:\n\n1. Automotive segment\n2. Energy generation and storage segment\n\nThese segments are mentioned in the following tables:\n\n* [TSLA, 10-K, 2026-01-29, ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS, TABLE: Revenues]\n* [TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: The following table presents inventory by reportable segment (in millions):]\n* [TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Energy generation and storage segment]\n* [TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Automotive segment]\n\nThese segments are also mentioned in the following sections:\n\n* [TSLA, 10-K, 2026-01-29, ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS]\n* [TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA]\n\nNote that the evidence does not provide information on other potential operating segments.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 6,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS, TABLE: Revenues",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS, TABLE: Revenues]",
+            "start": 223,
+            "end": 359
+          },
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: The following table presents inventory by reportable segment (in millions):",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: The following table presents inventory by reportable segment (in millions):]",
+            "start": 362,
+            "end": 523
+          },
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Energy generation and storage segment",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Energy generation and storage segment]",
+            "start": 526,
+            "end": 687
+          },
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Automotive segment",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Automotive segment]",
+            "start": 690,
+            "end": 832
+          },
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS]",
+            "start": 898,
+            "end": 1017
+          },
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA]",
+            "start": 1020,
+            "end": 1097
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 2,
+        "ungrounded": [
+          "[TSLA, 10-K, 2026-01-29, ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS, TABLE: Revenues]",
+          "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: The following table presents inventory by reportable segment (in millions):]",
+          "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Energy generation and storage segment]",
+          "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, TABLE: (in millions, except per share data): Automotive segment]"
+        ],
+        "total": 6
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 7920.24,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA"
+      ]
+    },
+    {
+      "id": "eval_13",
+      "category": "numerical",
+      "question": "What were Tesla's total automotive revenues and automotive regulatory credits?",
+      "answer": "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA]\n\nAccording to the table, Tesla's total automotive revenues for the years 2025, 2024, and 2023 are:\n\n- $69,526 million (2025)\n- $77,070 million (2024)\n- $82,419 million (2023)\n\nAdditionally, the table shows that automotive regulatory credits for the years 2025, 2024, and 2023 are:\n\n- $1,993 million (2025)\n- $2,763 million (2024)\n- $1,790 million (2023)",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "TSLA",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "raw": "[TSLA, 10-K, 2026-01-29, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA]",
+            "start": 0,
+            "end": 77
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4116.58,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 1. FINANCIAL STATEMENTS",
+        "ITEM 1. FINANCIAL STATEMENTS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA"
+      ]
+    },
+    {
+      "id": "eval_14",
+      "category": "factual",
+      "question": "What are JPMorgan Chase's primary business lines / operating segments?",
+      "answer": "According to the evidence, JPMorgan Chase's primary business lines/operating segments are:\n\n1. Investment Banking\n2. Financial Services for Consumers and Small Businesses\n3. Commercial Banking\n4. Financial Transaction Processing\n5. Asset Management\n\nThese segments are mentioned in [3] [JPM, 10-K, 2026-02-13, Item 1. Business.] as part of the Firm's reportable business segments, and in [4] [JPM, 10-K, 2026-02-13, Part IV] as the principal bank subsidiary (JPMorgan Chase Bank, N.A.) and principal non-bank subsidiary (J.P. Morgan Securities LLC).\n\nNote that the evidence does not provide a comprehensive list of all business lines or operating segments, but rather highlights the primary ones mentioned in the provided sections.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 2,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "JPM",
+            "form": "10-K",
+            "filing_date": "2026-02-13",
+            "section": "Item 1. Business.",
+            "raw": "[JPM, 10-K, 2026-02-13, Item 1. Business.]",
+            "start": 286,
+            "end": 328
+          },
+          {
+            "ticker": "JPM",
+            "form": "10-K",
+            "filing_date": "2026-02-13",
+            "section": "Part IV",
+            "raw": "[JPM, 10-K, 2026-02-13, Part IV]",
+            "start": 392,
+            "end": 424
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 2,
+        "ungrounded": [],
+        "total": 2
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5509.09,
+      "retrieved_tickers": [
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM"
+      ],
+      "retrieved_sections": [
+        "Part IV",
+        "Part IV",
+        "Item 1. Business.",
+        "Part IV",
+        "Part IV"
+      ]
+    },
+    {
+      "id": "eval_15",
+      "category": "numerical",
+      "question": "What was JPMorgan Chase's Net Interest Income and Provision for credit losses?",
+      "answer": "Based on the provided evidence passages, I can answer the following questions:\n\n1. What was JPMorgan Chase's Net Interest Income and Provision for credit losses?\n\nAccording to [JPM, 10-Q, 2026-08-06, TABLE], the Net Interest Income was $25,511 and the Provision for credit losses was $2,515.\n\n2. What was JPMorgan Chase's Net Interest Income and Provision for credit losses in 2025 compared to 2024?\n\nAccording to [JPM, 10-K, 2026-02-13, Part IV, TABLE], the Net Interest Income after provision for credit losses was $81,231 in 2025 and $81,905 in 2024.\n\n3. What was JPMorgan Chase's Provision for credit losses in 2025 compared to 2024?\n\nAccording to [JPM, 10-K, 2026-02-13, Part IV, TABLE], the Provision for credit losses was $14,212 in 2025 and $10,678 in 2024.\n\nInsufficient evidence to answer the question about Net Interest Income in 2025 compared to 2024. The evidence does contain the Net Interest Income after provision for credit losses in 2025, which is $81,231.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 3,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "JPM",
+            "form": "10-Q",
+            "filing_date": "2026-08-06",
+            "section": "TABLE",
+            "raw": "[JPM, 10-Q, 2026-08-06, TABLE]",
+            "start": 176,
+            "end": 206
+          },
+          {
+            "ticker": "JPM",
+            "form": "10-K",
+            "filing_date": "2026-02-13",
+            "section": "Part IV, TABLE",
+            "raw": "[JPM, 10-K, 2026-02-13, Part IV, TABLE]",
+            "start": 414,
+            "end": 453
+          },
+          {
+            "ticker": "JPM",
+            "form": "10-K",
+            "filing_date": "2026-02-13",
+            "section": "Part IV, TABLE",
+            "raw": "[JPM, 10-K, 2026-02-13, Part IV, TABLE]",
+            "start": 652,
+            "end": 691
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [
+          "[JPM, 10-Q, 2026-08-06, TABLE]",
+          "[JPM, 10-K, 2026-02-13, Part IV, TABLE]",
+          "[JPM, 10-K, 2026-02-13, Part IV, TABLE]"
+        ],
+        "total": 3
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6302.32,
+      "retrieved_tickers": [
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM"
+      ],
+      "retrieved_sections": [
+        null,
+        "Part IV",
+        "Part IV",
+        "Part IV",
+        "Part IV"
+      ]
+    },
+    {
+      "id": "eval_16",
+      "category": "factual",
+      "question": "What are the reportable business segments of The Goldman Sachs Group?",
+      "answer": "The reportable business segments of The Goldman Sachs Group are:\n\n1. Global Banking & Markets\n2. Asset & Wealth Management\n3. Platform Solutions\n\n[GS, 10-K, 2026-02-25, Item 8. Financial Statements and Supplementary Data, Note 25. Business Segments]\n\nThese segments are determined and organized based on products and services provided, and the types of customers and counterparties served.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GS",
+            "form": "10-K",
+            "filing_date": "2026-02-25",
+            "section": "Item 8. Financial Statements and Supplementary Data, Note 25. Business Segments",
+            "raw": "[GS, 10-K, 2026-02-25, Item 8. Financial Statements and Supplementary Data, Note 25. Business Segments]",
+            "start": 146,
+            "end": 249
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [
+          "[GS, 10-K, 2026-02-25, Item 8. Financial Statements and Supplementary Data, Note 25. Business Segments]"
+        ],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4378.33,
+      "retrieved_tickers": [
+        "GS",
+        "GS",
+        "GS",
+        "GS",
+        "GS"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_17",
+      "category": "numerical",
+      "question": "What were Goldman Sachs' net revenues in Investment Banking fees?",
+      "answer": "[GS, 10-K, 2026-02-25, Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]\n\nAccording to the evidence, Goldman Sachs' net revenues in Investment Banking fees were $9,348 million for 2025, 21% higher than 2024, primarily due to significantly higher net revenues in Advisory, reflecting a significant increase in completed mergers and acquisitions volumes.\n\nNote: The figure is for the year ended December 2025.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GS",
+            "form": "10-K",
+            "filing_date": "2026-02-25",
+            "section": "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "raw": "[GS, 10-K, 2026-02-25, Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+            "start": 0,
+            "end": 117
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5728.7,
+      "retrieved_tickers": [
+        "GS",
+        "GS",
+        "GS",
+        "GS",
+        "GS"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_18",
+      "category": "factual",
+      "question": "What operating business segments does Bank of America report?",
+      "answer": "Bank of America reports its operating business segments as:\n\n1. Consumer Banking\n2. Global Wealth & Investment Management (GWIM)\n3. Global Banking\n4. Global Markets\n5. All Other\n\nThese segments are reported on an FTE (Full-Time Equivalent) basis, and the primary activities, products, and businesses of each segment are described in the Management's Discussion and Analysis section of the 10-K filing.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5540.95,
+      "retrieved_tickers": [
+        "BAC",
+        "BAC",
+        "JPM",
+        "BAC",
+        "BAC"
+      ],
+      "retrieved_sections": [
+        "Item 1A. Risk Factors of the Corporation\u2019s 2025 Annual Report on Form 10-K",
+        "Item 6. [Reserved]",
+        "Item 1. Business.",
+        "Part I. Financial Information",
+        "Item 6. [Reserved]"
+      ]
+    },
+    {
+      "id": "eval_19",
+      "category": "numerical",
+      "question": "What was Walmart's total net sales and e-commerce sales growth?",
+      "answer": "To answer the question, I will extract relevant information from the evidence passages.\n\nWalmart's total net sales growth:\n\n* Walmart International Segment: Net sales increased $8.5 billion or 7.0% for fiscal 2026 and $7.2 billion or 6.3% for fiscal 2025 ( [1, PART II] )\n* Walmart U.S. Segment: Net sales increased $20.6 billion or 4.4% for fiscal 2026 and $20.6 billion or 4.7% for fiscal 2025 ( [5, PART II] )\n* Walmart U.S. Segment eCommerce sales positively contributed approximately 4.9% and 5.1% to comparable sales for the three and six months ended July 31, 2026, respectively ( [2, Item 5. Other Information] and [3, Item 5. Other Information] )\n\nWalmart's e-commerce sales growth:\n\n* Walmart International Segment: eCommerce growth of $6.3 billion and $4.7 billion for fiscal 2026 and 2025, respectively ( [1, PART II] )\n* Walmart U.S. Segment eCommerce sales positively contributed approximately 4.9% and 5.1% to comparable sales for the three and six months ended July 31, 2026, respectively ( [2, Item 5. Other Information] and [3, Item 5. Other Information] )\n* Walmart U.S. Segment eCommerce sales: approximately $29.4 billion and $23.7 billion related to eCommerce for the three months ended July 31, 2026 and 2025, respectively, and approximately $56.4 billion and $45.1 billion related to eCommerce for the six months ended July 31, 2026 and 2025, respectively ( [4, Item 1.] )\n\nNote that the evidence does not provide a single, unified figure for Walmart's total net sales or e-commerce sales growth.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 7896.0,
+      "retrieved_tickers": [
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "Item 5. Other Information",
+        "Item 5. Other Information",
+        "Item 1.",
+        "PART II"
+      ]
+    },
+    {
+      "id": "eval_20",
+      "category": "factual",
+      "question": "What are Walmart's three reportable operating segments?",
+      "answer": "According to the evidence, Walmart's three reportable operating segments are:\n\n1. Walmart U.S.\n2. Walmart International\n3. Sam's Club U.S.\n\nThese segments are defined as those operations whose results the chief operating decision maker regularly reviews to analyze performance and allocate resources. [TICKER, 10-K, 2026-03-13, PART I]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "TICKER",
+            "form": "10-K",
+            "filing_date": "2026-03-13",
+            "section": "PART I",
+            "raw": "[TICKER, 10-K, 2026-03-13, PART I]",
+            "start": 301,
+            "end": 335
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [
+          "[TICKER, 10-K, 2026-03-13, PART I]"
+        ],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 3660.54,
+      "retrieved_tickers": [
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT"
+      ],
+      "retrieved_sections": [
+        "PART I",
+        "Item 1.",
+        "PART II",
+        "PART I",
+        "PART II"
+      ]
+    },
+    {
+      "id": "eval_21",
+      "category": "factual",
+      "question": "What is Costco's revenue model regarding membership fees versus merchandise sales?",
+      "answer": "According to the evidence, Costco's revenue model regarding membership fees versus merchandise sales is as follows:\n\n* Membership fees are accounted for on a deferred basis, ratably over the one-year membership period, and are classified as a reduction in sales, net of the estimated impact of non-redemptions (breakage).\n* The estimated breakage is computed based on redemption data, and the corresponding liability is classified as accrued member rewards in the consolidated balance sheets.\n* The 2% reward associated with Executive membership reduces net sales and is allocated to the category in which the reward is generated (core merchandise categories, warehouse ancillary, and other businesses).\n* Membership fees are reported separately from merchandise sales in the revenue figures, with membership fees ranging from $1,240 million in 2025 to $1,373 million in 2026.\n* Merchandise sales are reported separately from membership fees in the revenue figures, with merchandise sales ranging from $54,996 million in 2025 to $61,519 million in 2026.\n\n[TICKER, FORM, FILINGDATE, SECTION] [COST, 10-K, 2025-10-08, Item 8\u2014Financial Statements and Supplementary Data] [COST, 10-Q, 2026-06-03, Item 1\u2014Financial Statements]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 2,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "COST",
+            "form": "10-K",
+            "filing_date": "2025-10-08",
+            "section": "Item 8\u2014Financial Statements and Supplementary Data",
+            "raw": "[COST, 10-K, 2025-10-08, Item 8\u2014Financial Statements and Supplementary Data]",
+            "start": 1091,
+            "end": 1167
+          },
+          {
+            "ticker": "COST",
+            "form": "10-Q",
+            "filing_date": "2026-06-03",
+            "section": "Item 1\u2014Financial Statements",
+            "raw": "[COST, 10-Q, 2026-06-03, Item 1\u2014Financial Statements]",
+            "start": 1168,
+            "end": 1221
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 2,
+        "ungrounded": [],
+        "total": 2
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6998.83,
+      "retrieved_tickers": [
+        "COST",
+        "COST",
+        "COST",
+        "COST",
+        "COST"
+      ],
+      "retrieved_sections": [
+        "Item 8\u2014Financial Statements and Supplementary Data",
+        "Item 8\u2014Financial Statements and Supplementary Data",
+        "Item 1\u2014Financial Statements",
+        "Item 8\u2014Financial Statements and Supplementary Data",
+        "Item 2\u2014Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_22",
+      "category": "numerical",
+      "question": "What was Costco's membership fee revenue and member renewal rate?",
+      "answer": "Membership fee revenue for 2025 was $5,323,000 (as of 2025-10-08, Item 7\u2014Management's Discussion and Analysis of Financial Condition and Results of Operations, Table: Membership Fees).\n\nMember renewal rates were 92.3% in the U.S. and Canada and 89.8% worldwide as of 2025 (as of 2025-10-08, Item 7\u2014Management's Discussion and Analysis of Financial Condition and Results of Operations).",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4422.22,
+      "retrieved_tickers": [
+        "COST",
+        "COST",
+        "COST",
+        "COST",
+        "COST"
+      ],
+      "retrieved_sections": [
+        "Item 8\u2014Financial Statements and Supplementary Data",
+        "Item 7\u2014Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2\u2014Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7\u2014Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2\u2014Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_23",
+      "category": "factual",
+      "question": "What are Johnson & Johnson's primary business segments following the Kenvue separation?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about the separation of Kenvue from Johnson & Johnson, but it does not explicitly state the primary business segments of Johnson & Johnson following the separation.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5309.83,
+      "retrieved_tickers": [
+        "JNJ",
+        "JNJ",
+        "JNJ",
+        "JNJ",
+        "JNJ"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial statements and supplementary data",
+        "Item 8. Financial statements and supplementary data",
+        "Item 8. Financial statements and supplementary data",
+        "Item 8. Financial statements and supplementary data",
+        "Item 8. Financial statements and supplementary data"
+      ]
+    },
+    {
+      "id": "eval_24",
+      "category": "factual",
+      "question": "What are the reportable segments of UnitedHealth Group?",
+      "answer": "The reportable segments of UnitedHealth Group are:\n\n1. Optum Health\n2. Optum Insight\n3. Optum Rx\n4. UnitedHealthcare, which includes:\n   a. UnitedHealthcare Employer & Individual\n   b. UnitedHealthcare Medicare & Retirement\n   c. UnitedHealthcare Community & State",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5463.78,
+      "retrieved_tickers": [
+        "UNH",
+        "UNH",
+        "UNH",
+        "UNH",
+        "UNH"
+      ],
+      "retrieved_sections": [
+        "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 7.",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "Part I, Item 1 \u201cBusiness - Government Regulation\u201d",
+        "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+      ]
+    },
+    {
+      "id": "eval_25",
+      "category": "numerical",
+      "question": "What were Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products)?",
+      "answer": "According to the evidence, Exxon Mobil's earnings by business segment (Upstream, Energy Products, Chemical Products) are as follows:\n\n- Upstream: \n  - Six Months Ended June 30, 2026: $15,466 million (U.S.) + $7,292 million (Non-U.S.) + $64,507 million (U.S.) + $88,295 million (Non-U.S.) + $4,522 million (U.S.) + $7,839 million (Non-U.S.) + $2,968 million (U.S.) + $6,750 million (Non-U.S.) = $197,639 million (Segment Total)\n  - Six Months Ended June 30, 2025: $13,257 million (U.S.) + $7,246 million (Non-U.S.) + $48,957 million (U.S.) + $70,994 million (Non-U.S.) + $3,992 million (U.S.) + $7,085 million (Non-U.S.) + $2,805 million (U.S.) + $6,159 million (Non-U.S.) = $160,495 million (Segment Total)\n  - Three Months Ended June 30, 2026: $8,201 million (U.S.) + $4,479 million (Non-U.S.) + $38,517 million (U.S.) + $51,091 million (Non-U.S.) + $2,552 million (U.S.) + $4,335 million (Non-U.S.) + $1,596 million (U.S.) + $3,732 million (Non-U.S.) = $114,503 million (Segment Total)\n  - Three Months Ended June 30, 2025: $5,939 million (U.S.) + $3,286 million (Non-U.S.) + $25,072 million (U.S.) + $34,917 million (Non-U.S.) + $1,970 million (U.S.) + $3,700 million (Non-U.S.) + $1,438 million (U.S.) + $3,134 million (Non-U.S.) = $79,456 million (Segment Total)\n\n- Energy Products: \n  - Six Months Ended June 30, 2026: $64,507 million (U.S.) + $88,295 million (Non-U.S.) + $4,522 million (U.S.) + $7,839 million (Non-U.S.) + $2,968 million (U.S.) + $6,750 million (Non-U.S.) = $176,641 million (Segment Total)\n  - Six Months Ended June 30, 2025: $48,957 million (U.S.) + $70,994 million (Non-U.S.) + $3,992 million (U.S.) + $7,085 million (Non-U.S.) + $2,805 million (U.S.) + $6,159 million (Non-U.S.) = $140,297 million (Segment Total)\n  - Three Months Ended June 30, 2026: $38,517 million (U.S.) + $51,091 million (Non-U.S.) + $2,552 million (U.S.) + $4,335 million (Non-U.S.) + $1,596 million (U.S.) + $3,732 million (Non-U.S.) = $101,321 million (Segment Total)\n  - Three Months Ended June 30, 2025: $25,072 million (U.S.) + $34,917 million (Non-U.S.) + $1,970 million (U.S.) + $3,700 million (Non-U.S.) + $1,438 million (U.S.) + $3,134 million (Non-U.S.) = $69,511 million (Segment Total)\n\n- Chemical Products: \n  - Six Months Ended June 30, 2026: $4,522 million (U.S.) + $7,839 million (Non-U.S.) + $3,715 million (U.S.) + $1,975 million (Non-U.S.) + $3,086 million (U.S.) + $3,250 million (Non-U.S.) + $4,000 million (U.S.) + $62 million (Non-U.S.) = $28,913 million (Segment Total)\n  - Six Months Ended June 30, 2025: $3,992 million (U.S.) + $7,085 million (Non-U.S.) + $1,668 million (U.S.) + $790 million (Non-U.S.) + $1,438 million (U.S.) + $3,134 million (Non-U.S.) + $2,000 million (U.S.) + $31 million (Non-U.S.) = $18,245 million (Segment Total)\n  - Three Months Ended June 30, 2026: $2,552 million (U.S.) + $4,335 million (Non-U.S.) + $2,023 million (U.S.) + $998 million (Non-U.S.) + $1,596 million (U.S.) + $3,732 million (Non-U.S.) + $1,000 million (U.S.) + $33 million (Non-U.S.) = $13,854 million (Segment Total)\n  - Three Months Ended June 30, 2025: $1,970 million (U.S.) + $3,700 million (Non-U.S.) + $1,668 million (U.S.) + $269 million (Non-U.S.) + $1,438 million (U.S.) + $3,134 million (Non-U.S.) + $2,000 million (U.S.) + $31 million (Non-U.S.) = $10,420 million (Segment Total)\n\nInsufficient evidence to answer this question. The evidence does contain the earnings of Exxon Mobil by business segment for the periods of Six Months Ended June 30, 2026, Six Months Ended June 30, 2025, Three Months Ended June 30, 2026, and Three Months Ended June 30, 2025.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 14936.87,
+      "retrieved_tickers": [
+        "XOM",
+        "XOM",
+        "XOM",
+        "XOM",
+        "XOM"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "PART I. FINANCIAL INFORMATION",
+        "PART I. FINANCIAL INFORMATION",
+        "PART I. FINANCIAL INFORMATION",
+        "PART I. FINANCIAL INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_26",
+      "category": "temporal",
+      "question": "How did Microsoft Cloud revenue and Intelligent Cloud operating income change year-over-year?",
+      "answer": "Based on the provided evidence passages, here are the answers to the question:\n\n* Microsoft Cloud revenue and Intelligent Cloud operating income changed year-over-year as follows:\n + Microsoft Cloud revenue increased $4.9 billion or 22% (Item 2, [MSFT, 10-Q, 2026-04-29, Item 2]).\n + Intelligent Cloud operating income increased $6.4 billion or 20% (Item 2, [MSFT, 10-Q, 2026-04-29, Item 2]).",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 2,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 2",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 2]",
+            "start": 246,
+            "end": 278
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 2",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 2]",
+            "start": 358,
+            "end": 390
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 2,
+        "ungrounded": [],
+        "total": 2
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 1034.55,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 7",
+        "Item 2",
+        "Item 2",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "eval_27",
+      "category": "temporal",
+      "question": "How did NVIDIA's Data Center revenue compare between fiscal year 2025 and fiscal year 2026?",
+      "answer": "According to [NVDA, 10-K, 2026-02-25, Item 15. Exhibits and Financial Statement Schedules], Data Center revenue for fiscal year 2026 was up 68% from a year ago, and 76% of Data Center revenue from Taiwan-headquartered customers was attributed to end customers based in the United States and Europe.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "NVDA",
+            "form": "10-K",
+            "filing_date": "2026-02-25",
+            "section": "Item 15. Exhibits and Financial Statement Schedules",
+            "raw": "[NVDA, 10-K, 2026-02-25, Item 15. Exhibits and Financial Statement Schedules]",
+            "start": 13,
+            "end": 90
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5444.97,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_28",
+      "category": "temporal",
+      "question": "How did Amazon's advertising services revenue trend compared to online stores revenue?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about Amazon's retail sales, third-party seller services, and advertising services, but does not provide specific information about how Amazon's advertising services revenue trend compares to online stores revenue.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5455.47,
+      "retrieved_tickers": [
+        "AMZN",
+        "META",
+        "GOOGL",
+        "GOOGL",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "Item 7.",
+        "ITEM 7.",
+        "ITEM 2.",
+        "PART I. FINANCIAL INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_29",
+      "category": "cross-document",
+      "question": "How do Microsoft, Google, and Meta describe risks related to artificial intelligence and datacenter capital expenditures?",
+      "answer": "Based on the provided evidence passages, here are the descriptions of risks related to artificial intelligence and datacenter capital expenditures:\n\n**Microsoft:**\n\n* Risks related to AI investments are described in [2, 10-K, 2026-07-29, Item 1A], where it is stated that the investments are being made at significant scale and on an accelerated timeline, require substantial and increasing capital expenditures, and are in advance of fully developed revenue streams.\n* Capital expenditures are primarily related to data center equipment and infrastructure used for engineering and manufacturing operations, as mentioned in [3, 10-Q, 2026-08-26, Item 1. Financial Statements (Unaudited)].\n* The company's ability to fund these investments depends on its ability to generate sufficient cash flows and obtain financing on acceptable terms.\n\n**Google:**\n\n* Risks related to AI investments are not explicitly stated in the provided evidence passages, but the company's investments in AI platforms and models are mentioned in [5, 10-Q, 2026-07-23, ITEM 1A.], where it is stated that the company is incurring significant and increasing costs and liabilities to build and maintain infrastructure to support cloud computing services.\n* Capital expenditures are primarily related to building and maintaining infrastructure to support cloud computing services, as mentioned in [5, 10-Q, 2026-07-23, ITEM 1A.], where it is stated that the company is incurring significant and increasing costs and liabilities to build and maintain infrastructure to support cloud computing services.\n\n**Insufficient evidence to answer this question.**\n\nThe evidence does contain descriptions of risks related to datacenter capital expenditures, specifically in [3, 10-Q, 2026-08-26, Item 1. Financial Statements (Unaudited)], where it is stated that securing land, power, and shell for data centers is a critical phase in the AI infrastructure buildout.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 7964.79,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "NVDA",
+        "JNJ",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "Item 7",
+        "Item 1A",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 1A. Risk factors",
+        "ITEM 1A."
+      ]
+    },
+    {
+      "id": "eval_30",
+      "category": "cross-document",
+      "question": "What common credit and interest rate risk factors are highlighted by JPMorgan, Goldman Sachs, and Bank of America?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about credit and interest rate risk factors for Bank of America, Goldman Sachs, and JPMorgan (although JPMorgan is not explicitly mentioned in the provided evidence).",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 3119.34,
+      "retrieved_tickers": [
+        "BAC",
+        "GS",
+        "GS",
+        "GS",
+        "BAC"
+      ],
+      "retrieved_sections": [
+        "Item 1A. Risk Factors of this Annual Report on Form 10-K",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1A. Risk Factors of the Corporation\u2019s 2025 Annual Report on Form 10-K"
+      ]
+    },
+    {
+      "id": "eval_31",
+      "category": "unanswerable",
+      "question": "What is Apple's projected iPhone 18 unit sales forecast for the calendar year 2028?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain projected deferred revenue realization percentages.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5434.05,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Financial Statements",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_32",
+      "category": "unanswerable",
+      "question": "What is NVIDIA's exact market share percentage for custom ASIC chips in 2030?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about NVIDIA's revenue concentration among a limited number of direct and indirect customers, as well as details about their share repurchase transactions and revenue from sales to customers outside the United States.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5688.74,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 5. Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities"
+      ]
+    },
+    {
+      "id": "eval_33",
+      "category": "unanswerable",
+      "question": "What is the secret battery cathode chemical formula used in Tesla's 4680 cells?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Tesla's battery cell development, including the development of a new proprietary lithium-ion battery cell and improved manufacturing processes, but it does not mention the secret battery cathode chemical formula used in Tesla's 4680 cells.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5687.24,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 1A. RISK FACTORS",
+        "ITEM 1. BUSINESS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA"
+      ]
+    },
+    {
+      "id": "eval_34",
+      "category": "unanswerable",
+      "question": "What was QuantumCorp's net revenue for fiscal year 2025?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about net revenues for certain companies (JNJ, GS, META, and NVDA) in specific periods, but it does not provide information about QuantumCorp's net revenue for fiscal year 2025.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5547.02,
+      "retrieved_tickers": [
+        "JNJ",
+        "GS",
+        "META",
+        "GS",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial statements and supplementary data",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7.",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 15. Exhibits and Financial Statement Schedules"
+      ]
+    },
+    {
+      "id": "eval_35",
+      "category": "unanswerable",
+      "question": "What were Amazon's drone delivery parcel counts across Europe in 2019?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about Amazon's physical stores, office space, and fulfillment, data centers, and other facilities, but does not provide any information about drone delivery parcel counts across Europe in 2019.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5715.63,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "PART II",
+        "PART I",
+        "PART II",
+        "PART I"
+      ]
+    },
+    {
+      "id": "eval_36",
+      "category": "numerical",
+      "question": "In Apple's consolidated statements of operations, what were total net sales for fiscal 2025 versus fiscal 2024?",
+      "answer": "According to the evidence, total net sales for fiscal 2025 were $365.3 billion, while for fiscal 2024 they were $365.8 billion.\n\n[1, 10-K, 2025-10-31, Item 8. Financial Statements and Supplementary Data]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5643.5,
+      "retrieved_tickers": [
+        "AAPL",
+        "GS",
+        "GS",
+        "GS",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_37",
+      "category": "numerical",
+      "question": "What were Apple's total assets at the end of fiscal 2025 according to the consolidated balance sheet?",
+      "answer": "According to the consolidated balance sheet, Apple's total assets at the end of fiscal 2025 were $2,433,910 million.\n\n[CITATION: AAPL, 10-K, 2025-10-31, Item 8. Financial Statements and Supplementary Data]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5555.99,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 1. Financial Statements",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "eval_38",
+      "category": "numerical",
+      "question": "What were Apple's total liabilities at the end of fiscal 2025?",
+      "answer": "[1, 8. Financial Statements and Supplementary Data, 2025-10-31]\n\nAccording to the table \"Other Current Liabilities\" in Apple Inc.'s 2025 10-K filing, the total other current liabilities at the end of fiscal 2025 were $66,387 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5703.53,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "eval_39",
+      "category": "numerical",
+      "question": "What was NVIDIA's net income for the three months ended in the most recent quarter reported in this 10-Q?",
+      "answer": "According to [NVDA, 10-Q, 2026-08-26, Item 1. Financial Statements (Unaudited)], NVIDIA's net income for the three months ended in the most recent quarter reported in this 10-Q was $59,688 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "NVDA",
+            "form": "10-Q",
+            "filing_date": "2026-08-26",
+            "section": "Item 1. Financial Statements (Unaudited)",
+            "raw": "[NVDA, 10-Q, 2026-08-26, Item 1. Financial Statements (Unaudited)]",
+            "start": 13,
+            "end": 79
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5616.99,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_40",
+      "category": "numerical",
+      "question": "How much did NVIDIA spend on research and development in the most recent quarter versus the prior-year quarter?",
+      "answer": "According to [NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations], the company spent $201 million on research and development in the second quarter of fiscal year 2027.\n\nCitation: [NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, Table: Second Quarter of Fiscal Year 2027 Summary, Revenue]\n\nThis figure belongs to the second quarter of fiscal year 2027.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 2,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "NVDA",
+            "form": "10-Q",
+            "filing_date": "2026-08-26",
+            "section": "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "raw": "[NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+            "start": 13,
+            "end": 132
+          },
+          {
+            "ticker": "NVDA",
+            "form": "10-Q",
+            "filing_date": "2026-08-26",
+            "section": "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, Table: Second Quarter of Fiscal Year 2027 Summary, Revenue",
+            "raw": "[NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, Table: Second Quarter of Fiscal Year 2027 Summary, Revenue]",
+            "start": 247,
+            "end": 426
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [
+          "[NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, Table: Second Quarter of Fiscal Year 2027 Summary, Revenue]"
+        ],
+        "total": 2
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6147.91,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_41",
+      "category": "numerical",
+      "question": "What was Microsoft's net income for the three months ended March 31, 2026?",
+      "answer": "According to [MSFT, 10-Q, 2026-04-29, Item 1], Microsoft's net income for the three months ended March 31, 2026, was $31,778 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 1",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 1]",
+            "start": 13,
+            "end": 45
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4818.45,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 1",
+        "Item 1",
+        "Item 2",
+        "Item 2",
+        "Item 1"
+      ]
+    },
+    {
+      "id": "eval_42",
+      "category": "numerical",
+      "question": "What were Walmart's total revenues in the most recent fiscal year, and what were they the year before?",
+      "answer": "According to [WMT, 10-K, 2026-03-13, PART I], Walmart's total revenues for fiscal 2026 were $713.2 billion, and for fiscal 2025, they were $680.985 billion.\n\nNote: The evidence does contain the total revenues for both fiscal years, but does not provide the total revenues for the year before fiscal 2025.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "WMT",
+            "form": "10-K",
+            "filing_date": "2026-03-13",
+            "section": "PART I",
+            "raw": "[WMT, 10-K, 2026-03-13, PART I]",
+            "start": 13,
+            "end": 44
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6019.97,
+      "retrieved_tickers": [
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT"
+      ],
+      "retrieved_sections": [
+        "PART I",
+        "Item 3. Legal Proce",
+        "PART II",
+        "PART II",
+        "Item 3. Legal Proce"
+      ]
+    },
+    {
+      "id": "eval_43",
+      "category": "numerical",
+      "question": "In the most recent quarter, how did Apple's Products net sales compare to Services net sales?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information on the disaggregated net sales for 2025, 2024, and 2023, but it does not provide a direct comparison between Products net sales and Services net sales for the most recent quarter.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5346.14,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "eval_44",
+      "category": "numerical",
+      "question": "How much cash and cash equivalents did Apple hold at the end of the most recent quarter?",
+      "answer": "According to [AAPL, 10-Q, 2026-07-31, Item 1. Financial Statements], Apple Inc. held $35,934 million in cash, cash equivalents, and restricted cash and cash equivalents at the end of the nine months period ended June 27, 2026.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AAPL",
+            "form": "10-Q",
+            "filing_date": "2026-07-31",
+            "section": "Item 1. Financial Statements",
+            "raw": "[AAPL, 10-Q, 2026-07-31, Item 1. Financial Statements]",
+            "start": 13,
+            "end": 67
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5654.92,
+      "retrieved_tickers": [
+        "AAPL",
+        "WMT",
+        "JNJ",
+        "AAPL",
+        "COST"
+      ],
+      "retrieved_sections": [
+        "Item 1. Financial Statements",
+        "PART II",
+        "Item 7. Management\u2019s discussion and analysis of results of operations and financial condition",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 2\u2014Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_45",
+      "category": "numerical",
+      "question": "What was the value of Apple's inventories at the end of the most recent quarter?",
+      "answer": "According to the evidence, Apple's inventories at the end of the most recent quarter (June 27, 2026) were $11,092 million. [AAPL, 10-Q, 2026-07-31, Item 1. Financial Statements, Table: Inventories]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AAPL",
+            "form": "10-Q",
+            "filing_date": "2026-07-31",
+            "section": "Item 1. Financial Statements, Table: Inventories",
+            "raw": "[AAPL, 10-Q, 2026-07-31, Item 1. Financial Statements, Table: Inventories]",
+            "start": 123,
+            "end": 197
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [
+          "[AAPL, 10-Q, 2026-07-31, Item 1. Financial Statements, Table: Inventories]"
+        ],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5501.32,
+      "retrieved_tickers": [
+        "AAPL",
+        "COST",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 1. Financial Statements",
+        "Item 8\u2014Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 1. Financial Statements",
+        "Item 1. Financial Statements"
+      ]
+    },
+    {
+      "id": "eval_46",
+      "category": "factual",
+      "question": "What are Microsoft's primary cloud service offerings as described in its 10-Q?",
+      "answer": "According to the evidence, Microsoft's primary cloud service offerings are:\n\n1. Azure and other cloud services, including cloud and AI consumption-based services, GitHub cloud services, Health and Life Sciences cloud services (formerly Nuance Healthcare cloud services), virtual desktop offerings, and other cloud services. [MSFT, 10-Q, 2026-04-29, Item 2]\n2. Dynamics 365, comprising a set of intelligent, cloud-based applications across ERP, CRM, Power Apps, and Power Automate. [MSFT, 10-Q, 2026-04-29, Item 2]\n\nThese are the only cloud service offerings explicitly mentioned in the evidence as part of Microsoft's primary cloud service offerings.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 2,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 2",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 2]",
+            "start": 324,
+            "end": 356
+          },
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 2",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 2]",
+            "start": 481,
+            "end": 513
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 2,
+        "ungrounded": [],
+        "total": 2
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6247.76,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 8",
+        "Item 1",
+        "Item 1",
+        "Item 8"
+      ]
+    },
+    {
+      "id": "eval_47",
+      "category": "factual",
+      "question": "What are Google's main advertising products?",
+      "answer": "Based on the provided evidence passages, Google's main advertising products are:\n\n1. Google Search & other (as defined in [GOOGL, 10-K, 2026-02-05, ITEM 7.])\n2. YouTube ads (as defined in [GOOGL, 10-K, 2026-02-05, ITEM 7.])\n3. Google Network (as defined in [GOOGL, 10-K, 2026-02-05, ITEM 7.])\n\nThese products are further broken down into sub-products, such as:\n\n* Paid clicks and cost-per-click (related to Google Search & other properties)\n* Impressions and cost-per-impression (related to Google Network properties)\n\nInsufficient evidence to answer the question of what specific advertising formats or channels are part of Google's advertising products. The evidence does contain information on the types of advertising revenue streams, such as performance advertising and brand advertising.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 3,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 7.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 7.]",
+            "start": 122,
+            "end": 156
+          },
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 7.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 7.]",
+            "start": 188,
+            "end": 222
+          },
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 7.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 7.]",
+            "start": 257,
+            "end": 291
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 3,
+        "ungrounded": [],
+        "total": 3
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5919.46,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 1.",
+        "ITEM 8.",
+        "ITEM 1.",
+        "ITEM 1.",
+        "ITEM 7."
+      ]
+    },
+    {
+      "id": "eval_48",
+      "category": "factual",
+      "question": "What are Amazon's principal business activities?",
+      "answer": "According to the evidence, Amazon's principal revenue-generating activities are:\n\n1. Retail sales, which include revenue recognized when control of the goods is transferred to the customer, generally occurring upon delivery to a third-party carrier or to the customer. [AMZN, 10-K, 2026-02-06, PART II]\n2. Third-party seller services, which include commissions and fulfillment and shipping fees recognized when the services are rendered, generally occurring upon delivery of the related products to a third-party carrier or to the customer. [AMZN, 10-K, 2026-02-06, PART II]\n3. Advertising services, although the specific details of how revenue is recognized for this activity are not provided in the evidence. [AMZN, 10-K, 2026-02-06, PART II]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 3,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AMZN",
+            "form": "10-K",
+            "filing_date": "2026-02-06",
+            "section": "PART II",
+            "raw": "[AMZN, 10-K, 2026-02-06, PART II]",
+            "start": 269,
+            "end": 302
+          },
+          {
+            "ticker": "AMZN",
+            "form": "10-K",
+            "filing_date": "2026-02-06",
+            "section": "PART II",
+            "raw": "[AMZN, 10-K, 2026-02-06, PART II]",
+            "start": 541,
+            "end": 574
+          },
+          {
+            "ticker": "AMZN",
+            "form": "10-K",
+            "filing_date": "2026-02-06",
+            "section": "PART II",
+            "raw": "[AMZN, 10-K, 2026-02-06, PART II]",
+            "start": 711,
+            "end": 744
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 3,
+        "ungrounded": [],
+        "total": 3
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5800.91,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "PART II. OTHER INFORMATION",
+        "PART II. OTHER INFORMATION",
+        "PART I",
+        "PART I"
+      ]
+    },
+    {
+      "id": "eval_49",
+      "category": "factual",
+      "question": "What are Meta's primary sources of revenue?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about Meta's revenue streams, such as \"Other revenue\" and \"Reality Labs (RL) revenue\", but it does not explicitly state Meta's primary sources of revenue.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4582.21,
+      "retrieved_tickers": [
+        "META",
+        "AMZN",
+        "META",
+        "META",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 7.",
+        "PART II",
+        "Item 2.",
+        "Item 8.",
+        "Item 2."
+      ]
+    },
+    {
+      "id": "eval_50",
+      "category": "factual",
+      "question": "What are NVIDIA's reportable segments?",
+      "answer": "According to the evidence, NVIDIA's reportable segments are:\n\n1. Compute & Networking\n2. Graphics\n3. Other\n\nThese segments are mentioned in Evidence passages [2], [3], and [5].",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5571.57,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 15. Exhibits and Financial Statement Schedules",
+        "Item 1. Financial Statements (Unaudited)"
+      ]
+    },
+    {
+      "id": "eval_51",
+      "category": "factual",
+      "question": "What is Tesla's mission statement according to its 10-K?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains Tesla's financial statements, operational milestones, and other supplementary data for the year ended December 31, 2025, but does not include a mission statement.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5618.52,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 1. FINANCIAL STATEMENTS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA"
+      ]
+    },
+    {
+      "id": "eval_52",
+      "category": "factual",
+      "question": "What are JPMorgan Chase's core values?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about JPMorgan Chase's business segments, reportable business segments, and accounting policies.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5570.12,
+      "retrieved_tickers": [
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM"
+      ],
+      "retrieved_sections": [
+        "Part IV",
+        "Item 1. Business.",
+        "Part IV",
+        "Item 1A. Risk Factors.",
+        "Part IV"
+      ]
+    },
+    {
+      "id": "eval_53",
+      "category": "factual",
+      "question": "What is Goldman Sachs' business model?",
+      "answer": "Based on the provided evidence passages, Goldman Sachs' business model can be described as follows:\n\nGoldman Sachs is a leading global financial institution that delivers a broad range of financial services to a large and diversified client base, including corporations, financial institutions, governments, and individuals. (Item 1. Business, [GS, 10-K, 2026-02-25, Item 1. Business])\n\nThe company operates in three business segments: Global Banking & Markets, Asset & Wealth Management, and Platform Solutions. (Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, [GS, 10-K, 2026-02-25, Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations])\n\nGoldman Sachs also has a resolution planning framework in place, which includes a Resolution Capital Adequacy and Positioning framework and a triggers and alerts framework, to ensure that its major subsidiaries have access to sufficient loss-absorbing capacity to wind down following a Group Inc. bankruptcy filing. (Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, [GS, 10-Q, 2026-08-03, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations])\n\nNote that the evidence does not provide a detailed description of Goldman Sachs' business model, but rather provides an overview of the company's operations and risk management framework.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 3,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GS",
+            "form": "10-K",
+            "filing_date": "2026-02-25",
+            "section": "Item 1. Business",
+            "raw": "[GS, 10-K, 2026-02-25, Item 1. Business]",
+            "start": 344,
+            "end": 384
+          },
+          {
+            "ticker": "GS",
+            "form": "10-K",
+            "filing_date": "2026-02-25",
+            "section": "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "raw": "[GS, 10-K, 2026-02-25, Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+            "start": 609,
+            "end": 726
+          },
+          {
+            "ticker": "GS",
+            "form": "10-Q",
+            "filing_date": "2026-08-03",
+            "section": "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "raw": "[GS, 10-Q, 2026-08-03, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+            "start": 1141,
+            "end": 1258
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 3,
+        "ungrounded": [],
+        "total": 3
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 7730.24,
+      "retrieved_tickers": [
+        "GS",
+        "GS",
+        "GS",
+        "GS",
+        "GS"
+      ],
+      "retrieved_sections": [
+        "Item 1. Business",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_54",
+      "category": "factual",
+      "question": "What are Bank of America's responsible growth principles?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain Bank of America's values and culture, including their commitment to creating an inclusive environment and providing opportunities for employees to grow and develop.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 3824.0,
+      "retrieved_tickers": [
+        "BAC",
+        "BAC",
+        "BAC",
+        "BAC",
+        "BAC"
+      ],
+      "retrieved_sections": [
+        "Item 1. Business",
+        "Item 1. Financial Statements",
+        "Item 6. [Reserved]",
+        "Item 1A. Risk Factors",
+        "Item 1. Business"
+      ]
+    },
+    {
+      "id": "eval_55",
+      "category": "numerical",
+      "question": "What was Microsoft's total revenue for fiscal year 2026?",
+      "answer": "According to [MSFT, 10-K, 2026-07-29, Item 7], Microsoft's total revenue for fiscal year 2026 was $214.4 billion.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-K",
+            "filing_date": "2026-07-29",
+            "section": "Item 7",
+            "raw": "[MSFT, 10-K, 2026-07-29, Item 7]",
+            "start": 13,
+            "end": 45
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5694.73,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "NVDA",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 7",
+        "Item 8",
+        "Item 7",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "eval_56",
+      "category": "numerical",
+      "question": "What was Alphabet's operating income for 2025?",
+      "answer": "According to [GOOGL, 10-K, 2026-02-05, ITEM 8.], Alphabet's operating income for 2025 is $129,039 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 8.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 8.]",
+            "start": 13,
+            "end": 47
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5770.71,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 2.",
+        "ITEM 7.",
+        "ITEM 7.",
+        "ITEM 8.",
+        "ITEM 8."
+      ]
+    },
+    {
+      "id": "eval_57",
+      "category": "numerical",
+      "question": "What was Amazon's net income for 2025?",
+      "answer": "According to [AMZN, 10-K, 2026-02-06, PART II], Amazon's net income for 2025 was $77,670 million.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AMZN",
+            "form": "10-K",
+            "filing_date": "2026-02-06",
+            "section": "PART II",
+            "raw": "[AMZN, 10-K, 2026-02-06, PART II]",
+            "start": 13,
+            "end": 46
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5437.45,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART II",
+        "PART II",
+        "PART II",
+        "PART II",
+        "PART II"
+      ]
+    },
+    {
+      "id": "eval_58",
+      "category": "numerical",
+      "question": "What was Meta's earnings per share for 2025?",
+      "answer": "According to [META, 10-K, 2026-01-29, Item 8.], Meta's earnings per share for 2025 was $23.49.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "META",
+            "form": "10-K",
+            "filing_date": "2026-01-29",
+            "section": "Item 8.",
+            "raw": "[META, 10-K, 2026-01-29, Item 8.]",
+            "start": 13,
+            "end": 46
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5525.42,
+      "retrieved_tickers": [
+        "GS",
+        "META",
+        "META",
+        "META",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8.",
+        "Item 8.",
+        "Item 8.",
+        "Item 8."
+      ]
+    },
+    {
+      "id": "eval_59",
+      "category": "numerical",
+      "question": "What was NVIDIA's gross margin for the most recent quarter?",
+      "answer": "According to Table 2 from NVIDIA CORP (NVDA) 10-Q filed 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations, NVIDIA's gross margin for the most recent quarter (Three Months Ended Jul 26, 2026) was 75.0%.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6139.78,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 15. Exhibits and Financial Statement Schedules"
+      ]
+    },
+    {
+      "id": "eval_60",
+      "category": "temporal",
+      "question": "How did Apple's Services revenue change from fiscal 2024 to 2025?",
+      "answer": "According to [AAPL, 10-K, 2025-10-31, Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations], Services net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the App Store and cloud services.\n\nNote: The scale is in millions.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "AAPL",
+            "form": "10-K",
+            "filing_date": "2025-10-31",
+            "section": "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "raw": "[AAPL, 10-K, 2025-10-31, Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+            "start": 13,
+            "end": 132
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5431.43,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "GS",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Financial Statements",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations"
+      ]
+    },
+    {
+      "id": "eval_61",
+      "category": "temporal",
+      "question": "How did Microsoft's Azure revenue growth rate change year-over-year?",
+      "answer": "According to [MSFT, 10-Q, 2026-04-29, Item 2], Azure and other cloud services revenue increased 41% as of the end of the quarter.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "MSFT",
+            "form": "10-Q",
+            "filing_date": "2026-04-29",
+            "section": "Item 2",
+            "raw": "[MSFT, 10-Q, 2026-04-29, Item 2]",
+            "start": 13,
+            "end": 45
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5505.88,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 2",
+        "Item 7",
+        "Item 2",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "eval_62",
+      "category": "temporal",
+      "question": "How did Google Cloud revenue change from 2024 to 2025?",
+      "answer": "According to [GOOGL, 10-K, 2026-02-05, ITEM 7.], Google Cloud revenues increased $15.5 billion from 2024 to 2025, primarily driven by growth in Google Cloud Platform largely from infrastructure and platform services.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GOOGL",
+            "form": "10-K",
+            "filing_date": "2026-02-05",
+            "section": "ITEM 7.",
+            "raw": "[GOOGL, 10-K, 2026-02-05, ITEM 7.]",
+            "start": 13,
+            "end": 47
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5690.89,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 7.",
+        "ITEM 7.",
+        "ITEM 2.",
+        "ITEM 2.",
+        "ITEM 7."
+      ]
+    },
+    {
+      "id": "eval_62",
+      "category": "cross-document",
+      "question": "How do Tesla, Ford, and GM describe electric vehicle transition risks?",
+      "answer": "Based on the provided evidence passages, here's how Tesla, Ford, and GM describe electric vehicle transition risks:\n\nTesla:\n\n* Transition risk involves the financial and economic consequences of society's shift toward a lower-carbon economy. (TSLA, 10-K, 2026-01-29, ITEM 1A. RISK FACTORS)\n* Possible changes in public policy, adoption of new technologies, and shifts in consumer preferences are transition risk drivers. (TSLA, 10-K, 2026-01-29, ITEM 1A. RISK FACTORS)\n* The market for electric vehicles in general and Tesla vehicles in particular may not develop as expected, which could harm the business, prospects, financial condition, and operating results. (TSLA, 10-K, 2026-01-29, ITEM 1A. RISK FACTORS)\n\nFord:\n\nInsufficient evidence to answer this question.\n\nThe evidence contains information on physical risks and transition risks associated with climate change, but not specifically on electric vehicle transition risks.\n\nGM:\n\nInsufficient evidence to answer this question.\n\nThe evidence contains information on physical risks and transition risks associated with climate change, but not specifically on electric vehicle transition risks.\n\nNote: The evidence passages provided for Ford and GM do not mention electric vehicle transition risks, whereas Tesla's 10-K filing does.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 7301.09,
+      "retrieved_tickers": [
+        "JPM",
+        "JPM",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "Item 1A. Risk Factors.",
+        "Part IV",
+        "ITEM 1A. RISK FACTORS",
+        "ITEM 1A. RISK FACTORS",
+        "ITEM 1A. RISK FACTORS"
+      ]
+    },
+    {
+      "id": "eval_63",
+      "category": "cross-document",
+      "question": "How do Exxon, Chevron, and ConocoPhillips describe climate transition risks?",
+      "answer": "Exxon, Chevron, and ConocoPhillips do not explicitly describe climate transition risks in the provided evidence passages. However, ExxonMobil does discuss transition risks in Item 7A of its 10-K filing, which mentions that the transition to a lower-emission energy system is subject to substantial uncertainties and that the company's ambition to achieve net zero emissions is dependent on supportive policies and technology advancements.\n\nInsufficient evidence to answer this question. The evidence does contain ExxonMobil's discussion of the challenges and uncertainties associated with achieving net-zero emissions.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 4675.84,
+      "retrieved_tickers": [
+        "JPM",
+        "GS",
+        "GS",
+        "XOM",
+        "JPM"
+      ],
+      "retrieved_sections": [
+        "Item 1A. Risk Factors.",
+        "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1A. Risk Factors",
+        "Item 7A",
+        "Part IV"
+      ]
+    },
+    {
+      "id": "eval_64",
+      "category": "cross-document",
+      "question": "How do Walmart, Target, and Costco describe supply chain risks?",
+      "answer": "I'll answer the question about how Walmart, Target, and Costco describe supply chain risks based on the provided evidence passages.\n\nInsufficient evidence to answer this question.\n\nThe evidence passages from Walmart (WMT, 10-K, 2026-03-13, Item 1. Business) and Amazon (AMZN, 10-Q, 2026-07-31, PART II. OTHER INFORMATION) do not directly describe supply chain risks from the perspective of Walmart, Target, and Costco. However, the evidence from Amazon (AMZN, 10-Q, 2026-07-31, PART II. OTHER INFORMATION) does discuss the risks associated with supplier relationships, which may be relevant to supply chain risks.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5886.72,
+      "retrieved_tickers": [
+        "META",
+        "GOOGL",
+        "AMZN",
+        "WMT",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "Item 1A.",
+        "ITEM 1A.",
+        "PART I",
+        "Item 1. Business",
+        "PART II. OTHER INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_65",
+      "category": "unanswerable",
+      "question": "What will be Microsoft's stock price on December 31, 2030?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains the estimated future amortization expense related to intangible assets held as of March 31, 2026, but does not provide any information about Microsoft's stock price on December 31, 2030.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5090.57,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 7",
+        "Item 1",
+        "Item 1",
+        "Item 1"
+      ]
+    },
+    {
+      "id": "eval_66",
+      "category": "unanswerable",
+      "question": "What is the exact number of Google Search queries per day in 2027?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about the number of paid clicks and impressions, but not the exact number of Google Search queries per day in 2027.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5386.24,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 7.",
+        "ITEM 2.",
+        "ITEM 7.",
+        "ITEM 2.",
+        "ITEM 7."
+      ]
+    },
+    {
+      "id": "eval_67",
+      "category": "unanswerable",
+      "question": "What was AcmeCorp's revenue in 2025?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain AcmeCorp's revenue for 2025, which is $200.97 billion.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5913.07,
+      "retrieved_tickers": [
+        "META",
+        "UNH",
+        "TSLA",
+        "META",
+        "UNH"
+      ],
+      "retrieved_sections": [
+        "Item 7.",
+        "ITEM 1. FINANCIAL STATEMENTS",
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "Item 7.",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA"
+      ]
+    },
+    {
+      "id": "eval_68",
+      "category": "unanswerable",
+      "question": "What is the chemical composition of Apple's M4 chip?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Apple's manufacturing locations, but not about the chemical composition of their M4 chip.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5392.24,
+      "retrieved_tickers": [
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL",
+        "AAPL"
+      ],
+      "retrieved_sections": [
+        "Item 1. Business",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 8. Financial Statements and Supplementary Data",
+        "Item 8. Financial Statements and Supplementary Data"
+      ]
+    },
+    {
+      "id": "eval_69",
+      "category": "unanswerable",
+      "question": "What is NVIDIA's internal roadmap for GPU architecture through 2030?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains information about NVIDIA's current and near-term GPU architectures, such as the NVIDIA Blackwell architecture and the NVIDIA Rubin platform, but it does not provide a comprehensive roadmap for GPU architecture through 2030.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6044.63,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA"
+      ],
+      "retrieved_sections": [
+        "Item 1. Business",
+        "Item 1. Business",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Business",
+        "Item 1. Business"
+      ]
+    },
+    {
+      "id": "eval_70",
+      "category": "numerical",
+      "question": "What was Microsoft's Intelligent Cloud revenue for the quarter ended March 31, 2026?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain Microsoft's Intelligent Cloud revenue for the nine months ended March 31, 2026, as reported in Item 2 of the 10-Q filing, but not for the quarter ended March 31, 2026.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5508.34,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 1",
+        "Item 2",
+        "Item 2",
+        "Item 1"
+      ]
+    },
+    {
+      "id": "eval_71",
+      "category": "numerical",
+      "question": "What was Google Cloud's operating income for the most recent quarter?",
+      "answer": "According to [GOOGL, 10-Q, 2026-07-23, ITEM 2.], Google Cloud's operating income for the most recent quarter (three months ended June 30, 2026) was $6.0 billion.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "GOOGL",
+            "form": "10-Q",
+            "filing_date": "2026-07-23",
+            "section": "ITEM 2.",
+            "raw": "[GOOGL, 10-Q, 2026-07-23, ITEM 2.]",
+            "start": 13,
+            "end": 47
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5480.49,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 2.",
+        "ITEM 7.",
+        "ITEM 2.",
+        "ITEM 7.",
+        "ITEM 2."
+      ]
+    },
+    {
+      "id": "eval_72",
+      "category": "numerical",
+      "question": "What was AWS revenue for the most recent quarter?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about unearned revenue, but it does not provide specific information about AWS revenue for the most recent quarter.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5840.4,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "PART I. FINANCIAL INFORMATION",
+        "PART II",
+        "PART II",
+        "PART I. FINANCIAL INFORMATION",
+        "PART I. FINANCIAL INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_73",
+      "category": "numerical",
+      "question": "What was Family of Apps revenue for the most recent quarter?",
+      "answer": "According to [META, 10-Q, 2026-07-30, Item 2], the Family of Apps revenue for the most recent quarter (second quarter of 2026) was $60.80 billion.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "META",
+            "form": "10-Q",
+            "filing_date": "2026-07-30",
+            "section": "Item 2",
+            "raw": "[META, 10-Q, 2026-07-30, Item 2]",
+            "start": 13,
+            "end": 45
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [
+          "[META, 10-Q, 2026-07-30, Item 2]"
+        ],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5409.87,
+      "retrieved_tickers": [
+        "META",
+        "META",
+        "META",
+        "META",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 7.",
+        "Item 2.",
+        "Item 2.",
+        "Item 2.",
+        "Item 2."
+      ]
+    },
+    {
+      "id": "eval_74",
+      "category": "numerical",
+      "question": "What was Data Center revenue for the most recent quarter?",
+      "answer": "Data Center revenue for the most recent quarter ($96.2 billion) was up 106% from a year ago and up 18% sequentially, driven by the ramp of our Blackwell Ultra infrastructure. [NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "NVDA",
+            "form": "10-Q",
+            "filing_date": "2026-08-26",
+            "section": "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+            "raw": "[NVDA, 10-Q, 2026-08-26, Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations]",
+            "start": 175,
+            "end": 294
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5866.46,
+      "retrieved_tickers": [
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "NVDA",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 1. Financial Statements (Unaudited)",
+        "Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "eval_75",
+      "category": "numerical",
+      "question": "What was Tesla's automotive gross margin for the most recent quarter?",
+      "answer": "According to [TSLA, 10-Q, 2026-07-23, ITEM 1. FINANCIAL STATEMENTS], the automotive gross margin for the three months ended June 30, 2026, was $4,111, and for the six months ended June 30, 2026, it was $7,879.\n\nInsufficient evidence to answer this question regarding the most recent quarter. The evidence does contain quarterly gross profit figures for the automotive segment.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "TSLA",
+            "form": "10-Q",
+            "filing_date": "2026-07-23",
+            "section": "ITEM 1. FINANCIAL STATEMENTS",
+            "raw": "[TSLA, 10-Q, 2026-07-23, ITEM 1. FINANCIAL STATEMENTS]",
+            "start": 13,
+            "end": 67
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5793.05,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 1. FINANCIAL STATEMENTS"
+      ]
+    },
+    {
+      "id": "eval_76",
+      "category": "numerical",
+      "question": "What was JPMorgan's CET1 capital ratio?",
+      "answer": "According to [JPM, 10-K, 2026-02-13, Part IV], the CET1 capital ratio for JPMorgan Chase Bank, N.A. was 20.9% as of December 31, 2025, and for J.P. Morgan Securities plc, it was 15.4% as of December 31, 2025.",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 1,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "JPM",
+            "form": "10-K",
+            "filing_date": "2026-02-13",
+            "section": "Part IV",
+            "raw": "[JPM, 10-K, 2026-02-13, Part IV]",
+            "start": 13,
+            "end": 45
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 1,
+        "ungrounded": [],
+        "total": 1
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5649.33,
+      "retrieved_tickers": [
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM",
+        "JPM"
+      ],
+      "retrieved_sections": [
+        "Part IV",
+        "Part IV",
+        null,
+        "Part IV",
+        "Part IV"
+      ]
+    },
+    {
+      "id": "eval_77",
+      "category": "numerical",
+      "question": "What was Bank of America's net interest margin?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Bank of America's net interest income, but not its net interest margin.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5298.19,
+      "retrieved_tickers": [
+        "BAC",
+        "BAC",
+        "BAC",
+        "BAC",
+        "BAC"
+      ],
+      "retrieved_sections": [
+        "Item 1A. Risk Factors of the Corporation\u2019s 2025 Annual Report on Form 10-K",
+        "Item 1A. Risk Factors of this Annual Report on Form 10-K",
+        "Item 7A. Quantitative and Qualitative Disclosures about Market Risk",
+        "Item 7A. Quantitative and Qualitative Disclosures about Market Risk",
+        "Item 7A. Quantitative and Qualitative Disclosures about Market Risk"
+      ]
+    },
+    {
+      "id": "eval_78",
+      "category": "numerical",
+      "question": "What was Walmart's e-commerce sales growth rate?",
+      "answer": "According to the evidence, Walmart's e-commerce sales growth rate is as follows:\n\n- For the Walmart U.S. segment: \n  - 4.9% for the three months ended July 31, 2026, [WMT, 10-Q, 2026-08-28, Item 5. Other Information]\n  - 5.1% for the six months ended July 31, 2026, [WMT, 10-Q, 2026-08-28, Item 5. Other Information]\n\n- For the Walmart International segment: \n  - 12.8% for the three months ended July 31, 2026, [WMT, 10-Q, 2026-08-28, Item 5. Other Information]\n  - 15.3% for the six months ended July 31, 2026, [WMT, 10-Q, 2026-08-28, Item 5. Other Information]\n\n- For the Walmart U.S. segment (as of fiscal 2025): \n  - 2.9% [WMT, 10-K, 2026-03-13, PART II]\n\n- For the Walmart International segment (as of fiscal 2025): \n  - 3.6% for the three months ended July 31, 2025, [WMT, 10-Q, 2026-08-28, Item 5. Other Information]\n  - 4.7% for the six months ended July 31, 2025, [WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+      "is_refusal": false,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": true,
+        "count": 7,
+        "malformed": [],
+        "citations": [
+          {
+            "ticker": "WMT",
+            "form": "10-Q",
+            "filing_date": "2026-08-28",
+            "section": "Item 5. Other Information",
+            "raw": "[WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+            "start": 166,
+            "end": 216
+          },
+          {
+            "ticker": "WMT",
+            "form": "10-Q",
+            "filing_date": "2026-08-28",
+            "section": "Item 5. Other Information",
+            "raw": "[WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+            "start": 266,
+            "end": 316
+          },
+          {
+            "ticker": "WMT",
+            "form": "10-Q",
+            "filing_date": "2026-08-28",
+            "section": "Item 5. Other Information",
+            "raw": "[WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+            "start": 412,
+            "end": 462
+          },
+          {
+            "ticker": "WMT",
+            "form": "10-Q",
+            "filing_date": "2026-08-28",
+            "section": "Item 5. Other Information",
+            "raw": "[WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+            "start": 513,
+            "end": 563
+          },
+          {
+            "ticker": "WMT",
+            "form": "10-K",
+            "filing_date": "2026-03-13",
+            "section": "PART II",
+            "raw": "[WMT, 10-K, 2026-03-13, PART II]",
+            "start": 627,
+            "end": 659
+          },
+          {
+            "ticker": "WMT",
+            "form": "10-Q",
+            "filing_date": "2026-08-28",
+            "section": "Item 5. Other Information",
+            "raw": "[WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+            "start": 774,
+            "end": 824
+          },
+          {
+            "ticker": "WMT",
+            "form": "10-Q",
+            "filing_date": "2026-08-28",
+            "section": "Item 5. Other Information",
+            "raw": "[WMT, 10-Q, 2026-08-28, Item 5. Other Information]",
+            "start": 874,
+            "end": 924
+          }
+        ]
+      },
+      "grounding": {
+        "grounded": 7,
+        "ungrounded": [],
+        "total": 7
+      },
+      "refusal_correct": true,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 7702.51,
+      "retrieved_tickers": [
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT",
+        "WMT"
+      ],
+      "retrieved_sections": [
+        "Item 5. Other Information",
+        "PART II",
+        "Item 5. Other Information",
+        "Item 5. Other Information",
+        "PART II"
+      ]
+    },
+    {
+      "id": "eval_79",
+      "category": "numerical",
+      "question": "What was Costco's comparable sales growth?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about comparable sales growth for Walmart, but not for Costco.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 3418.33,
+      "retrieved_tickers": [
+        "COST",
+        "COST",
+        "COST",
+        "COST",
+        "WMT"
+      ],
+      "retrieved_sections": [
+        "Item 2\u2014Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7\u2014Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 7\u2014Management's Discussion and Analysis of Financial Condition and Results of Operations",
+        "Item 2\u2014Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations",
+        "PART II"
+      ]
+    },
+    {
+      "id": "eval_80",
+      "category": "unanswerable",
+      "question": "What will be Tesla's Model Y production volume in 2028?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Tesla's production volume for the Model Y in 2025, but not for 2028.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5812.65,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 1. BUSINESS",
+        "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA"
+      ]
+    },
+    {
+      "id": "eval_81",
+      "category": "unanswerable",
+      "question": "What will be the Federal Reserve interest rate in 2027?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about the Federal Reserve's supervisory stress test scenarios, but it does not provide information about the Federal Reserve interest rate in 2027.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5429.24,
+      "retrieved_tickers": [
+        "BAC",
+        "JPM",
+        "AMZN",
+        "META",
+        "AMZN"
+      ],
+      "retrieved_sections": [
+        "Item 1A. Risk Factors",
+        "Part IV",
+        "PART I. FINANCIAL INFORMATION",
+        "Item 1.",
+        "PART I. FINANCIAL INFORMATION"
+      ]
+    },
+    {
+      "id": "eval_81",
+      "category": "unanswerable",
+      "question": "What is the secret algorithm for Google Search ranking?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Google's search ranking and algorithmic changes, but it does not explicitly mention a \"secret algorithm\" for Google Search ranking.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5805.11,
+      "retrieved_tickers": [
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL",
+        "GOOGL"
+      ],
+      "retrieved_sections": [
+        "ITEM 1.",
+        "ITEM 1A.",
+        "ITEM 1A.",
+        "ITEM 2.",
+        "ITEM 7."
+      ]
+    },
+    {
+      "id": "eval_82",
+      "category": "unanswerable",
+      "question": "What is Jeff Bezos's personal net worth in 2026?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence contains Jeff Bezos's position as Executive Chair of Amazon, but not his personal net worth.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5392.57,
+      "retrieved_tickers": [
+        "AMZN",
+        "AMZN",
+        "AMZN",
+        "META",
+        "META"
+      ],
+      "retrieved_sections": [
+        "PART I",
+        "PART II",
+        "PART II",
+        "Item 8.",
+        "Item 1."
+      ]
+    },
+    {
+      "id": "eval_83",
+      "category": "unanswerable",
+      "question": "What is Mark Zuckerberg's private email address?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain Mark Zuckerberg's signature and title as Chairman and Chief Executive Officer (Principal Executive Officer) on various filings, but it does not provide his private email address.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 6002.07,
+      "retrieved_tickers": [
+        "META",
+        "META",
+        "META",
+        "META",
+        "META"
+      ],
+      "retrieved_sections": [
+        "Item 1A.",
+        "Item 16.",
+        "Item 1A.",
+        "Item 1A.",
+        "Item 1."
+      ]
+    },
+    {
+      "id": "eval_84",
+      "category": "ambiguous_contradictory",
+      "question": "Did Microsoft's gaming revenue grow or decline compared to Sony's PlayStation revenue?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Microsoft's gaming revenue, specifically Xbox gaming revenue, but it does not provide any comparable data for Sony's PlayStation revenue.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5397.33,
+      "retrieved_tickers": [
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT",
+        "MSFT"
+      ],
+      "retrieved_sections": [
+        "Item 2",
+        "Item 2",
+        "Item 2",
+        "Item 7",
+        "Item 2"
+      ]
+    },
+    {
+      "id": "eval_85",
+      "category": "ambiguous_contradictory",
+      "question": "Which automaker has better EV margins: Tesla, Ford, or GM?",
+      "answer": "Insufficient evidence to answer this question.\n\nThe evidence does contain information about Tesla's gross margin for the Energy Generation and Storage Segment, but it does not provide comparable information for Ford or GM.",
+      "is_refusal": true,
+      "expected_refusal": false,
+      "format": {
+        "has_answer": false,
+        "has_evidence": false,
+        "valid_format": false
+      },
+      "citation": {
+        "valid": false,
+        "count": 0,
+        "error": "No citations found"
+      },
+      "grounding": {
+        "grounded": 0,
+        "ungrounded": [],
+        "total": 0
+      },
+      "refusal_correct": false,
+      "keyword_coverage": 1.0,
+      "correct": false,
+      "latency_ms": 5749.04,
+      "retrieved_tickers": [
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA",
+        "TSLA"
+      ],
+      "retrieved_sections": [
+        "ITEM 1. BUSINESS",
+        "ITEM 7. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "ITEM 1. BUSINESS",
+        "ITEM 1A. RISK FACTORS",
+        "ITEM 1A. RISK FACTORS"
+      ]
+    }
+  ]
+}
