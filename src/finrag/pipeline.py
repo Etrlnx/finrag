@@ -17,6 +17,13 @@ from finrag.generation import (
     get_rate_limited_llm,
 )
 from finrag.retrieval import build_retrieval_pipeline
+from finrag.explainability import (
+    build_explainable_result,
+    extract_dense_scores,
+    extract_bm25_scores,
+    extract_rerank_scores,
+)
+from finrag.retrieval import get_bm25_retriever, get_reranker
 
 
 def _as_text(value) -> str:
@@ -149,6 +156,52 @@ class FinRAGPipeline:
                 for d in docs
             ],
         }
+
+    def query_explainable(self, question: str) -> "ExplainableResult":
+        """Answer with full explainability: claim traces, evidence chunks, retrieval diagnostics."""
+        if not self.chain:
+            self.build_chain()
+
+        # Retrieve documents with scores
+        docs = self.retriever.invoke(question)
+        
+        # Extract multi-stage retrieval scores
+        from finrag.embeddings import get_embeddings
+        embeddings = get_embeddings(self.cfg.embedding)
+        dense_scores = extract_dense_scores(docs, question, embeddings, self.vector_store)
+        
+        # BM25 scores (need BM25 retriever)
+        from finrag.retrieval import get_bm25_retriever
+        bm25 = get_bm25_retriever(self.documents, k=len(docs) * 3)
+        bm25_ranks = extract_bm25_scores(docs, question, bm25)
+        
+        # Rerank scores
+        from finrag.retrieval import get_reranker
+        reranker = get_reranker(self.cfg.retrieval)
+        rerank_scores = extract_rerank_scores(docs, question, reranker.model)
+        
+        # RRF ranks (approximate from final order)
+        rrf_ranks = {_chunk_id(doc): i + 1 for i, doc in enumerate(docs)}
+        
+        # Generate answer
+        answer = self.chain.invoke(question)
+        is_refusal = "Insufficient evidence to answer this question" in answer
+        
+        # Build explainable result
+        return build_explainable_result(
+            answer=answer,
+            is_refusal=is_refusal,
+            retrieved_docs=docs,
+            dense_scores=dense_scores,
+            bm25_ranks=bm25_ranks,
+            rrf_ranks=rrf_ranks,
+            rerank_scores=rerank_scores,
+        )
+
+
+def _chunk_id(doc: Document) -> str:
+    meta = doc.metadata
+    return f"{meta.get('ticker','')}_{meta.get('form','')}_{meta.get('filing_date','')}_{meta.get('section','').strip().rstrip('.')}_{hash(doc.page_content[:100])%10000:04d}"
 
 
 def build_production_pipeline() -> FinRAGPipeline:
