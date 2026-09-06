@@ -41,8 +41,8 @@ from finrag.retrieval import (  # noqa: E402
     get_ensemble_retriever,
     get_filtered_retriever,
     get_reranker,
+    ContextualCompressionRetriever,
 )
-from langchain_classic.retrievers import ContextualCompressionRetriever  # noqa: E402
 from finrag.generation import (  # noqa: E402
     INSUFFICIENT_EVIDENCE,
     RAG_PROMPT_HARDENED,
@@ -131,6 +131,12 @@ def check_citation_format(answer: str) -> Dict[str, Any]:
     }
 
 
+def _normalize_section(section: str) -> str:
+    """Normalize section strings for comparison (e.g., 'Item 1A.' -> 'Item 1A')."""
+    s = section.strip().rstrip(".")
+    return s
+
+
 def check_citations_grounded(citations: List[Dict], retrieved_docs: List[Document]) -> Dict[str, Any]:
     """Check if each citation corresponds to a retrieved document exactly (all 4 fields match same doc)."""
     # Build set of exact (ticker, form, filing_date, section) tuples from retrieved docs
@@ -140,14 +146,19 @@ def check_citations_grounded(citations: List[Dict], retrieved_docs: List[Documen
             d.metadata.get("ticker", ""),
             d.metadata.get("form", ""),
             d.metadata.get("filing_date", ""),
-            d.metadata.get("section", ""),
+            _normalize_section(d.metadata.get("section", "")),
         )
         retrieved_tuples.add(t)
 
     grounded = 0
     ungrounded = []
     for c in citations:
-        citation_tuple = (c["ticker"], c["form"], c["filing_date"], c["section"])
+        citation_tuple = (
+            c["ticker"],
+            c["form"],
+            c["filing_date"],
+            _normalize_section(c["section"]),
+        )
         if citation_tuple in retrieved_tuples:
             grounded += 1
         else:

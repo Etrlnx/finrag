@@ -104,25 +104,6 @@ def evaluate_retrieval(
     }
 
 
-def aggregate_metrics(results: List[Dict], k_values: List[int]) -> Dict[str, Any]:
-    by_cat = {}
-    for r in results:
-        cat = r["category"]
-        if cat not in by_cat:
-            by_cat[cat] = {k: {"hit": [], "mrr": [], "precision": [], "recall": [], "ndcg": [], "contamination": []} for k in [3, 5, 10]}
-
-        for k in k_values:
-            m = r["k_metrics"][f"k_{k}"]
-            by_cat[cat][k]["hit"].append(1.0 if m["hit"] else 0.0)
-            by_cat[cat][k]["mrr"].append(m["reciprocal_rank"])
-            by_cat[cat][k]["precision"].append(m["precision"])
-            by_cat[cat][k]["recall"].append(m["recall"])
-            by_cat[cat][k]["ndcg"].append(m["ndcg"])
-            by_cat[cat][k]["contamination"].append(m["contamination"])
-
-    return {cat: {k: {m: sum(v) / len(v) if v else 0.0 for m, v in d.items()} for k, d in d_items.items()} for cat, d_items in by_cat.items()}
-
-
 def run_retrieval_evaluation(
     eval_set: List[Dict],
     store: FAISS,
@@ -199,14 +180,15 @@ def main():
         agg = aggregate_metrics(results, [3, 5, 10])
         print(f"\n=== {name} ===")
         for k in [3, 5, 10]:
-            # aggregate_metrics returns {category: {k: metrics}}
-            # Aggregate across all categories
-            hit = sum(agg[cat][k]["hit"] for cat in agg) / len(agg)
-            mrr = sum(agg[cat][k]["mrr"] for cat in agg) / len(agg)
-            precision = sum(agg[cat][k]["precision"] for cat in agg) / len(agg)
-            recall = sum(agg[cat][k]["recall"] for cat in agg) / len(agg)
-            ndcg = sum(agg[cat][k]["ndcg"] for cat in agg) / len(agg)
-            contamination = sum(agg[cat][k]["contamination"] for cat in agg) / len(agg)
+            # aggregate_metrics returns {category: {k: metrics}} with already-aggregated means
+            # Aggregate across all categories (weighted by number of questions per category)
+            total_questions = sum(len([r for r in results if r["category"] == cat]) for cat in agg)
+            hit = sum(agg[cat][k]["hit"] * len([r for r in results if r["category"] == cat]) for cat in agg) / total_questions
+            mrr = sum(agg[cat][k]["mrr"] * len([r for r in results if r["category"] == cat]) for cat in agg) / total_questions
+            precision = sum(agg[cat][k]["precision"] * len([r for r in results if r["category"] == cat]) for cat in agg) / total_questions
+            recall = sum(agg[cat][k]["recall"] * len([r for r in results if r["category"] == cat]) for cat in agg) / total_questions
+            ndcg = sum(agg[cat][k]["ndcg"] * len([r for r in results if r["category"] == cat]) for cat in agg) / total_questions
+            contamination = sum(agg[cat][k]["contamination"] * len([r for r in results if r["category"] == cat]) for cat in agg) / total_questions
             print(f"  k={k}: Hit@k={hit*100:.1f}%, MRR={mrr:.3f}, Precision={precision*100:.1f}%, Recall={recall*100:.1f}%, NDCG={ndcg:.3f}, Contamination={contamination*100:.1f}%")
         print("  By category:")
         for cat, metrics in agg.items():
