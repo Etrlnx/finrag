@@ -37,3 +37,22 @@ work/
 eval/results/*
 !eval/results/.gitkeep
 *.log
+
+# Package build artifacts
+*.egg-info/
+dist/
+build/
+src/finrag.egg-info/
+
+# Test artifacts
+test_loader.py
+tmp/
+
+# Streamlit
+.streamlit/
+.web/
+!web/app.py
+
+# OS / Editor
+*.swp
+*.swo
