@@ -1,24 +1,93 @@
-"""Retrieval Components: Dense (Vector), Sparse (BM25), Hybrid (Ensemble), Metadata Filtering, and Cross-Encoder Reranking."""
+"""Retrieval Components: Dense (Vector), Sparse (BM25), Hybrid (RRF), Metadata Filtering, and Cross-Encoder Reranking."""
 
 from __future__ import annotations
 
 import warnings
-from typing import Optional, List
+from typing import Optional, List, Any, Dict
+from collections import defaultdict
 
 warnings.filterwarnings("ignore")
 
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
 from langchain_community.retrievers import BM25Retriever
+from sentence_transformers import CrossEncoder
 
-try:
-    from langchain_classic.retrievers import EnsembleRetriever, ContextualCompressionRetriever
-    from langchain_classic.retrievers.document_compressors import CrossEncoderReranker
-except ImportError:
-    from langchain.retrievers import EnsembleRetriever, ContextualCompressionRetriever
-    from langchain.retrievers.document_compressors import CrossEncoderReranker
 
-from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+class EnsembleRetriever(BaseRetriever):
+    """Simple Reciprocal Rank Fusion (RRF) ensemble retriever."""
+    
+    retrievers: List[BaseRetriever]
+    weights: List[float]
+    k: int = 5
+    rrf_k: int = 60
+    
+    def _get_relevant_documents(self, query: str) -> List[Document]:
+        # Get results from each retriever
+        all_results = []
+        for i, retriever in enumerate(self.retrievers):
+            try:
+                docs = retriever.invoke(query)
+                all_results.append((i, docs))
+            except Exception:
+                all_results.append((i, []))
+        
+        # RRF scoring
+        scores: Dict[str, float] = defaultdict(float)
+        doc_map: Dict[str, Document] = {}
+        
+        for retriever_idx, docs in all_results:
+            weight = self.weights[retriever_idx] if retriever_idx < len(self.weights) else 1.0
+            for rank, doc in enumerate(docs):
+                doc_id = f"{doc.metadata.get('ticker', '')}_{doc.metadata.get('section', '')}_{hash(doc.page_content[:100])}"
+                scores[doc_id] += weight / (self.rrf_k + rank + 1)
+                if doc_id not in doc_map:
+                    doc_map[doc_id] = doc
+        
+        # Sort by score
+        sorted_docs = sorted(
+            [(doc_map[doc_id], score) for doc_id, score in scores.items()],
+            key=lambda x: x[1],
+            reverse=True
+        )
+        
+        return [doc for doc, _ in sorted_docs[:self.k]]
+    
+    async def _aget_relevant_documents(self, query: str) -> List[Document]:
+        return self._get_relevant_documents(query)
+
+
+class ContextualCompressionRetriever(BaseRetriever):
+    """Retriever that compresses documents using a cross-encoder reranker."""
+    
+    base_retriever: BaseRetriever
+    base_compressor: Any  # CrossEncoderReranker
+    
+    def _get_relevant_documents(self, query: str) -> List[Document]:
+        docs = self.base_retriever.invoke(query)
+        return self.base_compressor.compress_documents(docs, query)
+    
+    async def _aget_relevant_documents(self, query: str) -> List[Document]:
+        docs = await self.base_retriever.ainvoke(query)
+        return self.base_compressor.compress_documents(docs, query)
+
+
+class CrossEncoderReranker:
+    """Wrapper around sentence_transformers.CrossEncoder for reranking."""
+    
+    def __init__(self, model: CrossEncoder, top_n: int):
+        self.model = model
+        self.top_n = top_n
+    
+    def compress_documents(self, documents: List[Document], query: str, **kwargs: Any) -> List[Document]:
+        if not documents:
+            return []
+        pairs = [(query, doc.page_content) for doc in documents]
+        scores = self.model.predict(pairs)
+        scored_docs = list(zip(documents, scores))
+        scored_docs.sort(key=lambda x: x[1], reverse=True)
+        return [doc for doc, _ in scored_docs[:self.top_n]]
+
 
 from finrag.config import config, RetrievalConfig
 from finrag.vectorstore import get_retriever as get_dense_retriever
@@ -43,18 +112,20 @@ def get_ensemble_retriever(
     bm25_retriever: BaseRetriever,
     bm25_weight: float = 0.3,
     dense_weight: float = 0.7,
+    k: Optional[int] = None,
 ) -> EnsembleRetriever:
     """Create hybrid ensemble retriever combining keyword BM25 and dense vector search via RRF."""
     return EnsembleRetriever(
         retrievers=[bm25_retriever, dense_retriever],
         weights=[bm25_weight, dense_weight],
+        k=k or config.retrieval.k,
     )
 
 
 def get_reranker(cfg: Optional[RetrievalConfig] = None) -> CrossEncoderReranker:
     """Create cross-encoder reranker for ContextualCompressionRetriever."""
     cfg = cfg or config.retrieval
-    cross_encoder = HuggingFaceCrossEncoder(model_name=cfg.rerank_model)
+    cross_encoder = CrossEncoder(cfg.rerank_model)
     return CrossEncoderReranker(model=cross_encoder, top_n=cfg.rerank_top_k)
 
 
@@ -127,6 +198,7 @@ def build_retrieval_pipeline(
             bm25_retriever=bm25,
             bm25_weight=w_bm25,
             dense_weight=w_dense,
+            k=fetch_k,  # Fetch more for filtering/reranking
         )
 
     if use_filtering:

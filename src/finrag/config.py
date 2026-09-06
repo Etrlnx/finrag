@@ -29,8 +29,8 @@ class EmbeddingConfig:
 
 @dataclass
 class LLMConfig:
-    provider: str = "gemini"  # gemini, anthropic, openai, ollama
-    model_name: str = "gemini-3.6-flash"
+    provider: str = "ollama"  # gemini, anthropic, openai, ollama
+    model_name: str = "llama3.2"
     temperature: float = 0.1
     rpm: int = 10
     max_tokens: int = 4096
@@ -92,7 +92,7 @@ class PathsConfig:
             data_dir=Path(os.getenv("DATA_DIR", "data")),
             raw_dir=Path(os.getenv("RAW_DATA_DIR", "data/raw")),
             processed_dir=Path(os.getenv("PROCESSED_DATA_DIR", "data/processed")),
-            vector_store_dir=Path(os.getenv("VECTOR_STORE_DIR", "data/vector_stores/embeddings_bge_base")),
+            vector_store_dir=Path(os.getenv("VECTOR_STORE_DIR", "data/vector_stores/phase6_table_aware")),
             manifest_path=Path(os.getenv("MANIFEST_PATH", "data/manifest.json")),
         )
 
