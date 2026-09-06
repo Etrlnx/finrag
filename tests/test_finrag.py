@@ -273,7 +273,7 @@ class TestProductionPipeline:
         pipeline = build_production_pipeline()
         assert pipeline is not None
         assert pipeline.vector_store is not None
-        assert pchain is not None
+        assert pipeline.chain is not None
 
     def test_load_production_pipeline(self):
         """Test loading existing production pipeline."""
