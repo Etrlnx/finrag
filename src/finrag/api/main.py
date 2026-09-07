@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+import logging
 import os
 import time
 import uuid
@@ -23,6 +25,36 @@ from finrag.monitoring import (
 )
 
 
+class JsonFormatter(logging.Formatter):
+    """JSON log formatter for Loki."""
+
+    def format(self, record: logging.LogRecord) -> str:
+        log_data = {
+            "timestamp": self.formatTime(record),
+            "level": record.levelname,
+            "logger": record.name,
+            "message": record.getMessage(),
+        }
+        # Add extra fields
+        for key, value in record.__dict__.items():
+            if key not in {"name", "msg", "args", "created", "filename", "funcName",
+                          "levelname", "levelno", "lineno", "module", "msecs",
+                          "message", "msg", "name", "pathname", "process",
+                          "processName", "relativeCreated", "thread", "threadName",
+                          "exc_info", "exc_text", "stack_info", "asctime"}:
+                log_data[key] = value
+        return json.dumps(log_data)
+
+
+# Configure JSON logging
+logger = logging.getLogger("finrag-api")
+logger.setLevel(logging.INFO)
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    handler.setFormatter(JsonFormatter())
+    logger.addHandler(handler)
+
+
 pipeline = None
 
 
@@ -30,19 +62,19 @@ pipeline = None
 async def lifespan(app: FastAPI):
     global pipeline
     load_start = time.perf_counter()
-    print("Loading production pipeline...")
+    logger.info("Loading production pipeline...")
     pipeline = load_production_pipeline()
     load_time = time.perf_counter() - load_start
     record_pipeline_load(load_time)
-    print("Initializing database...")
+    logger.info("Initializing database...")
     try:
         await init_db()
-        print("Database initialized.")
+        logger.info("Database initialized.")
     except Exception as e:
-        print(f"Database initialization failed (continuing without persistence): {e}")
-    print("Pipeline ready.")
+        logger.error(f"Database initialization failed (continuing without persistence): {e}")
+    logger.info("Pipeline ready.")
     yield
-    print("Shutting down...")
+    logger.info("Shutting down...")
 
 
 app = FastAPI(
@@ -107,6 +139,8 @@ async def query_endpoint(request: QueryRequest):
     request_id = str(uuid.uuid4())[:8]
     start = time.perf_counter()
 
+    logger.info("Query received", extra={"request_id": request_id, "question": request.question[:100]})
+
     try:
         if request.include_explainable:
             result: ExplainableResult = pipeline.query_explainable(request.question)
@@ -137,6 +171,10 @@ async def query_endpoint(request: QueryRequest):
             explainable=result if request.include_explainable else None,
         ))
 
+        logger.info("Query completed",
+                    extra={"request_id": request_id, "latency_ms": latency_ms,
+                           "is_refusal": is_refusal, "status": "success"})
+
         return QueryResponse(
             request_id=request_id,
             question=request.question,
@@ -147,6 +185,7 @@ async def query_endpoint(request: QueryRequest):
         )
     except Exception as e:
         record_query("error", (time.perf_counter() - start) / 1000.0, False)
+        logger.error("Query failed", extra={"request_id": request_id, "error": str(e)})
         raise HTTPException(status_code=500, detail=str(e))
 
 

@@ -1,0 +1,139 @@
+{
+  "dashboard": {
+    "title": "FinRAG - Logs & Traces",
+    "uid": "finrag-logs",
+    "tags": ["finrag", "logs", "loki", "traces"],
+    "timezone": "browser",
+    "refresh": "30s",
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "Log Volume by Service",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (service) (rate({service=~\".+\"} |= \"\" [5m]))",
+            "legendFormat": "{{service}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "logs", "label": "Logs/sec"}, {"format": "short"}]
+      },
+      {
+        "id": 2,
+        "title": "Error Logs Rate",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (service) (rate({service=~\".+\"} |= \"error\" [5m]))",
+            "legendFormat": "{{service}}",
+            "refId": "A"
+          },
+          {
+            "expr": "sum by (service) (rate({service=~\".+\"} |= \"ERROR\" [5m]))",
+            "legendFormat": "{{service}} (ERROR)",
+            "refId": "B"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "logs", "label": "Error Logs/sec"}, {"format": "short"}]
+      },
+      {
+        "id": 3,
+        "title": "API Request Logs",
+        "type": "logs",
+        "gridPos": {"x": 0, "y": 8, "w": 24, "h": 10},
+        "targets": [
+          {
+            "expr": "{service=\"api\"} | json | level != \"DEBUG\"",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "showTime": true,
+          "showLabels": true,
+          "showCommonLabels": false,
+          "wrapLines": true,
+          "prependFields": ["level", "logger", "request_id"],
+          "order": "Descending",
+          "limit": 100
+        }
+      },
+      {
+        "id": 4,
+        "title": "Slow Queries (latency > 10s)",
+        "type": "logs",
+        "gridPos": {"x": 0, "y": 18, "w": 12, "h": 10},
+        "targets": [
+          {
+            "expr": "{service=\"api\"} | json | latency_ms > 10000",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "showTime": true,
+          "showLabels": true,
+          "showCommonLabels": false,
+          "wrapLines": true,
+          "prependFields": ["level", "latency_ms", "request_id"],
+          "order": "Descending",
+          "limit": 50
+        }
+      },
+      {
+        "id": 5,
+        "title": "Refusal Logs",
+        "type": "logs",
+        "gridPos": {"x": 12, "y": 18, "w": 12, "h": 10},
+        "targets": [
+          {
+            "expr": "{service=\"api\"} | json | message |= \"Insufficient evidence\"",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "showTime": true,
+          "showLabels": true,
+          "showCommonLabels": false,
+          "wrapLines": true,
+          "prependFields": ["level", "message", "request_id"],
+          "order": "Descending",
+          "limit": 50
+        }
+      },
+      {
+        "id": 6,
+        "title": "Streamlit Logs",
+        "type": "logs",
+        "gridPos": {"x": 0, "y": 28, "w": 24, "h": 10},
+        "targets": [
+          {
+            "expr": "{service=\"streamlit\"}",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "showTime": true,
+          "showLabels": true,
+          "showCommonLabels": false,
+          "wrapLines": true,
+          "prependFields": ["level", "message"],
+          "order": "Descending",
+          "limit": 100
+        }
+      }
+    ],
+    "schemaVersion": 30,
+    "version": 1,
+    "links": []
+  },
+  "folderId": 0,
+  "overwrite": true
+}

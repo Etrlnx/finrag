@@ -1,0 +1,251 @@
+{
+  "dashboard": {
+    "title": "FinRAG - Financial Intelligence Dashboard",
+    "uid": "finrag-overview",
+    "tags": ["finrag", "financial", "rag", "production"],
+    "timezone": "browser",
+    "refresh": "30s",
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "Request Rate",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(finrag_requests_total[5m])",
+            "legendFormat": "{{method}} {{endpoint}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "reqps", "label": "Requests/sec"}, {"format": "short"}]
+      },
+      {
+        "id": 2,
+        "title": "Query Latency (p50, p95, p99)",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.50, rate(finrag_query_latency_seconds_bucket[5m]))",
+            "legendFormat": "p50",
+            "refId": "A"
+          },
+          {
+            "expr": "histogram_quantile(0.95, rate(finrag_query_latency_seconds_bucket[5m]))",
+            "legendFormat": "p95",
+            "refId": "B"
+          },
+          {
+            "expr": "histogram_quantile(0.99, rate(finrag_query_latency_seconds_bucket[5m]))",
+            "legendFormat": "p99",
+            "refId": "C"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "seconds", "label": "Latency"}, {"format": "short"}]
+      },
+      {
+        "id": 3,
+        "title": "Query Status Distribution",
+        "type": "piechart",
+        "gridPos": {"x": 0, "y": 8, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (status) (finrag_queries_total)",
+            "legendFormat": "{{status}}",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "displayLabels": ["name", "value", "percent"],
+          "pieType": "pie"
+        }
+      },
+      {
+        "id": 4,
+        "title": "Refusal Rate",
+        "type": "stat",
+        "gridPos": {"x": 8, "y": 8, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "finrag_query_refusal_rate",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""},
+          "text": {},
+          "textMode": "auto"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 0.1},
+                {"color": "red", "value": 0.3}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "Total Queries",
+        "type": "stat",
+        "gridPos": {"x": 16, "y": 8, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "finrag_queries_total",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""},
+          "text": {},
+          "textMode": "auto"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short"
+          }
+        }
+      },
+      {
+        "id": 6,
+        "title": "Pipeline Load Time",
+        "type": "stat",
+        "gridPos": {"x": 0, "y": 16, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "finrag_pipeline_load_seconds_sum / finrag_pipeline_load_seconds_count",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "seconds",
+            "decimals": 1
+          }
+        }
+      },
+      {
+        "id": 7,
+        "title": "Active Queries",
+        "type": "stat",
+        "gridPos": {"x": 8, "y": 16, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "finrag_active_queries",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "short"
+          }
+        }
+      },
+      {
+        "id": 8,
+        "title": "Retrieval Operations",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 24, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(finrag_retrieval_total[5m])",
+            "legendFormat": "Retrievals/sec",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "ops", "label": "Retrievals/sec"}, {"format": "short"}]
+      },
+      {
+        "id": 9,
+        "title": "Documents Retrieved per Query",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 24, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.50, rate(finrag_retrieval_docs_bucket[5m]))",
+            "legendFormat": "p50",
+            "refId": "A"
+          },
+          {
+            "expr": "histogram_quantile(0.95, rate(finrag_retrieval_docs_bucket[5m]))",
+            "legendFormat": "p95",
+            "refId": "B"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "short", "label": "Docs"}, {"format": "short"}]
+      },
+      {
+        "id": 10,
+        "title": "Request Latency by Endpoint",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 32, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, sum by (le, endpoint) (rate(finrag_request_latency_seconds_bucket[5m])))",
+            "legendFormat": "{{endpoint}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "seconds", "label": "Latency"}, {"format": "short"}]
+      },
+      {
+        "id": 11,
+        "title": "Error Rate",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 32, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(finrag_requests_total{status=~\"5..\"}[5m])) by (endpoint) / sum(rate(finrag_requests_total[5m])) by (endpoint)",
+            "legendFormat": "{{endpoint}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {"mode": "time"},
+        "yaxes": [{"format": "percentunit", "label": "Error Rate"}, {"format": "short"}]
+      }
+    ],
+    "schemaVersion": 30,
+    "version": 1,
+    "links": []
+  },
+  "folderId": 0,
+  "overwrite": true
+}

@@ -1,0 +1,12 @@
+apiVersion: 1
+
+providers:
+  - name: 'FinRAG Dashboards'
+    orgId: 1
+    folder: 'FinRAG'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards
