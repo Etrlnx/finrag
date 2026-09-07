@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 
 from finrag.pipeline import load_production_pipeline
 from finrag.explainability.models import ExplainableResult
+from finrag.persistence import log_query, init_db
 
 
 pipeline = None
@@ -24,7 +25,13 @@ async def lifespan(app: FastAPI):
     global pipeline
     print("Loading production pipeline...")
     pipeline = load_production_pipeline()
-    print("Pipeline loaded and ready.")
+    print("Initializing database...")
+    try:
+        await init_db()
+        print("Database initialized.")
+    except Exception as e:
+        print(f"Database initialization failed (continuing without persistence): {e}")
+    print("Pipeline ready.")
     yield
     print("Shutting down...")
 
@@ -95,6 +102,19 @@ async def query_endpoint(request: QueryRequest):
 
         latency_ms = (time.perf_counter() - start) * 1000
 
+        # Log to database (fire and forget)
+        import asyncio
+        asyncio.create_task(log_query(
+            request_id=request_id,
+            question=request.question,
+            answer=answer,
+            is_refusal=is_refusal,
+            latency_ms=latency_ms,
+            model_provider="ollama",
+            model_name="llama3.2",
+            explainable=result if request.include_explainable else None,
+        ))
+
         return QueryResponse(
             request_id=request_id,
             question=request.question,
@@ -105,6 +125,30 @@ async def query_endpoint(request: QueryRequest):
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/stats")
+async def get_stats():
+    """Get query statistics."""
+    from finrag.persistence import get_query_stats
+    return await get_query_stats()
+
+
+@app.get("/queries")
+async def get_recent_queries(limit: int = 50):
+    """Get recent query logs."""
+    from finrag.persistence import get_recent_queries
+    queries = await get_recent_queries(limit)
+    return [
+        {
+            "request_id": q.request_id,
+            "question": q.question,
+            "is_refusal": q.is_refusal,
+            "latency_ms": q.latency_ms,
+            "created_at": q.created_at.isoformat(),
+        }
+        for q in queries
+    ]
 
 
 if __name__ == "__main__":
