@@ -8,13 +8,19 @@ import uuid
 from contextlib import asynccontextmanager
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from finrag.pipeline import load_production_pipeline
 from finrag.explainability.models import ExplainableResult
 from finrag.persistence import log_query, init_db
+from finrag.monitoring import (
+    record_request,
+    record_query,
+    record_pipeline_load,
+    metrics_endpoint,
+)
 
 
 pipeline = None
@@ -23,8 +29,11 @@ pipeline = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global pipeline
+    load_start = time.perf_counter()
     print("Loading production pipeline...")
     pipeline = load_production_pipeline()
+    load_time = time.perf_counter() - load_start
+    record_pipeline_load(load_time)
     print("Initializing database...")
     try:
         await init_db()
@@ -50,6 +59,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def metrics_middleware(request: Request, call_next):
+    start = time.perf_counter()
+    response = await call_next(request)
+    latency = time.perf_counter() - start
+    record_request(request.method, request.url.path, response.status_code, latency)
+    return response
 
 
 class QueryRequest(BaseModel):
@@ -101,6 +119,10 @@ async def query_endpoint(request: QueryRequest):
             explainable = None
 
         latency_ms = (time.perf_counter() - start) * 1000
+        latency_s = latency_ms / 1000.0
+
+        # Record query metrics
+        record_query("refusal" if is_refusal else "success", latency_s, is_refusal)
 
         # Log to database (fire and forget)
         import asyncio
@@ -124,6 +146,7 @@ async def query_endpoint(request: QueryRequest):
             explainable=explainable,
         )
     except Exception as e:
+        record_query("error", (time.perf_counter() - start) / 1000.0, False)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -149,6 +172,12 @@ async def get_recent_queries(limit: int = 50):
         }
         for q in queries
     ]
+
+
+@app.get("/metrics")
+async def metrics():
+    """Prometheus metrics endpoint."""
+    return await metrics_endpoint()
 
 
 if __name__ == "__main__":
