@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: finrag-postgres
+    environment:
+      POSTGRES_DB: finrag
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    container_name: finrag-api
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/finrag
+      LLM_PROVIDER: ollama
+      DEFAULT_LLM_MODEL: llama3.2
+      EMBEDDING_PROVIDER: huggingface
+      DEFAULT_EMBEDDING_MODEL: BAAI/bge-base-en-v1.5
+      VECTOR_STORE_DIR: /app/data/vector_stores/phase6_table_aware
+      SEC_EDGAR_USER_AGENT: FinRAGResearch user@example.com
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  streamlit:
+    build: .
+    container_name: finrag-streamlit
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/finrag
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+    command: streamlit run web/app.py --server.port 8501 --server.address 0.0.0.0
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
